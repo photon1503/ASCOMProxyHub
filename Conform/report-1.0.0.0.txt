@@ -1,0 +1,492 @@
+22:43:58.798 ASCOM Universal Device Conformance Checker Version 2.0.0.16486, Build time: Mon 29 May 2023 07:03:52
+22:43:58.800 
+22:43:58.801 Operating system is Microsoft Windows 10.0.18363 64bit, Application is 64bit.
+22:43:58.801 
+22:43:58.801 COM Driver ProgID: ASCOM.photonProxyHub.Telescope
+22:43:58.801 
+22:43:58.804 CreateDevice                        INFO     Creating NATIVE COM device: ASCOM.photonProxyHub.Telescope
+22:43:59.089 CreateDevice                        INFO     Successfully created driver
+22:44:00.093 ConformanceCheck                    OK       Driver instance created successfully
+22:44:00.094 
+22:44:00.095 Connect to device
+22:44:00.216 Connected                           OK       True
+22:44:00.216 
+22:44:00.221 Common Driver Methods
+22:44:00.247 InterfaceVersion                    OK       3
+22:44:00.251 Connected                           OK       True
+22:44:00.257 Description                         OK       Astrooptik Server Tel Driver
+22:44:00.262 DriverInfo                          OK       Build 3
+22:44:00.268 DriverVersion                       OK       2011_10_08
+22:44:00.276 Name                                OK       Astrooptik
+22:44:00.277 Action                              INFO     Conform cannot test the Action method
+22:44:00.317 SupportedActions                    OK       Driver returned an empty action list
+22:44:00.317 
+22:44:00.318 Can Properties
+22:44:00.323 CanFindHome                         OK       True
+22:44:00.328 CanPark                             OK       True
+22:44:00.333 CanPulseGuide                       OK       True
+22:44:00.341 CanSetDeclinationRate               OK       True
+22:44:00.346 CanSetGuideRates                    OK       False
+22:44:00.350 CanSetPark                          OK       True
+22:44:00.354 CanSetPierSide                      OK       True
+22:44:00.362 CanSetRightAscensionRate            OK       True
+22:44:00.369 CanSetTracking                      OK       True
+22:44:00.374 CanSlew                             OK       True
+22:44:00.379 CanSlewltAz                         OK       True
+22:44:00.383 CanSlewAltAzAsync                   OK       True
+22:44:00.387 CanSlewAsync                        OK       True
+22:44:00.391 CanSync                             OK       True
+22:44:00.397 CanSyncAltAz                        OK       False
+22:44:00.403 CanUnPark                           OK       True
+22:44:00.403 
+22:44:00.404 Pre-run Checks
+22:44:00.410 Mount Safety                        INFO     Scope is not parked, continuing testing
+22:44:00.477 Mount Safety                        INFO     Scope tracking has been enabled
+22:44:00.478 TimeCheck                           INFO     PC Time Zone:  (UTC+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna offset: 1 hours.
+22:44:00.479 TimeCheck                           INFO     PC UTCDate:    12-Oct-2023 20:44:00.478
+22:44:00.483 TimeCheck                           INFO     Mount UTCDate: 12-Oct-2023 20:44:00.482
+22:44:00.484 
+22:44:00.485 Properties
+22:44:00.530 AlignmentMode                       OK       GermanPolar
+22:44:00.540 Altitude                            OK       61:09:30.49
+22:44:00.547 ApertureArea                        OK       Optional member returned a PropertyNotImplementedException (COM Error: 0x80040400) error.
+22:44:00.589 ApertureDiameter                    OK       Optional member returned a PropertyNotImplementedException (COM Error: 0x80040400) error.
+22:44:00.594 AtHome                              OK       False
+22:44:00.595 AtPark                              OK       False
+22:44:00.600 Azimuth                             OK       59:41:46.14
+22:44:00.604 Declination                         OK       54:56:56.4
+22:44:00.608 DeclinationRate Read                OK       0.00
+22:44:01.632 DeclinationRate Write               OK       Set rate to 0.0 - successfully set rate to 0
+22:44:02.643 DeclinationRate Write               OK       Set rate to 0.1 - successfully set rate to 0.1
+22:44:22.290 DeclinationRate Write -9.0          ISSUE    RightAscensionRate is outside the expected tolerance. Expected: +0.000, Actual: -0.177, Deviation from expected: 353.21%, Tolerance:5.00.
+22:44:22.292 DeclinationRate Write -9.0          ISSUE    DeclinationRate    is outside the expected tolerance. Expected: +0.100, Actual: +2.224, Deviation from expected: 2,124.13%, Tolerance:5.00.
+22:44:37.347 DeclinationRate Write +3.0          OK       RightAscensionRate is within expected tolerance. Expected: +0.000, Actual: -0.027, Deviation from expected: 54.95%.
+22:44:37.349 DeclinationRate Write +3.0          ISSUE    DeclinationRate    is outside the expected tolerance. Expected: +0.100, Actual: -0.026, Deviation from expected: 125.60%, Tolerance:5.00.
+22:44:56.386 DeclinationRate Write +9.0          ISSUE    RightAscensionRate is outside the expected tolerance. Expected: +0.000, Actual: -0.263, Deviation from expected: 526.69%, Tolerance:5.00.
+22:44:56.386 DeclinationRate Write +9.0          ISSUE    DeclinationRate    is outside the expected tolerance. Expected: +0.100, Actual: +2.210, Deviation from expected: 2,109.51%, Tolerance:5.00.
+22:45:10.927 DeclinationRate Write -3.0          OK       RightAscensionRate is within expected tolerance. Expected: +0.000, Actual: +0.001, Deviation from expected: 1.16%.
+22:45:10.928 DeclinationRate Write -3.0          ISSUE    DeclinationRate    is outside the expected tolerance. Expected: +0.100, Actual: +0.075, Deviation from expected: 25.22%, Tolerance:5.00.
+22:45:11.940 DeclinationRate Write               OK       Set rate to 1.0 - successfully set rate to 1
+22:45:32.006 DeclinationRate Write -9.0          ISSUE    RightAscensionRate is outside the expected tolerance. Expected: +0.000, Actual: -0.196, Deviation from expected: 391.18%, Tolerance:5.00.
+22:45:32.008 DeclinationRate Write -9.0          ISSUE    DeclinationRate    is outside the expected tolerance. Expected: +1.000, Actual: +2.861, Deviation from expected: 186.06%, Tolerance:5.00.
+22:45:47.062 DeclinationRate Write +3.0          OK       RightAscensionRate is within expected tolerance. Expected: +0.000, Actual: -0.005, Deviation from expected: 9.24%.
+22:45:47.064 DeclinationRate Write +3.0          OK       DeclinationRate    is within expected tolerance. Expected: +1.000, Actual: +0.961, Deviation from expected: 3.87%.
+22:46:06.619 DeclinationRate Write +9.0          ISSUE    RightAscensionRate is outside the expected tolerance. Expected: +0.000, Actual: -0.294, Deviation from expected: 587.88%, Tolerance:5.00.
+22:46:06.620 DeclinationRate Write +9.0          ISSUE    DeclinationRate    is outside the expected tolerance. Expected: +1.000, Actual: +3.127, Deviation from expected: 212.70%, Tolerance:5.00.
+22:46:22.163 DeclinationRate Write -3.0          OK       RightAscensionRate is within expected tolerance. Expected: +0.000, Actual: +0.014, Deviation from expected: 27.24%.
+22:46:22.164 DeclinationRate Write -3.0          ISSUE    DeclinationRate    is outside the expected tolerance. Expected: +1.000, Actual: +0.696, Deviation from expected: 30.44%, Tolerance:5.00.
+22:46:23.174 DeclinationRate Write               OK       Reset rate to 0.0 - successfully set rate to 0
+22:46:23.181 DoesRefraction Read                 OK       True
+22:46:23.188 DoesRefraction Write                OK       Optional member returned a PropertyNotImplementedException (COM Error: 0x80040400) error.
+22:46:23.194 EquatorialSystem                    OK       Topocentric
+22:46:23.201 FocalLength                         OK       Optional member returned a PropertyNotImplementedException (COM Error: 0x80040400) error.
+22:46:23.206 GuideRateDeclination Read           OK       Optional member returned a PropertyNotImplementedException (COM Error: 0x80040400) error.
+22:46:23.211 GuideRateDeclination Write          OK       CanSetGuideRates is False and a PropertyNotImplementedException (COM Error: 0x80040400) error was generated as expected
+22:46:23.215 GuideRateRightAscension Read        OK       Optional member returned a PropertyNotImplementedException (COM Error: 0x80040400) error.
+22:46:23.220 GuideRateRightAscension Write       OK       CanSetGuideRates is False and a PropertyNotImplementedException (COM Error: 0x80040400) error was generated as expected
+22:46:23.224 IsPulseGuiding                      OK       False
+22:46:23.227 RightAscension                      OK       02:17:18.70
+22:46:23.234 RightAscensionRate Read             OK       0.00
+22:46:24.243 RightAscensionRate Write            OK       Set rate to 0.0 - successfully set rate to 0
+22:46:25.256 RightAscensionRate Write            OK       Set rate to 0.1 - successfully set rate to 0.1
+22:46:44.810 RightAscensionRate Write -9.0       ISSUE    RightAscensionRate is outside the expected tolerance. Expected: +0.100, Actual: +0.122, Deviation from expected: 21.64%, Tolerance:5.00.
+22:46:44.811 RightAscensionRate Write -9.0       OK       DeclinationRate    is within expected tolerance. Expected: +0.000, Actual: +0.022, Deviation from expected: 44.65%.
+22:46:59.873 RightAscensionRate Write +3.0       ISSUE    RightAscensionRate is outside the expected tolerance. Expected: +0.100, Actual: +0.070, Deviation from expected: 30.36%, Tolerance:5.00.
+22:46:59.875 RightAscensionRate Write +3.0       ISSUE    DeclinationRate    is outside the expected tolerance. Expected: +0.000, Actual: -0.061, Deviation from expected: 122.35%, Tolerance:5.00.
+22:47:19.426 RightAscensionRate Write +9.0       ISSUE    RightAscensionRate is outside the expected tolerance. Expected: +0.100, Actual: -0.249, Deviation from expected: 348.90%, Tolerance:5.00.
+22:47:19.427 RightAscensionRate Write +9.0       ISSUE    DeclinationRate    is outside the expected tolerance. Expected: +0.000, Actual: +2.480, Deviation from expected: 4,960.20%, Tolerance:5.00.
+22:47:33.986 RightAscensionRate Write -3.0       ISSUE    RightAscensionRate is outside the expected tolerance. Expected: +0.100, Actual: +0.080, Deviation from expected: 19.55%, Tolerance:5.00.
+22:47:33.989 RightAscensionRate Write -3.0       ISSUE    DeclinationRate    is outside the expected tolerance. Expected: +0.000, Actual: -0.230, Deviation from expected: 460.49%, Tolerance:5.00.
+22:47:35.004 RightAscensionRate Write            OK       Set rate to 1.0 - successfully set rate to 1
+22:47:54.555 RightAscensionRate Write -9.0       ISSUE    RightAscensionRate is outside the expected tolerance. Expected: +1.000, Actual: +0.790, Deviation from expected: 20.97%, Tolerance:5.00.
+22:47:54.557 RightAscensionRate Write -9.0       OK       DeclinationRate    is within expected tolerance. Expected: +0.000, Actual: +0.001, Deviation from expected: 1.80%.
+22:48:09.108 RightAscensionRate Write +3.0       ISSUE    RightAscensionRate is outside the expected tolerance. Expected: +1.000, Actual: +0.792, Deviation from expected: 20.79%, Tolerance:5.00.
+22:48:09.110 RightAscensionRate Write +3.0       OK       DeclinationRate    is within expected tolerance. Expected: +0.000, Actual: -0.007, Deviation from expected: 13.43%.
+22:48:28.161 RightAscensionRate Write +9.0       ISSUE    RightAscensionRate is outside the expected tolerance. Expected: +1.000, Actual: +0.518, Deviation from expected: 48.18%, Tolerance:5.00.
+22:48:28.162 RightAscensionRate Write +9.0       ISSUE    DeclinationRate    is outside the expected tolerance. Expected: +0.000, Actual: +1.634, Deviation from expected: 3,267.56%, Tolerance:5.00.
+22:48:43.215 RightAscensionRate Write -3.0       ISSUE    RightAscensionRate is outside the expected tolerance. Expected: +1.000, Actual: +0.870, Deviation from expected: 13.00%, Tolerance:5.00.
+22:48:43.217 RightAscensionRate Write -3.0       ISSUE    DeclinationRate    is outside the expected tolerance. Expected: +0.000, Actual: -0.247, Deviation from expected: 493.30%, Tolerance:5.00.
+22:48:44.227 RightAscensionRate Write            OK       Reset rate to 0.0 - successfully set rate to 0
+22:48:44.230 SiteElevation Read                  OK       122.2
+22:48:44.237 SiteElevation Write                 ISSUE    No error generated on set site elevation < -300m
+22:48:44.238 SiteElevation Write                 ISSUE    No error generated on set site elevation > 10,000m
+22:48:44.240 SiteElevation Write                 OK       Current value 122.2m written successfully
+22:48:44.243 SiteElevation Write                 ISSUE    Test value 2385 did not round trip correctly. GET SiteElevations returned: 122.2 instead of 2385
+22:48:44.244 SiteElevation Write                 OK       Successfully restored original site elevation: 122.2.
+22:48:44.246 SiteLatitude Read                   OK        48:15:44.3
+22:48:44.251 SiteLatitude Write                  ISSUE    No error generated on set site latitude < -90 degrees
+22:48:44.252 SiteLatitude Write                  ISSUE    No error generated on set site latitude > 90 degrees
+22:48:44.253 SiteLatitude Write                  OK       Current value: +48:15:44.3 degrees written successfully
+22:48:44.255 SiteLatitude Write                  ISSUE    Test value +58:15:44.3 did not round trip correctly. GET SiteLatitude returned: +48:15:44.3 instead of +58:15:44.3
+22:48:44.256 SiteLatitude Write                  OK       Successfully restored original site latitude: +48:15:44.3.
+22:48:44.257 SiteLongitude Read                  OK        16:38:04.9
+22:48:44.261 SiteLongitude Write                 ISSUE    No error generated on set site longitude < -180 degrees
+22:48:44.263 SiteLongitude Write                 ISSUE    No error generated on set site longitude > 180 degrees
+22:48:44.264 SiteLongitude Write                 OK       Current value +16:38:04.9 degrees written successfully
+22:48:44.266 SiteLongitude Write                 ISSUE    Test value +26:38:04.9 did not round trip correctly. GET SiteLongitude returned: +16:38:04.9 instead of +26:38:04.9
+22:48:44.267 SiteLongitude Write                 OK       Successfully restored original site longitude: +16:38:04.9.
+22:48:44.269 Slewing                             OK       False
+22:48:44.274 SlewSettleTime Read                 OK       0
+22:48:44.283 SlewSettleTime Write                ISSUE    Unexpected error: The supplied value is out of range for this property.
+22:48:44.286 SlewSettleTime Write                OK       Legal value 0 seconds written successfully
+22:48:44.287 SideOfPier Read                     OK       ThroughThePole
+22:48:44.288 SiderealTime                        OK       23:19:57.34
+22:48:44.289 SiderealTime                        OK       Scope and ASCOM sidereal times agree to better than 1 second, Scope: 23:19:57.34, ASCOM: 23:19:57.39
+22:48:44.289 TargetDeclination Read              ISSUE    Unexpected error - Incorrect exception received: This property has not yet been set.
+22:48:44.290 TargetDeclination Write             INFO     Tests moved after the SlewToCoordinates tests so that Conform can confirm that target coordinates are set as expected.
+22:48:44.290 TargetRightAscension Read           ISSUE    Unexpected error - Incorrect exception received: This property has not yet been set.
+22:48:44.291 TargetRightAscension Write          INFO     Tests moved after the SlewToCoordinates tests so that Conform can confirm that target coordinates are set as expected.
+22:48:44.292 Tracking Read                       OK       True
+22:48:45.297 Tracking Write                      OK       False
+22:48:46.390 TrackingRates                                Found drive rate: Sidereal
+22:48:46.390 TrackingRates                       OK       Drive rates read OK
+22:48:46.395 TrackingRates                       OK       Disposed tracking rates OK
+22:48:46.399 TrackingRates                       OK       Successfully obtained a TrackingRates object after the previous TrackingRates object was disposed
+22:48:46.405 TrackingRate Read                   OK       Sidereal
+22:48:46.408 TrackingRate Write                  ISSUE    No error generated when TrackingRate is set to an invalid value (5)
+22:48:46.409 TrackingRate Write                  ISSUE    No error generated when TrackingRate is set to an invalid value (-1)
+22:48:46.412 UTCDate Read                        OK       12-Oct-2023 20:48:46.411
+22:48:46.417 UTCDate Write                       OK       Optional member returned a PropertyNotImplementedException (COM Error: 0x80040400) error.
+22:48:46.418 
+22:48:46.419 Methods
+22:48:46.431 CanMoveAxis:Primary                 OK       CanMoveAxis:Primary True
+22:48:46.433 CanMoveAxis:Secondary               OK       CanMoveAxis:Secondary True
+22:48:46.434 CanMoveAxis:Tertiary                OK       CanMoveAxis:Tertiary True
+22:48:46.435 Park                                         Parking scope...
+22:49:09.457 Park                                OK       Success
+22:49:11.453 Park                                OK       Success if already parked
+22:49:11.474 Parked:AbortSlew                    ISSUE    AbortSlew didn't raise an error when Parked as required
+22:50:24.550 Parked:FindHome                     ISSUE    FindHome didn't raise an error when Parked as required
+22:50:24.553 Parked:FindHome                     ISSUE    Telescope was unparked by the FindHome command. This should not happen!
+22:50:24.556 Parked:MoveAxis Primary             ISSUE    Not parked after Telescope.Park command, MoveAxis Primary when parked test skipped
+22:50:24.558 Parked:MoveAxis Secondary           ISSUE    Not parked after Telescope.Park command, MoveAxis Secondary when parked test skipped
+22:50:24.559 Parked:MoveAxis Tertiary            ISSUE    Not parked after Telescope.Park command, MoveAxis Tertiary when parked test skipped
+22:50:24.561 Parked:PulseGuide                   ISSUE    Not parked after Telescope.Park command, PulseGuide when parked test skipped
+22:50:24.562 Parked:SlewToCoordinates            ISSUE    Not parked after Telescope.Park command, SlewToCoordinates when parked test skipped
+22:50:24.563 Parked:SlewToCoordinatesAsync       ISSUE    Not parked after Telescope.Park command, SlewToCoordinatesAsync when parked test skipped
+22:50:24.564 Parked:SlewToTarget                 ISSUE    Not parked after Telescope.Park command, SlewToTarget when parked test skipped
+22:50:24.566 Parked:SlewToTargetAsync            ISSUE    Not parked after Telescope.Park command, SlewToTargetAsync when parked test skipped
+22:50:24.567 Parked:SyncToCoordinates            ISSUE    Not parked after Telescope.Park command, SyncToCoordinates when parked test skipped
+22:50:24.568 Parked:SyncToTarget                 ISSUE    Not parked after Telescope.Park command, SyncToTarget when parked test skipped
+22:50:24.578 UnPark                              OK       Success
+22:50:24.579 UnPark                              OK       Success when already unparked
+22:50:24.605 AbortSlew                           OK       AbortSlew OK when not slewing
+22:50:24.622 AxisRate:Primary                    OK       Empty axis rate returned
+22:50:24.626 AxisRate:Primary                    OK       Disposed axis rates OK
+22:50:24.630 AxisRate:Secondary                  OK       Empty axis rate returned
+22:50:24.633 AxisRate:Secondary                  OK       Disposed axis rates OK
+22:50:24.638 AxisRate:Tertiary                   OK       Empty axis rate returned
+22:50:24.644 AxisRate:Tertiary                   OK       Disposed axis rates OK
+22:51:13.044 FindHome                            ISSUE    MoveAxis Exception
+System.Exception: The find home operation failed for some reason
+   at Microsoft.CSharp.RuntimeBinder.ComInterop.ComRuntimeHelpers.CheckThrowException(Int32 hresult, ExcepInfo& excepInfo, UInt32 argErr, String message)
+   at CallSite.Target(Closure, CallSite, ComObject)
+   at CallSite.Target(Closure, CallSite, Object)
+   at ConformU.TelescopeFacade.<FindHome>b__112_0() in J:\ConformU\ConformU\Conform\Devices\Facades\TelescopeFacade.cs:line 133
+   at ConformU.DriverHostForm.ActionNoParameters(Action action) in J:\ConformU\ConformU\Conform\Devices\Facades\BaseClass\DriverHostForm.cs:line 164
+   at ConformU.FacadeBaseClass.<>c__DisplayClass11_0.<MethodNoParameters>b__0() in J:\ConformU\ConformU\Conform\Devices\Facades\BaseClass\FacadeBaseClass.cs:line 226
+   at System.Windows.Forms.Control.InvokeMarshaledCallbackHelper(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Windows.Forms.Control.InvokeMarshaledCallbacks()
+--- End of stack trace from previous location ---
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Action method)
+   at ConformU.FacadeBaseClass.MethodNoParameters(Action action) in J:\ConformU\ConformU\Conform\Devices\Facades\BaseClass\FacadeBaseClass.cs:line 226
+   at ConformU.TelescopeFacade.FindHome() in J:\ConformU\ConformU\Conform\Devices\Facades\TelescopeFacade.cs:line 133
+   at ConformU.TelescopeTester.TelescopeOptionalMethodsTest(OptionalMethodType p_Type, String p_Name, Boolean p_CanTest) in J:\ConformU\ConformU\Conform\Devices\TelescopeTester.cs:line 5742
+22:51:13.045 FindHome                            ISSUE    Unexpected error: The find home operation failed for some reason
+22:51:13.062 MoveAxis Primary                    ISSUE    MoveAxis tests skipped because there are no AxisRate values
+22:51:13.063 MoveAxis Primary                    OK       AxisRates object successfully disposed
+22:51:13.071 MoveAxis Secondary                  ISSUE    MoveAxis tests skipped because there are no AxisRate values
+22:51:13.072 MoveAxis Secondary                  OK       AxisRates object successfully disposed
+22:51:13.076 MoveAxis Tertiary                   ISSUE    MoveAxis tests skipped because there are no AxisRate values
+22:51:13.076 MoveAxis Tertiary                   OK       AxisRates object successfully disposed
+22:51:16.097 PulseGuide                          OK       Asynchronous pulse guide found OK
+22:51:38.654 PulseGuide -9.0 North               ISSUE    Moved north but outside test tolerance - Declination change (DMS): +00:06:09.3, Expected: +00:00:00.0, Difference: +00:06:09.3, Test tolerance: +00:00:01.0.
+22:51:38.655 PulseGuide -9.0 North               ISSUE    East-West movement was outside test tolerance: RA change (HMS): -00:00:50.85, Expected: +00:00:00.00, Tolerance: +00:00:00.07.
+22:51:41.668 PulseGuide -9.0 South               ISSUE    Moved north instead of south - Declination change (DMS): +00:06:05.1, Expected: +-0:00:00.0, Difference: +00:06:05.1, Test tolerance: +00:00:01.0.
+22:51:41.671 PulseGuide -9.0 South               ISSUE    East-West movement was outside test tolerance: RA change (HMS): -00:01:08.27, Expected: +00:00:00.00, Tolerance: +00:00:00.07.
+22:51:44.682 PulseGuide -9.0 East                ISSUE    Moved west instead of east - RA change (HMS): -00:01:20.62, Expected: +00:00:00.00, Difference: +00:01:20.62, Test tolerance: +00:00:00.07.
+22:51:44.683 PulseGuide -9.0 East                ISSUE    North-south movement was outside test tolerance: Declination change (DMS): +00:05:37.8, Expected: +00:00:00.0, Tolerance: +00:00:01.0.
+22:51:47.694 PulseGuide -9.0 West                ISSUE    Moved east instead of west - RA change (HMS): +00:00:13.47, Expected: +-0:00:00.00, Difference: +00:00:13.47, Test tolerance: +00:00:00.07.
+22:51:47.695 PulseGuide -9.0 West                ISSUE    North-south movement was outside test tolerance: Declination change (DMS): +00:00:21.4, Expected: +00:00:00.0, Tolerance: +00:00:01.0.
+22:52:03.742 PulseGuide +9.0 North               ISSUE    Moved north but outside test tolerance - Declination change (DMS): +00:04:21.4, Expected: +00:00:00.0, Difference: +00:04:21.4, Test tolerance: +00:00:01.0.
+22:52:03.744 PulseGuide +9.0 North               ISSUE    East-West movement was outside test tolerance: RA change (HMS): -00:00:32.95, Expected: +00:00:00.00, Tolerance: +00:00:00.07.
+22:52:06.756 PulseGuide +9.0 South               ISSUE    Moved south but outside test tolerance - Declination change (DMS): -00:00:26.2, Expected: +-0:00:00.0, Difference: +00:00:26.2, Test tolerance: +00:00:01.0.
+22:52:06.758 PulseGuide +9.0 South               ISSUE    East-West movement was outside test tolerance: RA change (HMS): +00:00:26.04, Expected: +00:00:00.00, Tolerance: +00:00:00.07.
+22:52:09.770 PulseGuide +9.0 East                ISSUE    Moved east but outside test tolerance - RA change (HMS): +00:00:21.30, Expected: +00:00:00.00, Difference: +00:00:21.30, Test tolerance: +00:00:00.07.
+22:52:09.771 PulseGuide +9.0 East                OK       No significant north-south movement as expected. Declination change (DMS): -00:00:00.1, Test tolerance: +00:00:01.0.
+22:52:12.785 PulseGuide +9.0 West                ISSUE    Moved east instead of west - RA change (HMS): +00:00:21.21, Expected: +-0:00:00.00, Difference: +00:00:21.21, Test tolerance: +00:00:00.07.
+22:52:12.788 PulseGuide +9.0 West                OK       No significant north-south movement as expected. Declination change (DMS): +00:00:00.0, Test tolerance: +00:00:01.0.
+22:52:26.842 PulseGuide -3.0 North               ISSUE    Moved south instead of north - Declination change (DMS): -00:00:46.5, Expected: +00:00:00.0, Difference: +00:00:46.5, Test tolerance: +00:00:01.0.
+22:52:26.843 PulseGuide -3.0 North               ISSUE    East-West movement was outside test tolerance: RA change (HMS): +00:00:04.10, Expected: +00:00:00.00, Tolerance: +00:00:00.07.
+22:52:26.854 PulseGuide -3.0 South               ISSUE    The declination axis did not move.
+22:52:26.856 PulseGuide -3.0 South               OK       No significant east-west movement as expected. RA change (HMS): +00:00:00.00, Test tolerance: +00:00:00.07.
+22:52:26.863 PulseGuide -3.0 East                ISSUE    The RA axis did not move.
+22:52:26.864 PulseGuide -3.0 East                OK       No significant north-south movement as expected. Declination change (DMS): +00:00:00.0, Test tolerance: +00:00:01.0.
+22:52:26.871 PulseGuide -3.0 West                ISSUE    The RA axis did not move.
+22:52:26.871 PulseGuide -3.0 West                OK       No significant north-south movement as expected. Declination change (DMS): +00:00:00.0, Test tolerance: +00:00:01.0.
+22:52:43.401 PulseGuide +3.0 North               ISSUE    The declination axis did not move.
+22:52:43.401 PulseGuide +3.0 North               OK       No significant east-west movement as expected. RA change (HMS): +00:00:00.00, Test tolerance: +00:00:00.07.
+22:52:43.405 PulseGuide +3.0 South               ISSUE    The declination axis did not move.
+22:52:43.405 PulseGuide +3.0 South               OK       No significant east-west movement as expected. RA change (HMS): +00:00:00.00, Test tolerance: +00:00:00.07.
+22:52:43.409 PulseGuide +3.0 East                ISSUE    The RA axis did not move.
+22:52:43.409 PulseGuide +3.0 East                OK       No significant north-south movement as expected. Declination change (DMS): +00:00:00.0, Test tolerance: +00:00:01.0.
+22:52:43.413 PulseGuide +3.0 West                ISSUE    The RA axis did not move.
+22:52:43.413 PulseGuide +3.0 West                OK       No significant north-south movement as expected. Declination change (DMS): +00:00:00.0, Test tolerance: +00:00:01.0.
+22:52:43.428 SlewToCoordinates                   ISSUE    Slewed 108235.9 arc seconds away from RA target: 22:23:57.09 Actual RA: 20:23:41.36. Tolerance: ±10 arc seconds
+22:52:43.429 SlewToCoordinates                   ISSUE    Slewed 194401.6 arc seconds from the expected DEC:  01:00:00.0. Actual DEC:  55:00:01.6. Tolerance: ±10 degrees.
+22:52:43.430 SlewToCoordinates                   OK       The TargetRightAscension property: 22:23:57.09 matches the expected RA 22:23:57.09 within tolerance ±10 arc seconds.
+22:52:43.433 SlewToCoordinates                   OK       The TargetDeclination property  01:00:00.0 matches the expected Declination  01:00:00.0 within tolerance ±10 arc seconds.
+22:52:43.443 SlewToCoordinates (Bad L)           ISSUE    Unexpected error - slewing to bad RA coordinate: The supplied value is out of range for this property.
+22:52:43.451 SlewToCoordinates (Bad L)           ISSUE    Unexpected error - slewing to bad Dec coordinate: The supplied value is out of range for this property.
+22:52:43.455 SlewToCoordinates (Bad H)           ISSUE    Unexpected error - slewing to bad RA coordinate: The supplied value is out of range for this property.
+22:52:43.458 SlewToCoordinates (Bad H)           ISSUE    Unexpected error - slewing to bad Dec coordinate: The supplied value is out of range for this property.
+22:53:01.937 SlewToCoordinatesAsync              ISSUE    Slewed 53.9 arc seconds away from RA target: 21:23:57.19 Actual RA: 21:24:00.78. Tolerance: ±10 arc seconds
+22:53:01.938 SlewToCoordinatesAsync              OK       Slewed OK within tolerance: ±10 arc seconds. Actual DEC:  01:59:57.7, Target DEC:  02:00:00.0
+22:53:01.941 SlewToCoordinatesAsync              OK       The TargetRightAscension property: 21:23:57.19 matches the expected RA 21:23:57.19 within tolerance ±10 arc seconds.
+22:53:01.943 SlewToCoordinatesAsync              OK       The TargetDeclination property  02:00:00.0 matches the expected Declination  02:00:00.0 within tolerance ±10 arc seconds.
+22:53:01.950 SlewToCoordinatesAsync (Bad L)      ISSUE    Unexpected error - slewing to bad RA coordinate: The supplied value is out of range for this property.
+22:53:01.956 SlewToCoordinatesAsync (Bad L)      ISSUE    Unexpected error - slewing to bad Dec coordinate: The supplied value is out of range for this property.
+22:53:01.961 SlewToCoordinatesAsync (Bad H)      ISSUE    Unexpected error - slewing to bad RA coordinate: The supplied value is out of range for this property.
+22:53:01.965 SlewToCoordinatesAsync (Bad H)      ISSUE    Unexpected error - slewing to bad Dec coordinate: The supplied value is out of range for this property.
+22:53:10.484 SyncToCoordinates                   ISSUE    Slewed to start position 23.3 arc seconds away from RA target: 20:24:15.78 Actual RA: 20:24:17.33. Tolerance: ±10 arc seconds
+22:53:10.486 SyncToCoordinates                   OK       Slewed to start position OK within tolerance: ±10 arc seconds. Actual DEC:  24:07:47.0, Target DEC:  24:07:52.1
+22:53:10.863 SyncToCoordinates                   ISSUE    Synced to sync position 3631.9 arc seconds away from RA target: 20:20:15.78 Actual RA: 20:24:17.90. Tolerance: ±10 arc seconds
+22:53:10.863 SyncToCoordinates                   ISSUE    Synced to sync position 3595.5 arc seconds from the expected DEC:  23:07:52.1. Actual DEC:  24:07:47.7. Tolerance: ±10 degrees.
+22:53:10.865 SyncToCoordinates                   OK       The TargetRightAscension property 20:20:15.78 matches the expected RA OK. 
+22:53:10.866 SyncToCoordinates                   OK       The TargetDeclination property  23:07:52.1 matches the expected Declination OK. 
+22:53:15.877 SyncToCoordinates                   ISSUE    Slewed back to start position 72.7 arc seconds away from RA target: 20:24:15.78 Actual RA: 20:24:20.63. Tolerance: ±10 arc seconds
+22:53:15.878 SyncToCoordinates                   OK       Slewed back to start position OK within tolerance: ±10 arc seconds. Actual DEC:  24:07:52.5, Target DEC:  24:07:52.1
+22:53:16.867 SyncToCoordinates                   ISSUE    Synced to reversed sync position 3525.2 arc seconds away from RA target: 20:28:15.78 Actual RA: 20:24:20.77. Tolerance: ±10 arc seconds
+22:53:16.868 SyncToCoordinates                   ISSUE    Synced to reversed sync position 3600.1 arc seconds from the expected DEC:  25:07:52.1. Actual DEC:  24:07:52.0. Tolerance: ±10 degrees.
+22:53:21.881 SyncToCoordinates                   ISSUE    Slewed back to start position 67.8 arc seconds away from RA target: 20:24:15.78 Actual RA: 20:24:20.30. Tolerance: ±10 arc seconds
+22:53:21.882 SyncToCoordinates                   OK       Slewed back to start position OK within tolerance: ±10 arc seconds. Actual DEC:  24:07:52.3, Target DEC:  24:07:52.1
+22:53:21.891 SyncToCoordinates (Bad L)           ISSUE    Unexpected error - syncing to bad RA coordinate: The supplied value is out of range for this property.
+22:53:21.898 SyncToCoordinates (Bad L)           ISSUE    Unexpected error - syncing to bad Dec coordinate: The supplied value is out of range for this property.
+22:53:21.904 SyncToCoordinates (Bad H)           ISSUE    Unexpected error - syncing to bad RA coordinate: The supplied value is out of range for this property.
+22:53:21.908 SyncToCoordinates (Bad H)           ISSUE    Unexpected error - syncing to bad Dec coordinate: The supplied value is out of range for this property.
+22:53:21.915 TargetRightAscension Write          ISSUE    Unexpected error: The supplied value is out of range for this property.
+22:53:21.918 TargetRightAscension Write          ISSUE    Unexpected error: The supplied value is out of range for this property.
+22:53:21.921 TargetRightAscension Write          OK       Legal value 19:24:35.78 HH:MM:SS written successfully
+22:53:21.928 TargetDeclination Write             ISSUE    Unexpected error: The supplied value is out of range for this property.
+22:53:21.932 TargetDeclination Write             ISSUE    Unexpected error: The supplied value is out of range for this property.
+22:53:21.935 TargetDeclination Write             OK       Legal value  01:00:00.0 DD:MM:SS written successfully
+22:53:29.940 SlewToTarget                        ISSUE    Slewed 50.9 arc seconds away from RA target: 20:24:35.78 Actual RA: 20:24:39.17. Tolerance: ±10 arc seconds
+22:53:29.941 SlewToTarget                        OK       Slewed OK within tolerance: ±10 arc seconds. Actual DEC:  02:59:57.4, Target DEC:  03:00:00.0
+22:53:29.944 SlewToTarget                        OK       The TargetRightAscension property: 20:24:35.78 matches the expected RA 20:24:35.78 within tolerance ±10 arc seconds.
+22:53:29.947 SlewToTarget                        OK       The TargetDeclination property  03:00:00.0 matches the expected Declination  03:00:00.0 within tolerance ±10 arc seconds.
+22:53:29.954 SlewToTarget (Bad L)                ISSUE    Unexpected error - Exception setting bad RA coordinate: The supplied value is out of range for this property.
+22:53:29.960 SlewToTarget (Bad L)                ISSUE    Unexpected error - Exception setting bad Dec coordinate: The supplied value is out of range for this property.
+22:53:29.965 SlewToTarget (Bad H)                ISSUE    Unexpected error - Exception setting bad RA coordinate: The supplied value is out of range for this property.
+22:53:29.971 SlewToTarget (Bad H)                ISSUE    Unexpected error - Exception setting bad Dec coordinate: The supplied value is out of range for this property.
+22:53:37.488 SlewToTargetAsync                   ISSUE    Slewed 24.3 arc seconds away from RA target: 19:24:43.85 Actual RA: 19:24:45.47. Tolerance: ±10 arc seconds
+22:53:37.489 SlewToTargetAsync                   ISSUE    Slewed 11.9 arc seconds from the expected DEC:  04:00:00.0. Actual DEC:  03:59:48.1. Tolerance: ±10 degrees.
+22:53:37.492 SlewToTargetAsync                   OK       The TargetRightAscension property: 19:24:43.85 matches the expected RA 19:24:43.85 within tolerance ±10 arc seconds.
+22:53:37.494 SlewToTargetAsync                   OK       The TargetDeclination property  04:00:00.0 matches the expected Declination  04:00:00.0 within tolerance ±10 arc seconds.
+22:53:37.496 SlewToTargetAsync (Bad L)           ISSUE    Unexpected error - Exception setting bad RA coordinate: The supplied value is out of range for this property.
+22:53:37.501 SlewToTargetAsync (Bad L)           ISSUE    Unexpected error - Exception setting bad Dec coordinate: The supplied value is out of range for this property.
+22:53:37.505 SlewToTargetAsync (Bad H)           ISSUE    Unexpected error - Exception setting bad RA coordinate: The supplied value is out of range for this property.
+22:53:37.508 SlewToTargetAsync (Bad H)           ISSUE    Unexpected error - Exception setting bad Dec coordinate: The supplied value is out of range for this property.
+22:53:37.520 DestinationSideOfPier               OK       DestinationSideOfPier is different on either side of the meridian
+22:53:37.530 SlewToAltAz                         ISSUE    Slewed 98.7 arc seconds away from Azimuth target: 150:00:00.00 Actual Azimuth: 248:40:40.88. Tolerance ±10 arc seconds.
+22:53:37.530 SlewToAltAz                         ISSUE    Slewed 29.7 degree(s) away from Altitude target: 50:00:00.00 Actual Altitude: 20:15:39.42. Tolerance ±10 arc seconds.
+22:53:37.542 SlewToAltAz (Bad L)                 ISSUE    Failed to reject bad Altitude coordinate: -100:00:00.00
+22:53:37.552 SlewToAltAz (Bad L)                 ISSUE    Failed to reject bad Azimuth coordinate: -10:00:00.00
+22:53:37.567 SlewToAltAz (Bad H)                 ISSUE    Failed to reject bad Altitude coordinate: 100:00:00.00
+22:53:37.582 SlewToAltAz (Bad H)                 ISSUE    Failed to reject bad Azimuth coordinate: 370:00:00.00
+22:54:02.599 SlewToAltAzAsync                    OK       Slewed to target Azimuth OK within tolerance: 10 arc seconds. Actual Azimuth: 157:26:33.68, Target Azimuth: 155:00:00.00
+22:54:02.600 SlewToAltAzAsync                    OK       Slewed to target Altitude OK within tolerance: 10 arc seconds. Actual Altitude: 54:27:15.82, Target Altitude: 55:00:00.00
+22:54:02.616 SlewToAltAzAsync (Bad L)            ISSUE    Failed to reject bad Altitude coordinate: -100:00:00.00
+22:54:02.631 SlewToAltAzAsync (Bad L)            ISSUE    Failed to reject bad Azimuth coordinate: -10:00:00.00
+22:54:02.646 SlewToAltAzAsync (Bad H)            ISSUE    Failed to reject bad Altitude coordinate: 100:00:00.00
+22:54:02.661 SlewToAltAzAsync (Bad H)            ISSUE    Failed to reject bad Azimuth coordinate: 370:00:00.00
+22:54:32.559 SyncToTarget                        OK       Slewed to start position OK within tolerance: ±10 arc seconds. Actual RA: 20:25:16.68, Target RA: 20:25:16.56
+22:54:32.560 SyncToTarget                        OK       Slewed to start position OK within tolerance: ±10 arc seconds. Actual DEC:  24:07:43.9, Target DEC:  24:07:52.1
+22:54:32.861 SyncToTarget                        ISSUE    Synced to sync position 3638.9 arc seconds away from RA target: 20:21:16.56 Actual RA: 20:25:19.15. Tolerance: ±10 arc seconds
+22:54:32.862 SyncToTarget                        ISSUE    Synced to sync position 3596.9 arc seconds from the expected DEC:  23:07:52.1. Actual DEC:  24:07:49.0. Tolerance: ±10 degrees.
+22:54:37.873 SyncToTarget                        ISSUE    Slewed back to start position 72.9 arc seconds away from RA target: 20:25:16.56 Actual RA: 20:25:21.42. Tolerance: ±10 arc seconds
+22:54:37.874 SyncToTarget                        OK       Slewed back to start position OK within tolerance: ±10 arc seconds. Actual DEC:  24:07:52.2, Target DEC:  24:07:52.1
+22:54:38.861 SyncToTarget                        ISSUE    Synced to reversed sync position 3525.3 arc seconds away from RA target: 20:29:16.56 Actual RA: 20:25:21.54. Tolerance: ±10 arc seconds
+22:54:38.862 SyncToTarget                        ISSUE    Synced to reversed sync position 3600.1 arc seconds from the expected DEC:  25:07:52.1. Actual DEC:  24:07:52.0. Tolerance: ±10 degrees.
+22:54:43.873 SyncToTarget                        ISSUE    Slewed back to start position 71.5 arc seconds away from RA target: 20:25:16.56 Actual RA: 20:25:21.32. Tolerance: ±10 arc seconds
+22:54:43.874 SyncToTarget                        OK       Slewed back to start position OK within tolerance: ±10 arc seconds. Actual DEC:  24:07:52.3, Target DEC:  24:07:52.1
+22:54:43.882 SyncToTarget (Bad L)                ISSUE    Unexpected error - Exception setting bad RA coordinate: The supplied value is out of range for this property.
+22:54:43.890 SyncToTarget (Bad L)                ISSUE    Unexpected error - Exception setting bad Dec coordinate: The supplied value is out of range for this property.
+22:54:43.895 SyncToTarget (Bad H)                ISSUE    Unexpected error - Exception setting bad RA coordinate: The supplied value is out of range for this property.
+22:54:43.901 SyncToTarget (Bad H)                ISSUE    Unexpected error - Exception setting bad Dec coordinate: The supplied value is out of range for this property.
+22:54:43.912 SyncToAltAz                         OK       CanSyncAltAz is False and a MethodNotImplementedException (COM Error: 0x80040400) error was generated as expected
+22:54:43.913 
+22:54:43.913 Post-run Checks
+22:54:43.916 Mount Safety                        OK       Tracking stopped to protect your mount.
+22:54:43.916 
+22:54:43.916 Disconnect from device
+22:54:43.918 Connected                           OK       False
+22:54:43.918 
+22:54:43.919 Conformance test has finished
+22:54:43.919 
+22:54:43.920 Your device had 136 issues, 0 errors and 2 configuration alerts
+22:54:43.920 
+22:54:43.921 Issue Summary
+22:54:43.921 DeclinationRate Write -9.0          ISSUE    RightAscensionRate is outside the expected tolerance. Expected: +0.000, Actual: -0.177, Deviation from expected: 353.21%, Tolerance:5.00.
+22:54:43.921 DeclinationRate Write -9.0          ISSUE    DeclinationRate    is outside the expected tolerance. Expected: +0.100, Actual: +2.224, Deviation from expected: 2,124.13%, Tolerance:5.00.
+22:54:43.921 DeclinationRate Write +3.0          ISSUE    DeclinationRate    is outside the expected tolerance. Expected: +0.100, Actual: -0.026, Deviation from expected: 125.60%, Tolerance:5.00.
+22:54:43.921 DeclinationRate Write +9.0          ISSUE    RightAscensionRate is outside the expected tolerance. Expected: +0.000, Actual: -0.263, Deviation from expected: 526.69%, Tolerance:5.00.
+22:54:43.922 DeclinationRate Write +9.0          ISSUE    DeclinationRate    is outside the expected tolerance. Expected: +0.100, Actual: +2.210, Deviation from expected: 2,109.51%, Tolerance:5.00.
+22:54:43.922 DeclinationRate Write -3.0          ISSUE    DeclinationRate    is outside the expected tolerance. Expected: +0.100, Actual: +0.075, Deviation from expected: 25.22%, Tolerance:5.00.
+22:54:43.923 DeclinationRate Write -9.0          ISSUE    RightAscensionRate is outside the expected tolerance. Expected: +0.000, Actual: -0.196, Deviation from expected: 391.18%, Tolerance:5.00.
+22:54:43.923 DeclinationRate Write -9.0          ISSUE    DeclinationRate    is outside the expected tolerance. Expected: +1.000, Actual: +2.861, Deviation from expected: 186.06%, Tolerance:5.00.
+22:54:43.923 DeclinationRate Write +9.0          ISSUE    RightAscensionRate is outside the expected tolerance. Expected: +0.000, Actual: -0.294, Deviation from expected: 587.88%, Tolerance:5.00.
+22:54:43.923 DeclinationRate Write +9.0          ISSUE    DeclinationRate    is outside the expected tolerance. Expected: +1.000, Actual: +3.127, Deviation from expected: 212.70%, Tolerance:5.00.
+22:54:43.924 DeclinationRate Write -3.0          ISSUE    DeclinationRate    is outside the expected tolerance. Expected: +1.000, Actual: +0.696, Deviation from expected: 30.44%, Tolerance:5.00.
+22:54:43.924 RightAscensionRate Write -9.0       ISSUE    RightAscensionRate is outside the expected tolerance. Expected: +0.100, Actual: +0.122, Deviation from expected: 21.64%, Tolerance:5.00.
+22:54:43.924 RightAscensionRate Write +3.0       ISSUE    RightAscensionRate is outside the expected tolerance. Expected: +0.100, Actual: +0.070, Deviation from expected: 30.36%, Tolerance:5.00.
+22:54:43.924 RightAscensionRate Write +3.0       ISSUE    DeclinationRate    is outside the expected tolerance. Expected: +0.000, Actual: -0.061, Deviation from expected: 122.35%, Tolerance:5.00.
+22:54:43.924 RightAscensionRate Write +9.0       ISSUE    RightAscensionRate is outside the expected tolerance. Expected: +0.100, Actual: -0.249, Deviation from expected: 348.90%, Tolerance:5.00.
+22:54:43.925 RightAscensionRate Write +9.0       ISSUE    DeclinationRate    is outside the expected tolerance. Expected: +0.000, Actual: +2.480, Deviation from expected: 4,960.20%, Tolerance:5.00.
+22:54:43.925 RightAscensionRate Write -3.0       ISSUE    RightAscensionRate is outside the expected tolerance. Expected: +0.100, Actual: +0.080, Deviation from expected: 19.55%, Tolerance:5.00.
+22:54:43.925 RightAscensionRate Write -3.0       ISSUE    DeclinationRate    is outside the expected tolerance. Expected: +0.000, Actual: -0.230, Deviation from expected: 460.49%, Tolerance:5.00.
+22:54:43.925 RightAscensionRate Write -9.0       ISSUE    RightAscensionRate is outside the expected tolerance. Expected: +1.000, Actual: +0.790, Deviation from expected: 20.97%, Tolerance:5.00.
+22:54:43.925 RightAscensionRate Write +3.0       ISSUE    RightAscensionRate is outside the expected tolerance. Expected: +1.000, Actual: +0.792, Deviation from expected: 20.79%, Tolerance:5.00.
+22:54:43.926 RightAscensionRate Write +9.0       ISSUE    RightAscensionRate is outside the expected tolerance. Expected: +1.000, Actual: +0.518, Deviation from expected: 48.18%, Tolerance:5.00.
+22:54:43.926 RightAscensionRate Write +9.0       ISSUE    DeclinationRate    is outside the expected tolerance. Expected: +0.000, Actual: +1.634, Deviation from expected: 3,267.56%, Tolerance:5.00.
+22:54:43.926 RightAscensionRate Write -3.0       ISSUE    RightAscensionRate is outside the expected tolerance. Expected: +1.000, Actual: +0.870, Deviation from expected: 13.00%, Tolerance:5.00.
+22:54:43.926 RightAscensionRate Write -3.0       ISSUE    DeclinationRate    is outside the expected tolerance. Expected: +0.000, Actual: -0.247, Deviation from expected: 493.30%, Tolerance:5.00.
+22:54:43.926 SiteElevation Write                 ISSUE    No error generated on set site elevation < -300m
+22:54:43.927 SiteElevation Write                 ISSUE    No error generated on set site elevation > 10,000m
+22:54:43.929 SiteElevation Write                 ISSUE    Test value 2385 did not round trip correctly. GET SiteElevations returned: 122.2 instead of 2385
+22:54:43.929 SiteLatitude Write                  ISSUE    No error generated on set site latitude < -90 degrees
+22:54:43.929 SiteLatitude Write                  ISSUE    No error generated on set site latitude > 90 degrees
+22:54:43.929 SiteLatitude Write                  ISSUE    Test value +58:15:44.3 did not round trip correctly. GET SiteLatitude returned: +48:15:44.3 instead of +58:15:44.3
+22:54:43.929 SiteLongitude Write                 ISSUE    No error generated on set site longitude < -180 degrees
+22:54:43.929 SiteLongitude Write                 ISSUE    No error generated on set site longitude > 180 degrees
+22:54:43.929 SiteLongitude Write                 ISSUE    Test value +26:38:04.9 did not round trip correctly. GET SiteLongitude returned: +16:38:04.9 instead of +26:38:04.9
+22:54:43.930 SlewSettleTime Write                ISSUE    Unexpected error: The supplied value is out of range for this property.
+22:54:43.930 TargetDeclination Read              ISSUE    Unexpected error - Incorrect exception received: This property has not yet been set.
+22:54:43.930 TargetRightAscension Read           ISSUE    Unexpected error - Incorrect exception received: This property has not yet been set.
+22:54:43.930 TrackingRate Write                  ISSUE    No error generated when TrackingRate is set to an invalid value (5)
+22:54:43.931 TrackingRate Write                  ISSUE    No error generated when TrackingRate is set to an invalid value (-1)
+22:54:43.931 Parked:AbortSlew                    ISSUE    AbortSlew didn't raise an error when Parked as required
+22:54:43.931 Parked:FindHome                     ISSUE    FindHome didn't raise an error when Parked as required
+22:54:43.931 Parked:FindHome                     ISSUE    Telescope was unparked by the FindHome command. This should not happen!
+22:54:43.931 Parked:MoveAxis Primary             ISSUE    Not parked after Telescope.Park command, MoveAxis Primary when parked test skipped
+22:54:43.931 Parked:MoveAxis Secondary           ISSUE    Not parked after Telescope.Park command, MoveAxis Secondary when parked test skipped
+22:54:43.931 Parked:MoveAxis Tertiary            ISSUE    Not parked after Telescope.Park command, MoveAxis Tertiary when parked test skipped
+22:54:43.932 Parked:PulseGuide                   ISSUE    Not parked after Telescope.Park command, PulseGuide when parked test skipped
+22:54:43.932 Parked:SlewToCoordinates            ISSUE    Not parked after Telescope.Park command, SlewToCoordinates when parked test skipped
+22:54:43.932 Parked:SlewToCoordinatesAsync       ISSUE    Not parked after Telescope.Park command, SlewToCoordinatesAsync when parked test skipped
+22:54:43.932 Parked:SlewToTarget                 ISSUE    Not parked after Telescope.Park command, SlewToTarget when parked test skipped
+22:54:43.932 Parked:SlewToTargetAsync            ISSUE    Not parked after Telescope.Park command, SlewToTargetAsync when parked test skipped
+22:54:43.932 Parked:SyncToCoordinates            ISSUE    Not parked after Telescope.Park command, SyncToCoordinates when parked test skipped
+22:54:43.933 Parked:SyncToTarget                 ISSUE    Not parked after Telescope.Park command, SyncToTarget when parked test skipped
+22:54:43.936 FindHome                            ISSUE    MoveAxis Exception
+System.Exception: The find home operation failed for some reason
+   at Microsoft.CSharp.RuntimeBinder.ComInterop.ComRuntimeHelpers.CheckThrowException(Int32 hresult, ExcepInfo& excepInfo, UInt32 argErr, String message)
+   at CallSite.Target(Closure, CallSite, ComObject)
+   at CallSite.Target(Closure, CallSite, Object)
+   at ConformU.TelescopeFacade.<FindHome>b__112_0() in J:\ConformU\ConformU\Conform\Devices\Facades\TelescopeFacade.cs:line 133
+   at ConformU.DriverHostForm.ActionNoParameters(Action action) in J:\ConformU\ConformU\Conform\Devices\Facades\BaseClass\DriverHostForm.cs:line 164
+   at ConformU.FacadeBaseClass.<>c__DisplayClass11_0.<MethodNoParameters>b__0() in J:\ConformU\ConformU\Conform\Devices\Facades\BaseClass\FacadeBaseClass.cs:line 226
+   at System.Windows.Forms.Control.InvokeMarshaledCallbackHelper(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Windows.Forms.Control.InvokeMarshaledCallbacks()
+--- End of stack trace from previous location ---
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   at System.Windows.Forms.Control.Invoke(Action method)
+   at ConformU.FacadeBaseClass.MethodNoParameters(Action action) in J:\ConformU\ConformU\Conform\Devices\Facades\BaseClass\FacadeBaseClass.cs:line 226
+   at ConformU.TelescopeFacade.FindHome() in J:\ConformU\ConformU\Conform\Devices\Facades\TelescopeFacade.cs:line 133
+   at ConformU.TelescopeTester.TelescopeOptionalMethodsTest(OptionalMethodType p_Type, String p_Name, Boolean p_CanTest) in J:\ConformU\ConformU\Conform\Devices\TelescopeTester.cs:line 5742
+22:54:43.936 FindHome                            ISSUE    Unexpected error: The find home operation failed for some reason
+22:54:43.936 MoveAxis Primary                    ISSUE    MoveAxis tests skipped because there are no AxisRate values
+22:54:43.936 MoveAxis Secondary                  ISSUE    MoveAxis tests skipped because there are no AxisRate values
+22:54:43.936 MoveAxis Tertiary                   ISSUE    MoveAxis tests skipped because there are no AxisRate values
+22:54:43.936 PulseGuide -9.0 North               ISSUE    Moved north but outside test tolerance - Declination change (DMS): +00:06:09.3, Expected: +00:00:00.0, Difference: +00:06:09.3, Test tolerance: +00:00:01.0.
+22:54:43.937 PulseGuide -9.0 North               ISSUE    East-West movement was outside test tolerance: RA change (HMS): -00:00:50.85, Expected: +00:00:00.00, Tolerance: +00:00:00.07.
+22:54:43.937 PulseGuide -9.0 South               ISSUE    Moved north instead of south - Declination change (DMS): +00:06:05.1, Expected: +-0:00:00.0, Difference: +00:06:05.1, Test tolerance: +00:00:01.0.
+22:54:43.937 PulseGuide -9.0 South               ISSUE    East-West movement was outside test tolerance: RA change (HMS): -00:01:08.27, Expected: +00:00:00.00, Tolerance: +00:00:00.07.
+22:54:43.937 PulseGuide -9.0 East                ISSUE    Moved west instead of east - RA change (HMS): -00:01:20.62, Expected: +00:00:00.00, Difference: +00:01:20.62, Test tolerance: +00:00:00.07.
+22:54:43.937 PulseGuide -9.0 East                ISSUE    North-south movement was outside test tolerance: Declination change (DMS): +00:05:37.8, Expected: +00:00:00.0, Tolerance: +00:00:01.0.
+22:54:43.937 PulseGuide -9.0 West                ISSUE    Moved east instead of west - RA change (HMS): +00:00:13.47, Expected: +-0:00:00.00, Difference: +00:00:13.47, Test tolerance: +00:00:00.07.
+22:54:43.938 PulseGuide -9.0 West                ISSUE    North-south movement was outside test tolerance: Declination change (DMS): +00:00:21.4, Expected: +00:00:00.0, Tolerance: +00:00:01.0.
+22:54:43.938 PulseGuide +9.0 North               ISSUE    Moved north but outside test tolerance - Declination change (DMS): +00:04:21.4, Expected: +00:00:00.0, Difference: +00:04:21.4, Test tolerance: +00:00:01.0.
+22:54:43.938 PulseGuide +9.0 North               ISSUE    East-West movement was outside test tolerance: RA change (HMS): -00:00:32.95, Expected: +00:00:00.00, Tolerance: +00:00:00.07.
+22:54:43.946 PulseGuide +9.0 South               ISSUE    Moved south but outside test tolerance - Declination change (DMS): -00:00:26.2, Expected: +-0:00:00.0, Difference: +00:00:26.2, Test tolerance: +00:00:01.0.
+22:54:43.947 PulseGuide +9.0 South               ISSUE    East-West movement was outside test tolerance: RA change (HMS): +00:00:26.04, Expected: +00:00:00.00, Tolerance: +00:00:00.07.
+22:54:43.947 PulseGuide +9.0 East                ISSUE    Moved east but outside test tolerance - RA change (HMS): +00:00:21.30, Expected: +00:00:00.00, Difference: +00:00:21.30, Test tolerance: +00:00:00.07.
+22:54:43.947 PulseGuide +9.0 West                ISSUE    Moved east instead of west - RA change (HMS): +00:00:21.21, Expected: +-0:00:00.00, Difference: +00:00:21.21, Test tolerance: +00:00:00.07.
+22:54:43.947 PulseGuide -3.0 North               ISSUE    Moved south instead of north - Declination change (DMS): -00:00:46.5, Expected: +00:00:00.0, Difference: +00:00:46.5, Test tolerance: +00:00:01.0.
+22:54:43.947 PulseGuide -3.0 North               ISSUE    East-West movement was outside test tolerance: RA change (HMS): +00:00:04.10, Expected: +00:00:00.00, Tolerance: +00:00:00.07.
+22:54:43.948 PulseGuide -3.0 South               ISSUE    The declination axis did not move.
+22:54:43.948 PulseGuide -3.0 East                ISSUE    The RA axis did not move.
+22:54:43.948 PulseGuide -3.0 West                ISSUE    The RA axis did not move.
+22:54:43.948 PulseGuide +3.0 North               ISSUE    The declination axis did not move.
+22:54:43.948 PulseGuide +3.0 South               ISSUE    The declination axis did not move.
+22:54:43.948 PulseGuide +3.0 East                ISSUE    The RA axis did not move.
+22:54:43.949 PulseGuide +3.0 West                ISSUE    The RA axis did not move.
+22:54:43.949 SlewToCoordinates                   ISSUE    Slewed 108235.9 arc seconds away from RA target: 22:23:57.09 Actual RA: 20:23:41.36. Tolerance: ±10 arc seconds
+22:54:43.949 SlewToCoordinates                   ISSUE    Slewed 194401.6 arc seconds from the expected DEC:  01:00:00.0. Actual DEC:  55:00:01.6. Tolerance: ±10 degrees.
+22:54:43.949 SlewToCoordinates (Bad L)           ISSUE    Unexpected error - slewing to bad RA coordinate: The supplied value is out of range for this property.
+22:54:43.949 SlewToCoordinates (Bad L)           ISSUE    Unexpected error - slewing to bad Dec coordinate: The supplied value is out of range for this property.
+22:54:43.950 SlewToCoordinates (Bad H)           ISSUE    Unexpected error - slewing to bad RA coordinate: The supplied value is out of range for this property.
+22:54:43.950 SlewToCoordinates (Bad H)           ISSUE    Unexpected error - slewing to bad Dec coordinate: The supplied value is out of range for this property.
+22:54:43.950 SlewToCoordinatesAsync              ISSUE    Slewed 53.9 arc seconds away from RA target: 21:23:57.19 Actual RA: 21:24:00.78. Tolerance: ±10 arc seconds
+22:54:43.950 SlewToCoordinatesAsync (Bad L)      ISSUE    Unexpected error - slewing to bad RA coordinate: The supplied value is out of range for this property.
+22:54:43.951 SlewToCoordinatesAsync (Bad L)      ISSUE    Unexpected error - slewing to bad Dec coordinate: The supplied value is out of range for this property.
+22:54:43.951 SlewToCoordinatesAsync (Bad H)      ISSUE    Unexpected error - slewing to bad RA coordinate: The supplied value is out of range for this property.
+22:54:43.951 SlewToCoordinatesAsync (Bad H)      ISSUE    Unexpected error - slewing to bad Dec coordinate: The supplied value is out of range for this property.
+22:54:43.952 SyncToCoordinates                   ISSUE    Slewed to start position 23.3 arc seconds away from RA target: 20:24:15.78 Actual RA: 20:24:17.33. Tolerance: ±10 arc seconds
+22:54:43.952 SyncToCoordinates                   ISSUE    Synced to sync position 3631.9 arc seconds away from RA target: 20:20:15.78 Actual RA: 20:24:17.90. Tolerance: ±10 arc seconds
+22:54:43.952 SyncToCoordinates                   ISSUE    Synced to sync position 3595.5 arc seconds from the expected DEC:  23:07:52.1. Actual DEC:  24:07:47.7. Tolerance: ±10 degrees.
+22:54:43.952 SyncToCoordinates                   ISSUE    Slewed back to start position 72.7 arc seconds away from RA target: 20:24:15.78 Actual RA: 20:24:20.63. Tolerance: ±10 arc seconds
+22:54:43.952 SyncToCoordinates                   ISSUE    Synced to reversed sync position 3525.2 arc seconds away from RA target: 20:28:15.78 Actual RA: 20:24:20.77. Tolerance: ±10 arc seconds
+22:54:43.953 SyncToCoordinates                   ISSUE    Synced to reversed sync position 3600.1 arc seconds from the expected DEC:  25:07:52.1. Actual DEC:  24:07:52.0. Tolerance: ±10 degrees.
+22:54:43.953 SyncToCoordinates                   ISSUE    Slewed back to start position 67.8 arc seconds away from RA target: 20:24:15.78 Actual RA: 20:24:20.30. Tolerance: ±10 arc seconds
+22:54:43.953 SyncToCoordinates (Bad L)           ISSUE    Unexpected error - syncing to bad RA coordinate: The supplied value is out of range for this property.
+22:54:43.953 SyncToCoordinates (Bad L)           ISSUE    Unexpected error - syncing to bad Dec coordinate: The supplied value is out of range for this property.
+22:54:43.953 SyncToCoordinates (Bad H)           ISSUE    Unexpected error - syncing to bad RA coordinate: The supplied value is out of range for this property.
+22:54:43.954 SyncToCoordinates (Bad H)           ISSUE    Unexpected error - syncing to bad Dec coordinate: The supplied value is out of range for this property.
+22:54:43.954 TargetRightAscension Write          ISSUE    Unexpected error: The supplied value is out of range for this property.
+22:54:43.955 TargetRightAscension Write          ISSUE    Unexpected error: The supplied value is out of range for this property.
+22:54:43.956 TargetDeclination Write             ISSUE    Unexpected error: The supplied value is out of range for this property.
+22:54:43.956 TargetDeclination Write             ISSUE    Unexpected error: The supplied value is out of range for this property.
+22:54:43.956 SlewToTarget                        ISSUE    Slewed 50.9 arc seconds away from RA target: 20:24:35.78 Actual RA: 20:24:39.17. Tolerance: ±10 arc seconds
+22:54:43.956 SlewToTarget (Bad L)                ISSUE    Unexpected error - Exception setting bad RA coordinate: The supplied value is out of range for this property.
+22:54:43.957 SlewToTarget (Bad L)                ISSUE    Unexpected error - Exception setting bad Dec coordinate: The supplied value is out of range for this property.
+22:54:43.957 SlewToTarget (Bad H)                ISSUE    Unexpected error - Exception setting bad RA coordinate: The supplied value is out of range for this property.
+22:54:43.957 SlewToTarget (Bad H)                ISSUE    Unexpected error - Exception setting bad Dec coordinate: The supplied value is out of range for this property.
+22:54:43.957 SlewToTargetAsync                   ISSUE    Slewed 24.3 arc seconds away from RA target: 19:24:43.85 Actual RA: 19:24:45.47. Tolerance: ±10 arc seconds
+22:54:43.958 SlewToTargetAsync                   ISSUE    Slewed 11.9 arc seconds from the expected DEC:  04:00:00.0. Actual DEC:  03:59:48.1. Tolerance: ±10 degrees.
+22:54:43.958 SlewToTargetAsync (Bad L)           ISSUE    Unexpected error - Exception setting bad RA coordinate: The supplied value is out of range for this property.
+22:54:43.958 SlewToTargetAsync (Bad L)           ISSUE    Unexpected error - Exception setting bad Dec coordinate: The supplied value is out of range for this property.
+22:54:43.958 SlewToTargetAsync (Bad H)           ISSUE    Unexpected error - Exception setting bad RA coordinate: The supplied value is out of range for this property.
+22:54:43.958 SlewToTargetAsync (Bad H)           ISSUE    Unexpected error - Exception setting bad Dec coordinate: The supplied value is out of range for this property.
+22:54:43.958 SlewToAltAz                         ISSUE    Slewed 98.7 arc seconds away from Azimuth target: 150:00:00.00 Actual Azimuth: 248:40:40.88. Tolerance ±10 arc seconds.
+22:54:43.959 SlewToAltAz                         ISSUE    Slewed 29.7 degree(s) away from Altitude target: 50:00:00.00 Actual Altitude: 20:15:39.42. Tolerance ±10 arc seconds.
+22:54:43.959 SlewToAltAz (Bad L)                 ISSUE    Failed to reject bad Altitude coordinate: -100:00:00.00
+22:54:43.959 SlewToAltAz (Bad L)                 ISSUE    Failed to reject bad Azimuth coordinate: -10:00:00.00
+22:54:43.959 SlewToAltAz (Bad H)                 ISSUE    Failed to reject bad Altitude coordinate: 100:00:00.00
+22:54:43.959 SlewToAltAz (Bad H)                 ISSUE    Failed to reject bad Azimuth coordinate: 370:00:00.00
+22:54:43.960 SlewToAltAzAsync (Bad L)            ISSUE    Failed to reject bad Altitude coordinate: -100:00:00.00
+22:54:43.960 SlewToAltAzAsync (Bad L)            ISSUE    Failed to reject bad Azimuth coordinate: -10:00:00.00
+22:54:43.961 SlewToAltAzAsync (Bad H)            ISSUE    Failed to reject bad Altitude coordinate: 100:00:00.00
+22:54:43.961 SlewToAltAzAsync (Bad H)            ISSUE    Failed to reject bad Azimuth coordinate: 370:00:00.00
+22:54:43.961 SyncToTarget                        ISSUE    Synced to sync position 3638.9 arc seconds away from RA target: 20:21:16.56 Actual RA: 20:25:19.15. Tolerance: ±10 arc seconds
+22:54:43.961 SyncToTarget                        ISSUE    Synced to sync position 3596.9 arc seconds from the expected DEC:  23:07:52.1. Actual DEC:  24:07:49.0. Tolerance: ±10 degrees.
+22:54:43.961 SyncToTarget                        ISSUE    Slewed back to start position 72.9 arc seconds away from RA target: 20:25:16.56 Actual RA: 20:25:21.42. Tolerance: ±10 arc seconds
+22:54:43.961 SyncToTarget                        ISSUE    Synced to reversed sync position 3525.3 arc seconds away from RA target: 20:29:16.56 Actual RA: 20:25:21.54. Tolerance: ±10 arc seconds
+22:54:43.961 SyncToTarget                        ISSUE    Synced to reversed sync position 3600.1 arc seconds from the expected DEC:  25:07:52.1. Actual DEC:  24:07:52.0. Tolerance: ±10 degrees.
+22:54:43.962 SyncToTarget                        ISSUE    Slewed back to start position 71.5 arc seconds away from RA target: 20:25:16.56 Actual RA: 20:25:21.32. Tolerance: ±10 arc seconds
+22:54:43.962 SyncToTarget (Bad L)                ISSUE    Unexpected error - Exception setting bad RA coordinate: The supplied value is out of range for this property.
+22:54:43.962 SyncToTarget (Bad L)                ISSUE    Unexpected error - Exception setting bad Dec coordinate: The supplied value is out of range for this property.
+22:54:43.962 SyncToTarget (Bad H)                ISSUE    Unexpected error - Exception setting bad RA coordinate: The supplied value is out of range for this property.
+22:54:43.963 SyncToTarget (Bad H)                ISSUE    Unexpected error - Exception setting bad Dec coordinate: The supplied value is out of range for this property.
+22:54:43.963 
+22:54:43.965 Configuration Alert Summary
+22:54:43.967 Conform configuration                        Extended side of pier read tests were omitted due to Conform configuration.
+22:54:43.970 Conform configuration                        Extended side of pier write tests were omitted due to Conform configuration.
