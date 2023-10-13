@@ -141,8 +141,7 @@ namespace ASCOM.photonProxyHub.Telescope
         {
             get
             {
-                LogMessage("SupportedActions Get", "Returning empty ArrayList");
-                return new ArrayList();
+                return driver.SupportedActions;
             }
         }
 
@@ -361,6 +360,9 @@ namespace ASCOM.photonProxyHub.Telescope
         /// </summary>
         internal static void AbortSlew()
         {
+            if (driver.AtPark)
+                throw new InvalidOperationException("Cannot abort slew when parked");
+
             driver.AbortSlew();
         }
 
@@ -651,7 +653,6 @@ namespace ASCOM.photonProxyHub.Telescope
             {
                 return driver.Declination;
             }
-
         }
 
         /// <summary>
@@ -708,7 +709,11 @@ namespace ASCOM.photonProxyHub.Telescope
         /// </summary>
         internal static void FindHome()
         {
+            if (driver.AtPark)
+                throw new InvalidOperationException("Cannot find home when parked");
+
             driver.FindHome();
+
         }
 
         /// <summary>
@@ -871,6 +876,8 @@ namespace ASCOM.photonProxyHub.Telescope
             }
             set
             {
+                if (value < -300 || value > 10000)
+                    throw new InvalidValueException("SiteElevation", value.ToString(), "-300 to +10000");
                 driver.SiteElevation = value;
             }
         }
@@ -886,6 +893,8 @@ namespace ASCOM.photonProxyHub.Telescope
             }
             set
             {
+                if (value < -90 || value > 90)
+                    throw new InvalidValueException("SiteLatitude", value.ToString(), "-90 to +90");
                 driver.SiteLatitude = value;
             }
         }
@@ -901,6 +910,8 @@ namespace ASCOM.photonProxyHub.Telescope
             }
             set
             {
+                if (value < -180 || value > 180)
+                    throw new InvalidValueException("SiteLongitude", value.ToString(), "-180 to +180");
                 driver.SiteLongitude = value;
 
             }
@@ -927,6 +938,10 @@ namespace ASCOM.photonProxyHub.Telescope
         /// </summary>
         internal static void SlewToAltAz(double Azimuth, double Altitude)
         {
+            if (Azimuth < 0 || Azimuth >= 360)
+                throw new InvalidValueException("Azimuth", Azimuth.ToString(), "0 to 360 degrees");
+            if (Altitude < -90 || Altitude > 90)
+                throw new InvalidValueException("Altitude", Altitude.ToString(), "-90 to +90 degrees");
             driver.SlewToAltAz(Azimuth, Altitude);
         }
 
@@ -943,12 +958,20 @@ namespace ASCOM.photonProxyHub.Telescope
             driver.SlewToAltAzAsync(Azimuth, Altitude);
         }
 
+        internal static void ValidateCoordinates(double RightAscension, double Declination)
+        {
+            if (RightAscension < 0 || RightAscension >= 24)
+                throw new InvalidValueException("RightAscension", RightAscension.ToString(), "0 to 24 hours");
+            if (Declination < -90 || Declination > 90)
+                throw new InvalidValueException("Declination", Declination.ToString(), "-90 to +90 degrees");
+        }
         /// <summary>
         /// This Method must be implemented if <see cref="CanSlewAltAzAsync" /> returns True.
         /// It does not return to the caller until the slew is complete.
         /// </summary>
         internal static void SlewToCoordinates(double RightAscension, double Declination)
         {
+            ValidateCoordinates(RightAscension, Declination);
             driver.SlewToCoordinates(RightAscension, Declination);
         }
 
@@ -958,6 +981,8 @@ namespace ASCOM.photonProxyHub.Telescope
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "VSTHRD200:Use \"Async\" suffix for async methods", Justification = "internal static method name used for many years.")]
         internal static void SlewToCoordinatesAsync(double RightAscension, double Declination)
         {
+
+            ValidateCoordinates(RightAscension, Declination);
             driver.SlewToCoordinatesAsync(RightAscension, Declination);
         }
 
@@ -1005,6 +1030,7 @@ namespace ASCOM.photonProxyHub.Telescope
         /// </summary>
         internal static void SyncToCoordinates(double RightAscension, double Declination)
         {
+            ValidateCoordinates(RightAscension, Declination);
             driver.SyncToCoordinates(RightAscension, Declination);
         }
 
@@ -1042,6 +1068,8 @@ namespace ASCOM.photonProxyHub.Telescope
             }
             set
             {
+                if (value < 0 || value >= 24)
+                    throw new InvalidValueException("TargetRightAscension", value.ToString(), "0 to 24 hours");
                 driver.TargetRightAscension = value;
             }
         }
@@ -1057,7 +1085,7 @@ namespace ASCOM.photonProxyHub.Telescope
             }
             set
             {
-              driver.Tracking= value;
+                driver.Tracking = value;
             }
         }
 
