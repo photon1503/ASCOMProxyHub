@@ -1235,10 +1235,8 @@ namespace ASCOM.photonProxyHub.Telescope
         /// </summary>
         internal static void Unpark()
         {
-            if (!driver.AtPark)
-                throw new InvalidOperationException("Cannot unpark when not parked");
-
-            driver.Unpark();
+            if (driver.AtPark)
+                driver.Unpark();
 
         }
 
