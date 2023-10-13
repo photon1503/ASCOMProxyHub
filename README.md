@@ -5,5 +5,11 @@ This is a
 
 The purpose of this server is to make obsolete drivers working again.
 
-* This driver is the implementation of ASCOM Telescope V3 standard
-* Overcomes issues with missing properties and methods
+* This driver is the implementation of ASCOM Telescope V3 standard and
+* overcomes issues with missing properties and methods
+
+Made especially for ASA DDM legacy mounts.
+
+## Installation
+## TODO
+Slew settle time UI and Property
