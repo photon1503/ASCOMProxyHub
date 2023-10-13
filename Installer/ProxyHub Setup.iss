@@ -5,8 +5,8 @@
 [Setup]
 AppID={{55c38cb0-2a1d-4720-a005-4e8e48f6fb7f}
 AppName=ASCOM ProxyHub Telescope Driver
-AppVerName=ASCOM ProxyHub Telescope Driver 1.0.0.0
-AppVersion=1.0.0.0
+AppVersion=1.0.0.1
+AppVerName="ASCOM ProxyHub Telescope Driver 1.0.0.1"
 AppPublisher=photon <gerald.hitz@gmail.com>
 AppPublisherURL=mailto:gerald.hitz@gmail.com
 AppSupportURL=https://ascomtalk.groups.io/g/Help
@@ -17,7 +17,7 @@ DefaultDirName="{cf}\ASCOM\Telescope"
 DisableDirPage=yes
 DisableProgramGroupPage=yes
 OutputDir="."
-OutputBaseFilename="ProxyHub Setup"
+OutputBaseFilename="ProxyHub Setup 1.0.0.1"
 Compression=lzma
 SolidCompression=yes
 ; Put there by Platform if Driver Installer Support selected
@@ -37,7 +37,7 @@ Name: "{cf}\ASCOM\Uninstall\Telescope\ProxyHub"
 Source: "C:\git\ASCOMproxyhub\bin\Release\ASCOM.photonProxyHub.exe"; DestDir: "{app}"
 ; TODO: Add driver assemblies into the ServedClasses folder
 ; Require a read-me HTML to appear after installation, maybe driver's Help doc
-Source: "C:\git\ASCOMproxyhub\ReadMe.htm"; DestDir: "{app}"; Flags: isreadme
+;Source: "C:\git\ASCOMproxyhub\ReadMe.htm"; DestDir: "{app}"; Flags: isreadme
 ; TODO: Add other files needed by your driver here (add subfolders above)
 
 

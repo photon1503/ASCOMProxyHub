@@ -77,6 +77,8 @@ namespace ASCOM.photonProxyHub.Telescope
         private TelescopeAxes axis;
         private readonly Rate[] rates;
 
+        public double maxRate = 15;  //TODO: Set maximum rate here!
+
         //
         // Constructor - Internal prevents public creation
         // of instances. Returned by Telescope.AxisRates.
@@ -99,11 +101,12 @@ namespace ASCOM.photonProxyHub.Telescope
                 case TelescopeAxes.axisPrimary:
                     // TODO Initialize this array with any Primary axis rates that your driver may provide
                     // Example: m_Rates = new Rate[] { new Rate(10.5, 30.2), new Rate(54.0, 43.6) }
-                    this.rates = new Rate[0];
+                    this.rates = new Rate[] { new Rate(0, maxRate) };  //TODO: Max rate set here
                     break;
                 case TelescopeAxes.axisSecondary:
                     // TODO Initialize this array with any Secondary axis rates that your driver may provide
-                    this.rates = new Rate[0];
+                    //this.rates = new Rate[0];
+                    this.rates = new Rate[] { new Rate(0, maxRate) };
                     break;
                 case TelescopeAxes.axisTertiary:
                     // TODO Initialize this array with any Tertiary axis rates that your driver may provide

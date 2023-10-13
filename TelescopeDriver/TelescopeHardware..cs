@@ -54,6 +54,7 @@ namespace ASCOM.photonProxyHub.Telescope
         internal static TraceLogger tl; // Local server's trace logger object for diagnostic log with information that you specify
 
         internal static ASCOM.DriverAccess.Telescope driver;
+        internal static bool isMoving = false;
 
         /// <summary>
         /// Initializes a new instance of the device Hardware class.
@@ -643,6 +644,9 @@ namespace ASCOM.photonProxyHub.Telescope
         {
             get
             {
+                // if (!driver.AtPark)
+                //     return false;
+
                 return driver.CanUnpark;
             }
         }
@@ -786,7 +790,18 @@ namespace ASCOM.photonProxyHub.Telescope
         /// <param name="Rate">The rate of motion (deg/sec) about the specified axis</param>
         internal static void MoveAxis(TelescopeAxes Axis, double Rate)
         {
+            if (driver.AtPark)
+            {
+                throw new InvalidOperationException("Cannot move when parked");
+            }
+            if (Rate > 15.0 || Rate < -15.0)
+            {
+                throw new InvalidValueException("MoveAxis", Rate.ToString(), "-15.0 to +15.0");
+            }
             driver.MoveAxis(Axis, Rate);
+            if (Rate == 0) isMoving = false;
+            else
+                isMoving = true;
         }
 
 
@@ -806,6 +821,10 @@ namespace ASCOM.photonProxyHub.Telescope
         /// <param name="Duration">The duration of the guide-rate motion (milliseconds)</param>
         internal static void PulseGuide(GuideDirections Direction, int Duration)
         {
+            if (driver.AtPark)
+            {
+                throw new InvalidOperationException("Cannot PulseGuide when parked");
+            }
             driver.PulseGuide(Direction, Duration);
         }
 
@@ -985,6 +1004,10 @@ namespace ASCOM.photonProxyHub.Telescope
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "VSTHRD200:Use \"Async\" suffix for async methods", Justification = "internal static method name used for many years.")]
         internal static void SlewToAltAzAsync(double Azimuth, double Altitude)
         {
+            if (Azimuth < 0 || Azimuth >= 360)
+                throw new InvalidValueException("Azimuth", Azimuth.ToString(), "0 to 360 degrees");
+            if (Altitude < -90 || Altitude > 90)
+                throw new InvalidValueException("Altitude", Altitude.ToString(), "-90 to +90 degrees");
             driver.SlewToAltAzAsync(Azimuth, Altitude);
         }
 
@@ -1001,6 +1024,10 @@ namespace ASCOM.photonProxyHub.Telescope
         /// </summary>
         internal static void SlewToCoordinates(double RightAscension, double Declination)
         {
+            if (driver.AtPark)
+            {
+                throw new InvalidOperationException("Cannot SlewToCoordinates when parked");
+            }
             ValidateCoordinates(RightAscension, Declination);
             driver.SlewToCoordinates(RightAscension, Declination);
             Settle();
@@ -1012,7 +1039,10 @@ namespace ASCOM.photonProxyHub.Telescope
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "VSTHRD200:Use \"Async\" suffix for async methods", Justification = "internal static method name used for many years.")]
         internal static void SlewToCoordinatesAsync(double RightAscension, double Declination)
         {
-
+            if (driver.AtPark)
+            {
+                throw new InvalidOperationException("Cannot SlewToCoordinatesAsync when parked");
+            }
             ValidateCoordinates(RightAscension, Declination);
             driver.SlewToCoordinatesAsync(RightAscension, Declination);
         }
@@ -1022,6 +1052,10 @@ namespace ASCOM.photonProxyHub.Telescope
         /// </summary>
         internal static void SlewToTarget()
         {
+            if (driver.AtPark)
+            {
+                throw new InvalidOperationException("Cannot slew when parked");
+            }
             driver.SlewToTarget();
             Settle();
         }
@@ -1033,6 +1067,10 @@ namespace ASCOM.photonProxyHub.Telescope
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "VSTHRD200:Use \"Async\" suffix for async methods", Justification = "internal static method name used for many years.")]
         internal static void SlewToTargetAsync()
         {
+            if (driver.AtPark)
+            {
+                throw new InvalidOperationException("Cannot slew when parked");
+            }
             driver.SlewToTargetAsync();
         }
 
@@ -1044,7 +1082,7 @@ namespace ASCOM.photonProxyHub.Telescope
         {
             get
             {
-                return driver.Slewing;
+                return driver.Slewing || isMoving;
             }
         }
 
@@ -1062,6 +1100,10 @@ namespace ASCOM.photonProxyHub.Telescope
         /// </summary>
         internal static void SyncToCoordinates(double RightAscension, double Declination)
         {
+            if (driver.AtPark)
+            {
+                throw new InvalidOperationException("Cannot sync when parked");
+            }
             ValidateCoordinates(RightAscension, Declination);
             driver.SyncToCoordinates(RightAscension, Declination);
         }
@@ -1071,6 +1113,10 @@ namespace ASCOM.photonProxyHub.Telescope
         /// </summary>
         internal static void SyncToTarget()
         {
+            if (driver.AtPark)
+            {
+                throw new InvalidOperationException("Cannot sync when parked");
+            }
             driver.SyncToTarget();
         }
 
@@ -1122,6 +1168,7 @@ namespace ASCOM.photonProxyHub.Telescope
                 if (value == driver.Tracking)
                     return;
                 driver.Tracking = value;
+                isMoving = false; //reset isMoving when mount is set to Tracking speed
             }
         }
 

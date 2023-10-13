@@ -9,6 +9,9 @@ The purpose of this server is to make obsolete drivers working again. Made espec
 ## Features
 * This driver implementats a virtual ASCOM Telescope V3 driver and passes the calls to the original driver.
 * Properties which are missing in the original driver are simulated in virtual driver.
+* Added validation of property values
+* Added MoveAxis and AxisRates
+* Added Slew settle time
 * The driver is able to connect to the original driver via COM or TCP/IP (Alpaca)
   
 
@@ -55,3 +58,5 @@ Download the latest release from [here](https://github.com/photon1503/ASCOMProxy
 
 ## TODO
 [ ] Add Slew settle time to UI and Property
+[ ] Add maximum slew rate to UI and Property
+[ ] Fix PulseGuide

@@ -8,10 +8,10 @@ using System.Runtime.InteropServices;
 //
 // TODO - Add your authorship information here
 [assembly: AssemblyTitle("ASCOM.photonProxyHub.Telescope")]
-[assembly: AssemblyDescription("ASCOM Local Server Telescope driver for photonProxyHub")]
+[assembly: AssemblyDescription("photonProxyHub")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("The ASCOM Initiative")]
-[assembly: AssemblyProduct("ASCOM Local Server Telescope driver for photonProxyHub")]
+[assembly: AssemblyProduct("photonProxyHub")]
 [assembly: AssemblyCopyright("Copyright © 2023 The ASCOM Initiative")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -31,4 +31,4 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("6.6.0.0")]
-[assembly: AssemblyFileVersion("6.6.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.1")]
