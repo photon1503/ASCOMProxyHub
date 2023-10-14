@@ -59,11 +59,11 @@ If Windows SmartScreen window appears, please click on "more info" and "run anyw
    
    <img width="378" alt="image" src="https://github.com/photon1503/ASCOMProxyHub/assets/14548927/d7576e36-31ca-4152-b2cc-1bff31d97b73">
 
-3. Configure the necessary settings (on time only)
+3. Configure the necessary settings (one time only)
    
    <img width="272" alt="image" src="https://github.com/photon1503/ASCOMProxyHub/assets/14548927/c0b9df00-ab6e-4fac-84bc-759371f86e6b">
    
-   - Choose Original ASCOM Driver
+   - Choose the original ASCOM Driver
    - Set Maximum slew speed for MoveAxis() commands
    - Set Slew settle time, or 0 to disable it
   
