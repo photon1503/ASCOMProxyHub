@@ -77,7 +77,7 @@ namespace ASCOM.photonProxyHub.Telescope
         private TelescopeAxes axis;
         private readonly Rate[] rates;
 
-        public double maxRate = 15;  //TODO: Set maximum rate here!
+        public double maxRate = Convert.ToDouble(Properties.Settings.Default.maxSlewRate);  //TODO: Set maximum rate here!
 
         //
         // Constructor - Internal prevents public creation

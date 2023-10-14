@@ -34,5 +34,29 @@ namespace ASCOM.photonProxyHub.Properties {
                 this["proxyDriverId"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("15")]
+        public string maxSlewRate {
+            get {
+                return ((string)(this["maxSlewRate"]));
+            }
+            set {
+                this["maxSlewRate"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        public string SlewSettleTime {
+            get {
+                return ((string)(this["SlewSettleTime"]));
+            }
+            set {
+                this["SlewSettleTime"] = value;
+            }
+        }
     }
 }

@@ -139,5 +139,15 @@ namespace ASCOM.photonProxyHub.Telescope
         {
             Properties.Settings.Default.Save();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelDriverId_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

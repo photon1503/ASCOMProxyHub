@@ -1,9 +1,15 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ASCOM.LocalServer.Server.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ASCOM.photonProxyHub.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="proxyDriverId" Type="System.String" Scope="User">
       <Value Profile="(Default)">(none)</Value>
+    </Setting>
+    <Setting Name="maxSlewRate" Type="System.String" Scope="User">
+      <Value Profile="(Default)">15</Value>
+    </Setting>
+    <Setting Name="SlewSettleTime" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -42,8 +42,7 @@ namespace ASCOM.photonProxyHub.Telescope
         internal const string traceStateDefault = "true";
 
         internal static bool simulateSlewSettle = true; // Variable to hold the slew settling simulation state
-        internal static short simulateSlewSettleTime = 5; // Variable to hold the slew settling time in seconds
-
+        
         private static string DriverProgId = ""; // ASCOM DeviceID (COM ProgID) for this driver, the value is set by the driver's class initialiser.
         private static string DriverDescription = ""; // The value is set by the driver's class initialiser.
         internal static string proxyDriverProgId; // COM port name (if required)
@@ -794,9 +793,10 @@ namespace ASCOM.photonProxyHub.Telescope
             {
                 throw new InvalidOperationException("Cannot move when parked");
             }
-            if (Rate > 15.0 || Rate < -15.0)
+            double maxSlewRate = Convert.ToDouble(Properties.Settings.Default.maxSlewRate);
+            if (Rate > maxSlewRate || Rate <(maxSlewRate*-1))
             {
-                throw new InvalidValueException("MoveAxis", Rate.ToString(), "-15.0 to +15.0");
+                throw new InvalidValueException("MoveAxis", Rate.ToString(), $"-{maxSlewRate} to +{maxSlewRate}");
             }
             driver.MoveAxis(Axis, Rate);
             if (Rate == 0) isMoving = false;
@@ -955,7 +955,7 @@ namespace ASCOM.photonProxyHub.Telescope
             get
             {
                 if (simulateSlewSettle)
-                { return simulateSlewSettleTime; }
+                { return Convert.ToInt16(Properties.Settings.Default.SlewSettleTime); ; }
                 else
                 {
                     return (short)driver.SlewSettleTime;
@@ -969,7 +969,7 @@ namespace ASCOM.photonProxyHub.Telescope
 
                 if (simulateSlewSettle)
                 {
-                    simulateSlewSettleTime = value;
+                    Properties.Settings.Default.SlewSettleTime = value.ToString();
 
                 }
                 else
@@ -1324,7 +1324,8 @@ namespace ASCOM.photonProxyHub.Telescope
             if (!simulateSlewSettle)
                 return;
 
-            Thread.Sleep(SlewSettleTime * 1000);
+            short _slewSettleTime = Convert.ToInt16(Properties.Settings.Default.SlewSettleTime);
+            Thread.Sleep(_slewSettleTime * 1000);
         }
         #endregion
     }
