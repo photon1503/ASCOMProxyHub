@@ -49,14 +49,24 @@ flowchart LR
 ## Installation
 
 Download the latest release from [here](https://github.com/photon1503/ASCOMProxyHub/releases/latest) and run the installer.
+If Windows SmartScreen window appears, please click on "more info" and "run anyway"
+
+<img width="399" alt="image" src="https://github.com/photon1503/ASCOMProxyHub/assets/14548927/6502b511-58cc-46b7-9265-4c402780e712">
 
 ## Usage
 
-1. In your client application, select "ASCOM Proxy Hub" as telescope driver and click "Properties".
+1. In your client application, select "ASCOM Telescope Driver for phonotProxyHub" as telescope driver.
+   
+   <img width="378" alt="image" src="https://github.com/photon1503/ASCOMProxyHub/assets/14548927/d7576e36-31ca-4152-b2cc-1bff31d97b73">
 
-2. In ASCOM Proxy Hub configuration, select your original telescope driver.
-
-## TODO
-[ ] Add Slew settle time to UI and Property
-[ ] Add maximum slew rate to UI and Property
-[ ] Fix PulseGuide
+3. Configure the necessary settings (on time only)
+   
+   <img width="272" alt="image" src="https://github.com/photon1503/ASCOMProxyHub/assets/14548927/c0b9df00-ab6e-4fac-84bc-759371f86e6b">
+   
+   - Choose Original ASCOM Driver
+   - Set Maximum slew speed for MoveAxis() commands
+   - Set Slew settle time, or 0 to disable it
+  
+4. Connect! and you are good
+   
+   <img width="667" alt="image" src="https://github.com/photon1503/ASCOMProxyHub/assets/14548927/e775168c-c77e-4bad-9978-9ce9d8b64fc2">
