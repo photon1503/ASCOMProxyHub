@@ -1,0 +1,2116 @@
+14:51:30.860 TelescopeHardware         Static initialiser completed.
+14:51:30.861 InitialiseHardware        Start.
+14:51:30.861 InitialiseHardware        Starting one-off initialisation.
+14:51:30.862 InitialiseHardware        ProgID: ASCOM.photonProxyHub.Telescope, Description: ASCOM Telescope Driver for photonProxyHub
+14:51:30.909 InitialiseHardware        Completed basic initialisation
+14:51:30.909 InitialiseHardware        One-off initialisation complete.
+14:51:30.910 Telescope                 Starting driver initialisation
+14:51:30.910 Telescope                 ProgID: ASCOM.photonProxyHub.Telescope, Description: ASCOM Telescope Driver for photonProxyHub
+14:51:30.910 Telescope                 Completed initialisation
+14:51:31.971 Connected Set             Connecting to device
+14:51:31.973 Connected                 Set True
+14:51:31.982 Connected Set             Connecting to proxy AstrooptikServer.Telescope
+14:51:32.014 Connected Get             True
+14:51:32.041 InterfaceVersion Get      3
+14:51:32.042 InterfaceVersion          3
+14:51:32.046 Connected Get             True
+14:51:32.052 Description               Astrooptik Server Tel Driver
+14:51:32.058 DriverInfo                Build 3
+14:51:32.066 DriverVersion             2011_10_08
+14:51:32.072 Name Get                  Astrooptik
+14:51:32.091 SupportedActions          Returning 0 actions.
+14:51:32.135 CanFindHome               True
+14:51:32.139 CanPark                   True
+14:51:32.144 CanPulseGuide             True
+14:51:32.148 CanSetDeclinationRate     True
+14:51:32.153 CanSetGuideRates          False
+14:51:32.157 CanSetPark                True
+14:51:32.163 CanSetPierSide            True
+14:51:32.168 AlignmentMode             algGermanPolar
+14:51:32.172 CanSetRightAscensionRate  True
+14:51:32.176 CanSetTracking            True
+14:51:32.181 CanSlew                   True
+14:51:32.186 CanSlewAltAz              True
+14:51:32.192 CanSlewAltAzAsync         True
+14:51:32.198 CanSlewAsync              True
+14:51:32.202 CanSync                   True
+14:51:32.207 CanSyncAltAz              False
+14:51:32.211 CanUnpark                 True
+14:51:32.219 AtPark                    True
+14:51:32.224 Unpark                    Completed.
+14:51:32.224 Unpark                    Calling method.
+14:51:32.225 Unpark                    Completed.
+14:51:32.229 Tracking Set              True
+14:51:32.284 UTCDate                   Get - MM/dd/yy HH:mm:ss
+14:51:32.285 UTCDate Get               2023-10-14 12:51:32
+14:51:32.286 UTCDate                   Get - MM/dd/yy HH:mm:ss
+14:51:32.286 UTCDate Get               2023-10-14 12:51:32
+14:51:32.287 UTCDate                   Get - MM/dd/yy HH:mm:ss
+14:51:32.287 UTCDate Get               2023-10-14 12:51:32
+14:51:32.325 TargetDeclination Get     Threw an exception: 
+ASCOM.DriverException: This property has not yet been set. ---> System.Exception: This property has not yet been set.
+   --- End of inner exception stack trace ---
+   at ASCOM.DriverAccess.MemberFactory.CheckDotNetExceptions(String memberName, Exception e) in C:\ASCOM Build\Export\ASCOM.DriverAccess\MemberFactory.cs:line 637
+   at ASCOM.DriverAccess.MemberFactory.GetTargetInvocationExceptionHandler(String memberName, Exception e) in C:\ASCOM Build\Export\ASCOM.DriverAccess\MemberFactory.cs:line 671
+   at ASCOM.DriverAccess.MemberFactory.CallMember(Int32 memberCode, String memberName, Type[] parameterTypes, Object[] parms) in C:\ASCOM Build\Export\ASCOM.DriverAccess\MemberFactory.cs:line 287
+   at ASCOM.DriverAccess.Telescope.get_TargetDeclination() in C:\ASCOM Build\Export\ASCOM.DriverAccess\Telescope.cs:line 1353
+   at ASCOM.photonProxyHub.Telescope.Telescope.get_TargetDeclination()
+14:51:32.333 TargetRightAscension Get  Threw an exception: 
+ASCOM.DriverException: This property has not yet been set. ---> System.Exception: This property has not yet been set.
+   --- End of inner exception stack trace ---
+   at ASCOM.DriverAccess.MemberFactory.CheckDotNetExceptions(String memberName, Exception e) in C:\ASCOM Build\Export\ASCOM.DriverAccess\MemberFactory.cs:line 637
+   at ASCOM.DriverAccess.MemberFactory.GetTargetInvocationExceptionHandler(String memberName, Exception e) in C:\ASCOM Build\Export\ASCOM.DriverAccess\MemberFactory.cs:line 671
+   at ASCOM.DriverAccess.MemberFactory.CallMember(Int32 memberCode, String memberName, Type[] parameterTypes, Object[] parms) in C:\ASCOM Build\Export\ASCOM.DriverAccess\MemberFactory.cs:line 287
+   at ASCOM.DriverAccess.Telescope.get_TargetRightAscension() in C:\ASCOM Build\Export\ASCOM.DriverAccess\Telescope.cs:line 1371
+   at ASCOM.photonProxyHub.Telescope.Telescope.get_TargetRightAscension()
+14:51:32.335 AlignmentMode             algGermanPolar
+14:51:32.339 Altitude                  1.1219570164412
+14:51:32.350 ApertureArea Get          Not implemented
+14:51:32.352 ApertureArea              Threw an exception: 
+ASCOM.PropertyNotImplementedException: Property read ApertureArea is not implemented in this driver.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.get_ApertureArea()
+   at ASCOM.photonProxyHub.Telescope.Telescope.get_ApertureArea()
+14:51:32.395 ApertureDiameter Get      Not implemented
+14:51:32.395 ApertureDiameter          Threw an exception: 
+ASCOM.PropertyNotImplementedException: Property read ApertureDiameter is not implemented in this driver.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.get_ApertureDiameter()
+   at ASCOM.photonProxyHub.Telescope.Telescope.get_ApertureDiameter()
+14:51:32.401 AtHome                    False
+14:51:32.402 AtPark                    False
+14:51:32.407 Azimuth                   174.666523141626
+14:51:32.411 Declination               -40.1940089016154
+14:51:32.420 DeclinationRate Get       0
+14:51:32.426 Tracking Get              True
+14:51:32.429 Slewing                   False
+14:51:32.436 DeclinationRate Set       0
+14:51:33.440 DeclinationRate Get       0
+14:51:33.442 Slewing                   False
+14:51:33.446 Tracking Get              True
+14:51:33.447 Slewing                   False
+14:51:33.448 DeclinationRate Set       0.1
+14:51:34.454 DeclinationRate Get       0.1
+14:51:34.456 Slewing                   False
+14:51:34.470 SiderealTime              15.4895247304825
+14:51:34.481 SiteLatitude Get          48.2623
+14:51:34.488 SiteLongitude Get         16.6347
+14:51:34.493 SiteElevation Get         122.2
+14:51:34.551 Tracking Set              True
+14:51:34.556 SlewToCoordinatesAsync    Calling method - RightAscension: 0.489524730482458, Declination: 85.
+14:51:34.559 SlewToCoordinatesAsync    Completed.
+14:51:34.562 Slewing                   True
+14:51:35.063 Slewing                   True
+14:51:35.563 Slewing                   True
+14:51:36.062 Slewing                   True
+14:51:36.564 Slewing                   True
+14:51:37.063 Slewing                   True
+14:51:37.564 Slewing                   True
+14:51:38.063 Slewing                   True
+14:51:38.568 Slewing                   True
+14:51:39.064 Slewing                   True
+14:51:39.564 Slewing                   True
+14:51:40.065 Slewing                   True
+14:51:40.563 Slewing                   True
+14:51:41.064 Slewing                   True
+14:51:41.563 Slewing                   True
+14:51:42.065 Slewing                   True
+14:51:42.564 Slewing                   True
+14:51:43.062 Slewing                   True
+14:51:43.564 Slewing                   True
+14:51:44.064 Slewing                   True
+14:51:44.563 Slewing                   True
+14:51:45.063 Slewing                   True
+14:51:45.562 Slewing                   True
+14:51:46.065 Slewing                   True
+14:51:46.565 Slewing                   True
+14:51:47.064 Slewing                   True
+14:51:47.563 Slewing                   True
+14:51:48.063 Slewing                   True
+14:51:48.565 Slewing                   True
+14:51:49.063 Slewing                   True
+14:51:49.563 Slewing                   True
+14:51:50.063 Slewing                   True
+14:51:50.563 Slewing                   True
+14:51:51.062 Slewing                   True
+14:51:51.563 Slewing                   True
+14:51:52.064 Slewing                   True
+14:51:52.565 Slewing                   True
+14:51:53.063 Slewing                   True
+14:51:53.563 Slewing                   True
+14:51:54.063 Slewing                   True
+14:51:54.562 Slewing                   True
+14:51:55.064 Slewing                   True
+14:51:55.563 Slewing                   False
+14:51:55.565 InterfaceVersion Get      3
+14:51:55.565 InterfaceVersion          3
+14:51:55.575 SideOfPier Get            pierWest
+14:51:55.588 RightAscension            0.490005461930576
+14:51:55.590 Declination               84.9987043165291
+14:51:55.598 RightAscensionRate Set    0
+14:51:55.601 DeclinationRate Set       0.1
+14:52:00.606 RightAscension            0.489979391350171
+14:52:00.608 Declination               84.9989383443277
+14:52:00.608 RightAscensionRate Set    0
+14:52:00.610 DeclinationRate Set       0
+14:52:00.618 SiderealTime              15.4968090643023
+14:52:00.620 SiteLatitude Get          48.2623
+14:52:00.622 SiteLongitude Get         16.6347
+14:52:00.626 SiteElevation Get         122.2
+14:52:00.651 Tracking Set              True
+14:52:00.651 SlewToCoordinatesAsync    Calling method - RightAscension: 12.4968090643023, Declination: 55.
+14:52:00.652 SlewToCoordinatesAsync    Completed.
+14:52:00.653 Slewing                   True
+14:52:01.155 Slewing                   True
+14:52:01.655 Slewing                   True
+14:52:02.157 Slewing                   True
+14:52:02.654 Slewing                   True
+14:52:03.155 Slewing                   True
+14:52:03.654 Slewing                   True
+14:52:04.154 Slewing                   True
+14:52:04.655 Slewing                   True
+14:52:05.155 Slewing                   True
+14:52:05.656 Slewing                   True
+14:52:06.156 Slewing                   True
+14:52:06.655 Slewing                   True
+14:52:07.155 Slewing                   True
+14:52:07.656 Slewing                   True
+14:52:08.155 Slewing                   True
+14:52:08.655 Slewing                   True
+14:52:09.156 Slewing                   True
+14:52:09.655 Slewing                   True
+14:52:10.154 Slewing                   True
+14:52:10.655 Slewing                   False
+14:52:10.655 InterfaceVersion Get      3
+14:52:10.655 InterfaceVersion          3
+14:52:10.656 SideOfPier Get            pierEast
+14:52:10.656 RightAscension            12.4969217666773
+14:52:10.657 Declination               55.0001470790646
+14:52:10.657 RightAscensionRate Set    0
+14:52:10.658 DeclinationRate Set       0.1
+14:52:15.662 RightAscension            12.496854720303
+14:52:15.663 Declination               55.000273136476
+14:52:15.664 RightAscensionRate Set    0
+14:52:15.666 DeclinationRate Set       0
+14:52:15.667 SiderealTime              15.5009863034431
+14:52:15.668 SiteLatitude Get          48.2623
+14:52:15.669 SiteLongitude Get         16.6347
+14:52:15.670 SiteElevation Get         122.2
+14:52:15.687 Tracking Set              True
+14:52:15.688 SlewToCoordinatesAsync    Calling method - RightAscension: 6.50098630344312, Declination: 85.
+14:52:15.689 SlewToCoordinatesAsync    Completed.
+14:52:15.689 Slewing                   True
+14:52:16.191 Slewing                   True
+14:52:16.693 Slewing                   True
+14:52:17.193 Slewing                   True
+14:52:17.690 Slewing                   True
+14:52:18.191 Slewing                   True
+14:52:18.692 Slewing                   True
+14:52:19.192 Slewing                   True
+14:52:19.690 Slewing                   True
+14:52:20.190 Slewing                   True
+14:52:20.692 Slewing                   True
+14:52:21.192 Slewing                   True
+14:52:21.693 Slewing                   True
+14:52:22.191 Slewing                   True
+14:52:22.692 Slewing                   True
+14:52:23.191 Slewing                   True
+14:52:23.692 Slewing                   True
+14:52:24.190 Slewing                   True
+14:52:24.691 Slewing                   True
+14:52:25.191 Slewing                   True
+14:52:25.691 Slewing                   True
+14:52:26.191 Slewing                   True
+14:52:26.692 Slewing                   True
+14:52:27.191 Slewing                   True
+14:52:27.690 Slewing                   True
+14:52:28.191 Slewing                   True
+14:52:28.691 Slewing                   True
+14:52:29.239 Slewing                   True
+14:52:29.775 Slewing                   True
+14:52:30.191 Slewing                   True
+14:52:30.692 Slewing                   True
+14:52:31.191 Slewing                   True
+14:52:31.691 Slewing                   False
+14:52:31.691 InterfaceVersion Get      3
+14:52:31.691 InterfaceVersion          3
+14:52:31.692 SideOfPier Get            pierEast
+14:52:31.693 RightAscension            6.50092151816884
+14:52:31.694 Declination               84.9997517737331
+14:52:31.694 RightAscensionRate Set    0
+14:52:31.694 DeclinationRate Set       0.1
+14:52:36.698 RightAscension            6.50092955254414
+14:52:36.698 Declination               84.9999922859747
+14:52:36.699 RightAscensionRate Set    0
+14:52:36.700 DeclinationRate Set       0
+14:52:36.702 SiderealTime              15.506862625978
+14:52:36.702 SiteLatitude Get          48.2623
+14:52:36.703 SiteLongitude Get         16.6347
+14:52:36.703 SiteElevation Get         122.2
+14:52:36.719 Tracking Set              True
+14:52:36.719 SlewToCoordinatesAsync    Calling method - RightAscension: 18.506862625978, Declination: 55.
+14:52:36.720 SlewToCoordinatesAsync    Completed.
+14:52:36.721 Slewing                   True
+14:52:37.248 Slewing                   True
+14:52:37.735 Slewing                   True
+14:52:38.236 Slewing                   True
+14:52:38.723 Slewing                   True
+14:52:39.249 Slewing                   True
+14:52:39.727 Slewing                   True
+14:52:40.250 Slewing                   True
+14:52:40.730 Slewing                   True
+14:52:41.236 Slewing                   True
+14:52:41.725 Slewing                   True
+14:52:42.234 Slewing                   True
+14:52:42.728 Slewing                   True
+14:52:43.222 Slewing                   True
+14:52:43.722 Slewing                   True
+14:52:44.223 Slewing                   True
+14:52:44.721 Slewing                   True
+14:52:45.222 Slewing                   True
+14:52:45.722 Slewing                   True
+14:52:46.222 Slewing                   False
+14:52:46.223 InterfaceVersion Get      3
+14:52:46.223 InterfaceVersion          3
+14:52:46.224 SideOfPier Get            pierWest
+14:52:46.224 RightAscension            18.5070493669133
+14:52:46.225 Declination               55.0009628068817
+14:52:46.225 RightAscensionRate Set    0
+14:52:46.226 DeclinationRate Set       0.1
+14:52:51.229 RightAscension            18.5070683481618
+14:52:51.229 Declination               55.0010757814117
+14:52:51.230 RightAscensionRate Set    0
+14:52:51.231 DeclinationRate Set       0
+14:52:51.234 Tracking Get              True
+14:52:51.235 Slewing                   False
+14:52:51.236 DeclinationRate Set       1
+14:52:52.238 DeclinationRate Get       1
+14:52:52.239 Slewing                   False
+14:52:52.240 SiderealTime              15.511172170798
+14:52:52.240 SiteLatitude Get          48.2623
+14:52:52.241 SiteLongitude Get         16.6347
+14:52:52.242 SiteElevation Get         122.2
+14:52:52.259 Tracking Set              True
+14:52:52.259 SlewToCoordinatesAsync    Calling method - RightAscension: 0.511172170797977, Declination: 85.
+14:52:52.260 SlewToCoordinatesAsync    Completed.
+14:52:52.261 Slewing                   True
+14:52:52.764 Slewing                   True
+14:52:53.291 Slewing                   True
+14:52:53.763 Slewing                   True
+14:52:54.265 Slewing                   True
+14:52:54.770 Slewing                   True
+14:52:55.287 Slewing                   True
+14:52:55.784 Slewing                   True
+14:52:56.295 Slewing                   True
+14:52:56.775 Slewing                   True
+14:52:57.262 Slewing                   True
+14:52:57.763 Slewing                   True
+14:52:58.263 Slewing                   True
+14:52:58.763 Slewing                   True
+14:52:59.262 Slewing                   True
+14:52:59.762 Slewing                   True
+14:53:00.264 Slewing                   True
+14:53:00.762 Slewing                   True
+14:53:01.262 Slewing                   True
+14:53:01.764 Slewing                   True
+14:53:02.264 Slewing                   True
+14:53:02.762 Slewing                   True
+14:53:03.263 Slewing                   True
+14:53:03.763 Slewing                   True
+14:53:04.262 Slewing                   True
+14:53:04.763 Slewing                   True
+14:53:05.262 Slewing                   True
+14:53:05.763 Slewing                   True
+14:53:06.262 Slewing                   True
+14:53:06.763 Slewing                   True
+14:53:07.263 Slewing                   True
+14:53:07.763 Slewing                   True
+14:53:08.262 Slewing                   True
+14:53:08.762 Slewing                   True
+14:53:09.263 Slewing                   False
+14:53:09.264 InterfaceVersion Get      3
+14:53:09.264 InterfaceVersion          3
+14:53:09.264 SideOfPier Get            pierWest
+14:53:09.265 RightAscension            0.511313765245385
+14:53:09.265 Declination               85.0018462539045
+14:53:09.265 RightAscensionRate Set    0
+14:53:09.266 DeclinationRate Set       1
+14:53:14.267 RightAscension            0.511238165163407
+14:53:14.268 Declination               85.0040511178913
+14:53:14.268 RightAscensionRate Set    0
+14:53:14.269 DeclinationRate Set       0
+14:53:14.271 SiderealTime              15.5173222966225
+14:53:14.272 SiteLatitude Get          48.2623
+14:53:14.273 SiteLongitude Get         16.6347
+14:53:14.273 SiteElevation Get         122.2
+14:53:14.289 Tracking Set              True
+14:53:14.290 SlewToCoordinatesAsync    Calling method - RightAscension: 12.5173222966225, Declination: 55.
+14:53:14.291 SlewToCoordinatesAsync    Completed.
+14:53:14.292 Slewing                   True
+14:53:14.793 Slewing                   True
+14:53:15.294 Slewing                   True
+14:53:15.793 Slewing                   True
+14:53:16.293 Slewing                   True
+14:53:16.793 Slewing                   True
+14:53:17.292 Slewing                   True
+14:53:17.793 Slewing                   True
+14:53:18.294 Slewing                   True
+14:53:18.792 Slewing                   True
+14:53:19.294 Slewing                   True
+14:53:19.793 Slewing                   True
+14:53:20.294 Slewing                   True
+14:53:20.793 Slewing                   True
+14:53:21.294 Slewing                   True
+14:53:21.794 Slewing                   True
+14:53:22.294 Slewing                   True
+14:53:22.794 Slewing                   True
+14:53:23.294 Slewing                   True
+14:53:23.795 Slewing                   True
+14:53:24.294 Slewing                   False
+14:53:24.294 InterfaceVersion Get      3
+14:53:24.294 InterfaceVersion          3
+14:53:24.295 SideOfPier Get            pierEast
+14:53:24.295 RightAscension            12.5173725434011
+14:53:24.296 Declination               55.0003123330356
+14:53:24.296 RightAscensionRate Set    0
+14:53:24.296 DeclinationRate Set       1
+14:53:29.299 RightAscension            12.5173721966035
+14:53:29.300 Declination               55.0016817727836
+14:53:29.301 RightAscensionRate Set    0
+14:53:29.302 DeclinationRate Set       0
+14:53:29.308 SiderealTime              15.5215009283423
+14:53:29.309 SiteLatitude Get          48.2623
+14:53:29.310 SiteLongitude Get         16.6347
+14:53:29.311 SiteElevation Get         122.2
+14:53:29.324 Tracking Set              True
+14:53:29.325 SlewToCoordinatesAsync    Calling method - RightAscension: 6.52150092834233, Declination: 85.
+14:53:29.326 SlewToCoordinatesAsync    Completed.
+14:53:29.326 Slewing                   True
+14:53:29.829 Slewing                   True
+14:53:30.327 Slewing                   True
+14:53:30.830 Slewing                   True
+14:53:31.329 Slewing                   True
+14:53:31.828 Slewing                   True
+14:53:32.328 Slewing                   True
+14:53:32.830 Slewing                   True
+14:53:33.329 Slewing                   True
+14:53:33.833 Slewing                   True
+14:53:34.329 Slewing                   True
+14:53:34.837 Slewing                   True
+14:53:35.332 Slewing                   True
+14:53:35.836 Slewing                   True
+14:53:36.327 Slewing                   True
+14:53:36.830 Slewing                   True
+14:53:37.328 Slewing                   True
+14:53:37.830 Slewing                   True
+14:53:38.332 Slewing                   True
+14:53:38.828 Slewing                   True
+14:53:39.328 Slewing                   True
+14:53:39.829 Slewing                   True
+14:53:40.329 Slewing                   True
+14:53:40.829 Slewing                   True
+14:53:41.329 Slewing                   True
+14:53:41.829 Slewing                   True
+14:53:42.328 Slewing                   True
+14:53:42.828 Slewing                   True
+14:53:43.329 Slewing                   True
+14:53:43.828 Slewing                   True
+14:53:44.327 Slewing                   True
+14:53:44.829 Slewing                   True
+14:53:45.329 Slewing                   False
+14:53:45.330 InterfaceVersion Get      3
+14:53:45.330 InterfaceVersion          3
+14:53:45.332 SideOfPier Get            pierEast
+14:53:45.333 RightAscension            6.52124228034828
+14:53:45.335 Declination               84.9994229534186
+14:53:45.335 RightAscensionRate Set    0
+14:53:45.337 DeclinationRate Set       1
+14:53:50.342 RightAscension            6.5212551313326
+14:53:50.343 Declination               85.0007096526556
+14:53:50.344 RightAscensionRate Set    0
+14:53:50.346 DeclinationRate Set       0
+14:53:50.351 SiderealTime              15.5273769724664
+14:53:50.353 SiteLatitude Get          48.2623
+14:53:50.355 SiteLongitude Get         16.6347
+14:53:50.356 SiteElevation Get         122.2
+14:53:50.381 Tracking Set              True
+14:53:50.382 SlewToCoordinatesAsync    Calling method - RightAscension: 18.5273769724664, Declination: 55.
+14:53:50.383 SlewToCoordinatesAsync    Completed.
+14:53:50.383 Slewing                   True
+14:53:50.886 Slewing                   True
+14:53:51.385 Slewing                   True
+14:53:51.888 Slewing                   True
+14:53:52.385 Slewing                   True
+14:53:52.887 Slewing                   True
+14:53:53.386 Slewing                   True
+14:53:53.885 Slewing                   True
+14:53:54.386 Slewing                   True
+14:53:54.886 Slewing                   True
+14:53:55.386 Slewing                   True
+14:53:55.885 Slewing                   True
+14:53:56.386 Slewing                   True
+14:53:56.887 Slewing                   True
+14:53:57.385 Slewing                   True
+14:53:57.885 Slewing                   True
+14:53:58.386 Slewing                   True
+14:53:58.888 Slewing                   True
+14:53:59.385 Slewing                   True
+14:53:59.887 Slewing                   True
+14:54:00.386 Slewing                   False
+14:54:00.387 InterfaceVersion Get      3
+14:54:00.387 InterfaceVersion          3
+14:54:00.389 SideOfPier Get            pierWest
+14:54:00.391 RightAscension            18.5274886658354
+14:54:00.393 Declination               55.0008780749477
+14:54:00.393 RightAscensionRate Set    0
+14:54:00.395 DeclinationRate Set       1
+14:54:05.399 RightAscension            18.5274912300595
+14:54:05.399 Declination               55.0023273852791
+14:54:05.399 RightAscensionRate Set    0
+14:54:05.400 DeclinationRate Set       0
+14:54:05.402 Tracking Get              True
+14:54:05.402 DeclinationRate Set       0
+14:54:06.405 DeclinationRate Get       0
+14:54:06.405 Slewing                   False
+14:54:06.409 DoesRefraction Get        True
+14:54:06.414 DoesRefraction Set        False
+14:54:06.416 DoesRefraction Set        Threw an exception: 
+ASCOM.PropertyNotImplementedException: Property write AstrooptikServer.Telescope DoesRefraction is not implemented in this driver. ---> System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Runtime.InteropServices.COMException: Property DoesRefraction is not implemented in this driver.
+   --- End of inner exception stack trace ---
+   at System.RuntimeType.InvokeDispMethod(String name, BindingFlags invokeAttr, Object target, Object[] args, Boolean[] byrefModifiers, Int32 culture, String[] namedParameters)
+   at System.RuntimeType.InvokeMember(String name, BindingFlags bindingFlags, Binder binder, Object target, Object[] providedArgs, ParameterModifier[] modifiers, CultureInfo culture, String[] namedParams)
+   at System.Type.InvokeMember(String name, BindingFlags invokeAttr, Binder binder, Object target, Object[] args, CultureInfo culture)
+   at ASCOM.DriverAccess.MemberFactory.CallMember(Int32 memberCode, String memberName, Type[] parameterTypes, Object[] parms) in C:\ASCOM Build\Export\ASCOM.DriverAccess\MemberFactory.cs:line 332
+   --- End of inner exception stack trace ---
+   at ASCOM.DriverAccess.MemberFactory.CallMember(Int32 memberCode, String memberName, Type[] parameterTypes, Object[] parms) in C:\ASCOM Build\Export\ASCOM.DriverAccess\MemberFactory.cs:line 363
+   at ASCOM.DriverAccess.Telescope.set_DoesRefraction(Boolean value) in C:\ASCOM Build\Export\ASCOM.DriverAccess\Telescope.cs:line 643
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_DoesRefraction(Boolean value)
+14:54:06.423 EquatorialSystem          equLocalTopocentric
+14:54:06.427 FocalLength Get           Not implemented
+14:54:06.427 FocalLength               Threw an exception: 
+ASCOM.PropertyNotImplementedException: Property read FocalLength is not implemented in this driver.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.get_FocalLength()
+   at ASCOM.photonProxyHub.Telescope.Telescope.get_FocalLength()
+14:54:06.432 GuideRateDeclination Get  Not implemented
+14:54:06.432 GuideRateDeclination Get  Threw an exception: 
+ASCOM.PropertyNotImplementedException: Property read GuideRateDeclination is not implemented in this driver.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.get_GuideRateDeclination()
+   at ASCOM.photonProxyHub.Telescope.Telescope.get_GuideRateDeclination()
+14:54:06.437 GuideRateDeclination Set  0
+14:54:06.437 GuideRateDeclination Set  Not implemented
+14:54:06.437 GuideRateDeclination Set  Threw an exception: 
+ASCOM.PropertyNotImplementedException: Property write GuideRateDeclination is not implemented in this driver.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_GuideRateDeclination(Double value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_GuideRateDeclination(Double value)
+14:54:06.442 GuideRateRightAscension G Not implemented
+14:54:06.442 GuideRateRightAscension G Threw an exception: 
+ASCOM.PropertyNotImplementedException: Property read GuideRateRightAscension is not implemented in this driver.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.get_GuideRateRightAscension()
+   at ASCOM.photonProxyHub.Telescope.Telescope.get_GuideRateRightAscension()
+14:54:06.447 GuideRateRightAscension S 0
+14:54:06.447 GuideRateRightAscension S Not implemented
+14:54:06.447 GuideRateRightAscension S Threw an exception: 
+ASCOM.PropertyNotImplementedException: Property write GuideRateRightAscension is not implemented in this driver.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_GuideRateRightAscension(Double value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_GuideRateRightAscension(Double value)
+14:54:06.452 IsPulseGuiding            False
+14:54:06.453 RightAscension            18.5274908684743
+14:54:06.457 RightAscensionRate Get    0
+14:54:06.458 Tracking Get              True
+14:54:06.459 Slewing                   False
+14:54:06.459 RightAscensionRate Set    0
+14:54:07.462 RightAscensionRate Get    0
+14:54:07.463 Slewing                   False
+14:54:07.464 Tracking Get              True
+14:54:07.465 Slewing                   False
+14:54:07.465 RightAscensionRate Set    0.1
+14:54:08.468 RightAscensionRate Get    0.1
+14:54:08.469 Slewing                   False
+14:54:08.470 SiderealTime              15.5324157304812
+14:54:08.471 SiteLatitude Get          48.2623
+14:54:08.472 SiteLongitude Get         16.6347
+14:54:08.472 SiteElevation Get         122.2
+14:54:08.486 Tracking Set              True
+14:54:08.487 SlewToCoordinatesAsync    Calling method - RightAscension: 0.532415730481176, Declination: 85.
+14:54:08.488 SlewToCoordinatesAsync    Completed.
+14:54:08.489 Slewing                   True
+14:54:08.989 Slewing                   True
+14:54:09.490 Slewing                   True
+14:54:09.991 Slewing                   True
+14:54:10.489 Slewing                   True
+14:54:10.990 Slewing                   True
+14:54:11.490 Slewing                   True
+14:54:11.990 Slewing                   True
+14:54:12.489 Slewing                   True
+14:54:12.990 Slewing                   True
+14:54:13.490 Slewing                   True
+14:54:13.990 Slewing                   True
+14:54:14.489 Slewing                   True
+14:54:14.990 Slewing                   True
+14:54:15.489 Slewing                   True
+14:54:15.991 Slewing                   True
+14:54:16.518 Slewing                   True
+14:54:16.990 Slewing                   True
+14:54:17.490 Slewing                   True
+14:54:17.989 Slewing                   True
+14:54:18.490 Slewing                   True
+14:54:18.989 Slewing                   True
+14:54:19.490 Slewing                   True
+14:54:19.992 Slewing                   True
+14:54:20.489 Slewing                   True
+14:54:20.990 Slewing                   True
+14:54:21.489 Slewing                   True
+14:54:21.991 Slewing                   True
+14:54:22.489 Slewing                   True
+14:54:22.991 Slewing                   True
+14:54:23.490 Slewing                   True
+14:54:23.992 Slewing                   True
+14:54:24.490 Slewing                   True
+14:54:24.991 Slewing                   False
+14:54:24.992 InterfaceVersion Get      3
+14:54:24.992 InterfaceVersion          3
+14:54:24.994 SideOfPier Get            pierWest
+14:54:24.995 RightAscension            0.532828139571189
+14:54:24.997 Declination               84.9994351784543
+14:54:25.005 RightAscensionRate Set    0.099726956631945
+14:54:25.006 DeclinationRate Set       0
+14:54:30.010 RightAscension            0.532949656663426
+14:54:30.010 Declination               84.9994733282067
+14:54:30.011 RightAscensionRate Set    0
+14:54:30.011 DeclinationRate Set       0
+14:54:30.013 SiderealTime              15.5384182310327
+14:54:30.014 SiteLatitude Get          48.2623
+14:54:30.014 SiteLongitude Get         16.6347
+14:54:30.015 SiteElevation Get         122.2
+14:54:30.033 Tracking Set              True
+14:54:30.036 SlewToCoordinatesAsync    Calling method - RightAscension: 12.5384182310327, Declination: 55.
+14:54:30.037 SlewToCoordinatesAsync    Completed.
+14:54:30.040 Slewing                   True
+14:54:30.539 Slewing                   True
+14:54:31.041 Slewing                   True
+14:54:31.540 Slewing                   True
+14:54:32.096 Slewing                   True
+14:54:32.539 Slewing                   True
+14:54:33.068 Slewing                   True
+14:54:33.580 Slewing                   True
+14:54:34.040 Slewing                   True
+14:54:34.632 Slewing                   True
+14:54:35.054 Slewing                   True
+14:54:35.550 Slewing                   True
+14:54:36.039 Slewing                   True
+14:54:36.538 Slewing                   True
+14:54:37.066 Slewing                   True
+14:54:37.541 Slewing                   True
+14:54:38.050 Slewing                   True
+14:54:38.551 Slewing                   True
+14:54:39.044 Slewing                   True
+14:54:39.547 Slewing                   False
+14:54:39.548 InterfaceVersion Get      3
+14:54:39.548 InterfaceVersion          3
+14:54:39.552 SideOfPier Get            pierEast
+14:54:39.555 RightAscension            12.5386614589546
+14:54:39.579 Declination               54.9999756246276
+14:54:39.581 RightAscensionRate Set    0.099726956631945
+14:54:39.589 DeclinationRate Set       0
+14:54:44.603 RightAscension            12.5386797851246
+14:54:44.605 Declination               54.9999720589094
+14:54:44.605 RightAscensionRate Set    0
+14:54:44.609 DeclinationRate Set       0
+14:54:44.623 SiderealTime              15.5424784839131
+14:54:44.624 SiteLatitude Get          48.2623
+14:54:44.628 SiteLongitude Get         16.6347
+14:54:44.631 SiteElevation Get         122.2
+14:54:44.650 Tracking Set              True
+14:54:44.651 SlewToCoordinatesAsync    Calling method - RightAscension: 6.5424784839131, Declination: 85.
+14:54:44.656 SlewToCoordinatesAsync    Completed.
+14:54:44.661 Slewing                   True
+14:54:45.180 Slewing                   True
+14:54:45.658 Slewing                   True
+14:54:46.159 Slewing                   True
+14:54:46.660 Slewing                   True
+14:54:47.159 Slewing                   True
+14:54:47.660 Slewing                   True
+14:54:48.170 Slewing                   True
+14:54:48.659 Slewing                   True
+14:54:49.163 Slewing                   True
+14:54:49.665 Slewing                   True
+14:54:50.171 Slewing                   True
+14:54:50.659 Slewing                   True
+14:54:51.159 Slewing                   True
+14:54:51.659 Slewing                   True
+14:54:52.159 Slewing                   True
+14:54:52.658 Slewing                   True
+14:54:53.161 Slewing                   True
+14:54:53.657 Slewing                   True
+14:54:54.158 Slewing                   True
+14:54:54.659 Slewing                   True
+14:54:55.157 Slewing                   True
+14:54:55.657 Slewing                   True
+14:54:56.159 Slewing                   True
+14:54:56.658 Slewing                   True
+14:54:57.158 Slewing                   True
+14:54:57.659 Slewing                   True
+14:54:58.158 Slewing                   True
+14:54:58.658 Slewing                   True
+14:54:59.157 Slewing                   True
+14:54:59.657 Slewing                   True
+14:55:00.158 Slewing                   True
+14:55:00.658 Slewing                   False
+14:55:00.659 InterfaceVersion Get      3
+14:55:00.659 InterfaceVersion          3
+14:55:00.659 SideOfPier Get            pierEast
+14:55:00.660 RightAscension            6.54243699216228
+14:55:00.661 Declination               84.9996049032142
+14:55:00.661 RightAscensionRate Set    0.099726956631945
+14:55:00.662 DeclinationRate Set       0
+14:55:05.665 RightAscension            6.54256703502086
+14:55:05.667 Declination               84.9996727142798
+14:55:05.667 RightAscensionRate Set    0
+14:55:05.667 DeclinationRate Set       0
+14:55:05.670 SiderealTime              15.5483456148668
+14:55:05.670 SiteLatitude Get          48.2623
+14:55:05.671 SiteLongitude Get         16.6347
+14:55:05.672 SiteElevation Get         122.2
+14:55:05.692 Tracking Set              True
+14:55:05.693 SlewToCoordinatesAsync    Calling method - RightAscension: 18.5483456148668, Declination: 55.
+14:55:05.694 SlewToCoordinatesAsync    Completed.
+14:55:05.695 Slewing                   True
+14:55:06.196 Slewing                   True
+14:55:06.696 Slewing                   True
+14:55:07.197 Slewing                   True
+14:55:07.696 Slewing                   True
+14:55:08.198 Slewing                   True
+14:55:08.697 Slewing                   True
+14:55:09.197 Slewing                   True
+14:55:09.696 Slewing                   True
+14:55:10.200 Slewing                   True
+14:55:10.696 Slewing                   True
+14:55:11.196 Slewing                   True
+14:55:11.697 Slewing                   True
+14:55:12.197 Slewing                   True
+14:55:12.697 Slewing                   True
+14:55:13.197 Slewing                   True
+14:55:13.697 Slewing                   True
+14:55:14.198 Slewing                   True
+14:55:14.697 Slewing                   True
+14:55:15.195 Slewing                   False
+14:55:15.196 InterfaceVersion Get      3
+14:55:15.196 InterfaceVersion          3
+14:55:15.197 SideOfPier Get            pierWest
+14:55:15.197 RightAscension            18.5485335921984
+14:55:15.198 Declination               55.0009787196378
+14:55:15.198 RightAscensionRate Set    0.099726956631945
+14:55:15.202 DeclinationRate Set       0
+14:55:20.206 RightAscension            18.5486434000684
+14:55:20.208 Declination               55.0009894920776
+14:55:20.209 RightAscensionRate Set    0
+14:55:20.210 DeclinationRate Set       0
+14:55:20.216 Tracking Get              True
+14:55:20.218 Slewing                   False
+14:55:20.219 RightAscensionRate Set    1
+14:55:21.223 RightAscensionRate Get    1
+14:55:21.225 Slewing                   False
+14:55:21.227 SiderealTime              15.5526866342818
+14:55:21.228 SiteLatitude Get          48.2623
+14:55:21.230 SiteLongitude Get         16.6347
+14:55:21.231 SiteElevation Get         122.2
+14:55:21.262 Tracking Set              True
+14:55:21.263 SlewToCoordinatesAsync    Calling method - RightAscension: 0.552686634281798, Declination: 85.
+14:55:21.264 SlewToCoordinatesAsync    Completed.
+14:55:21.265 Slewing                   True
+14:55:21.765 Slewing                   True
+14:55:22.266 Slewing                   True
+14:55:22.765 Slewing                   True
+14:55:23.265 Slewing                   True
+14:55:23.765 Slewing                   True
+14:55:24.265 Slewing                   True
+14:55:24.765 Slewing                   True
+14:55:25.267 Slewing                   True
+14:55:25.765 Slewing                   True
+14:55:26.266 Slewing                   True
+14:55:26.767 Slewing                   True
+14:55:27.265 Slewing                   True
+14:55:27.766 Slewing                   True
+14:55:28.267 Slewing                   True
+14:55:28.765 Slewing                   True
+14:55:29.266 Slewing                   True
+14:55:29.765 Slewing                   True
+14:55:30.265 Slewing                   True
+14:55:30.766 Slewing                   True
+14:55:31.266 Slewing                   True
+14:55:31.766 Slewing                   True
+14:55:32.267 Slewing                   True
+14:55:32.765 Slewing                   True
+14:55:33.268 Slewing                   True
+14:55:33.766 Slewing                   True
+14:55:34.265 Slewing                   True
+14:55:34.766 Slewing                   True
+14:55:35.267 Slewing                   True
+14:55:35.766 Slewing                   True
+14:55:36.266 Slewing                   True
+14:55:36.766 Slewing                   True
+14:55:37.267 Slewing                   True
+14:55:37.767 Slewing                   True
+14:55:38.267 Slewing                   False
+14:55:38.268 InterfaceVersion Get      3
+14:55:38.268 InterfaceVersion          3
+14:55:38.270 SideOfPier Get            pierWest
+14:55:38.271 RightAscension            0.553835734152816
+14:55:38.274 Declination               84.9997970413091
+14:55:38.274 RightAscensionRate Set    0.99726956631945
+14:55:38.276 DeclinationRate Set       0
+14:55:43.280 RightAscension            0.555155379359256
+14:55:43.282 Declination               84.9998389067719
+14:55:43.283 RightAscensionRate Set    0
+14:55:43.284 DeclinationRate Set       0
+14:55:43.289 SiderealTime              15.5588175410113
+14:55:43.291 SiteLatitude Get          48.2623
+14:55:43.292 SiteLongitude Get         16.6347
+14:55:43.294 SiteElevation Get         122.2
+14:55:43.319 Tracking Set              True
+14:55:43.320 SlewToCoordinatesAsync    Calling method - RightAscension: 12.5588175410113, Declination: 55.
+14:55:43.321 SlewToCoordinatesAsync    Completed.
+14:55:43.321 Slewing                   True
+14:55:43.823 Slewing                   True
+14:55:44.322 Slewing                   True
+14:55:44.823 Slewing                   True
+14:55:45.323 Slewing                   True
+14:55:45.823 Slewing                   True
+14:55:46.324 Slewing                   True
+14:55:46.823 Slewing                   True
+14:55:47.323 Slewing                   True
+14:55:47.826 Slewing                   True
+14:55:48.323 Slewing                   True
+14:55:48.825 Slewing                   True
+14:55:49.322 Slewing                   True
+14:55:49.824 Slewing                   True
+14:55:50.323 Slewing                   True
+14:55:50.822 Slewing                   True
+14:55:51.324 Slewing                   True
+14:55:51.824 Slewing                   True
+14:55:52.324 Slewing                   True
+14:55:52.823 Slewing                   True
+14:55:53.323 Slewing                   False
+14:55:53.324 InterfaceVersion Get      3
+14:55:53.325 InterfaceVersion          3
+14:55:53.326 SideOfPier Get            pierEast
+14:55:53.328 RightAscension            12.5592070303561
+14:55:53.330 Declination               55.0001004331694
+14:55:53.330 RightAscensionRate Set    0.99726956631945
+14:55:53.332 DeclinationRate Set       0
+14:55:58.337 RightAscension            12.5604249573363
+14:55:58.338 Declination               55.0000915643149
+14:55:58.338 RightAscensionRate Set    0
+14:55:58.339 DeclinationRate Set       0
+14:55:58.343 SiderealTime              15.5630279260871
+14:55:58.343 SiteLatitude Get          48.2623
+14:55:58.344 SiteLongitude Get         16.6347
+14:55:58.345 SiteElevation Get         122.2
+14:55:58.359 Tracking Set              True
+14:55:58.360 SlewToCoordinatesAsync    Calling method - RightAscension: 6.5630279260871, Declination: 85.
+14:55:58.361 SlewToCoordinatesAsync    Completed.
+14:55:58.362 Slewing                   True
+14:55:58.863 Slewing                   True
+14:55:59.363 Slewing                   True
+14:55:59.863 Slewing                   True
+14:56:00.363 Slewing                   True
+14:56:00.863 Slewing                   True
+14:56:01.364 Slewing                   True
+14:56:01.865 Slewing                   True
+14:56:02.367 Slewing                   True
+14:56:02.864 Slewing                   True
+14:56:03.364 Slewing                   True
+14:56:03.864 Slewing                   True
+14:56:04.363 Slewing                   True
+14:56:04.864 Slewing                   True
+14:56:05.363 Slewing                   True
+14:56:05.864 Slewing                   True
+14:56:06.365 Slewing                   True
+14:56:06.864 Slewing                   True
+14:56:07.363 Slewing                   True
+14:56:07.865 Slewing                   True
+14:56:08.364 Slewing                   True
+14:56:08.864 Slewing                   True
+14:56:09.364 Slewing                   True
+14:56:09.864 Slewing                   True
+14:56:10.364 Slewing                   True
+14:56:10.864 Slewing                   True
+14:56:11.363 Slewing                   True
+14:56:11.863 Slewing                   True
+14:56:12.363 Slewing                   True
+14:56:12.863 Slewing                   True
+14:56:13.365 Slewing                   True
+14:56:13.863 Slewing                   True
+14:56:14.362 Slewing                   False
+14:56:14.363 InterfaceVersion Get      3
+14:56:14.363 InterfaceVersion          3
+14:56:14.364 SideOfPier Get            pierEast
+14:56:14.365 RightAscension            6.56308786756046
+14:56:14.365 Declination               84.9995290371614
+14:56:14.365 RightAscensionRate Set    0.99726956631945
+14:56:14.366 DeclinationRate Set       0
+14:56:19.370 RightAscension            6.56418445094531
+14:56:19.371 Declination               84.9994325209564
+14:56:19.372 RightAscensionRate Set    0
+14:56:19.374 DeclinationRate Set       0
+14:56:19.381 SiderealTime              15.5688666461892
+14:56:19.382 SiteLatitude Get          48.2623
+14:56:19.384 SiteLongitude Get         16.6347
+14:56:19.386 SiteElevation Get         122.2
+14:56:19.411 Tracking Set              True
+14:56:19.412 SlewToCoordinatesAsync    Calling method - RightAscension: 18.5688666461892, Declination: 55.
+14:56:19.413 SlewToCoordinatesAsync    Completed.
+14:56:19.414 Slewing                   True
+14:56:19.915 Slewing                   True
+14:56:20.441 Slewing                   True
+14:56:20.916 Slewing                   True
+14:56:21.416 Slewing                   True
+14:56:21.917 Slewing                   True
+14:56:22.416 Slewing                   True
+14:56:22.916 Slewing                   True
+14:56:23.416 Slewing                   True
+14:56:23.917 Slewing                   True
+14:56:24.417 Slewing                   True
+14:56:24.917 Slewing                   True
+14:56:25.416 Slewing                   True
+14:56:25.916 Slewing                   True
+14:56:26.414 Slewing                   True
+14:56:26.917 Slewing                   True
+14:56:27.415 Slewing                   True
+14:56:27.916 Slewing                   True
+14:56:28.416 Slewing                   True
+14:56:28.917 Slewing                   True
+14:56:29.416 Slewing                   False
+14:56:29.416 InterfaceVersion Get      3
+14:56:29.416 InterfaceVersion          3
+14:56:29.417 SideOfPier Get            pierWest
+14:56:29.417 RightAscension            18.5695318008928
+14:56:29.418 Declination               55.0006269437959
+14:56:29.418 RightAscensionRate Set    0.99726956631945
+14:56:29.419 DeclinationRate Set       0
+14:56:34.423 RightAscension            18.5707543815843
+14:56:34.425 Declination               55.0004874227393
+14:56:34.426 RightAscensionRate Set    0
+14:56:34.427 DeclinationRate Set       0
+14:56:34.440 Tracking Get              True
+14:56:34.441 RightAscensionRate Set    0
+14:56:35.445 RightAscensionRate Get    0
+14:56:35.445 Slewing                   False
+14:56:35.448 SiteElevation Get         122.2
+14:56:35.454 SiteElevation Set         -301
+14:56:35.455 SiteElevation Set         Threw an exception: 
+ASCOM.InvalidValueException: SiteElevation set - '-301' is an invalid value. The valid range is: -300 to +10000.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_SiteElevation(Double value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_SiteElevation(Double value)
+14:56:35.458 SiteElevation Set         10001
+14:56:35.458 SiteElevation Set         Threw an exception: 
+ASCOM.InvalidValueException: SiteElevation set - '10001' is an invalid value. The valid range is: -300 to +10000.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_SiteElevation(Double value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_SiteElevation(Double value)
+14:56:35.460 SiteElevation Set         122.2
+14:56:35.461 SiteElevation Set         2385
+14:56:35.463 SiteElevation Get         122.2
+14:56:35.463 SiteElevation Set         122.2
+14:56:35.465 SiteLatitude Get          48.2623
+14:56:35.470 SiteLatitude Set          -91
+14:56:35.470 SiteLatitude Set          Threw an exception: 
+ASCOM.InvalidValueException: SiteLatitude set - '-91' is an invalid value. The valid range is: -90 to +90.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_SiteLatitude(Double value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_SiteLatitude(Double value)
+14:56:35.472 SiteLatitude Set          91
+14:56:35.472 SiteLatitude Set          Threw an exception: 
+ASCOM.InvalidValueException: SiteLatitude set - '91' is an invalid value. The valid range is: -90 to +90.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_SiteLatitude(Double value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_SiteLatitude(Double value)
+14:56:35.474 SiteLatitude Set          48.2623
+14:56:35.475 SiteLatitude Set          58.2623
+14:56:35.477 SiteLatitude Get          48.2623
+14:56:35.478 SiteLatitude Set          48.2623
+14:56:35.481 SiteLongitude Get         16.6347
+14:56:35.490 SiteLongitude Set         -181
+14:56:35.491 SiteLongitude Set         Threw an exception: 
+ASCOM.InvalidValueException: SiteLongitude set - '-181' is an invalid value. The valid range is: -180 to +180.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_SiteLongitude(Double value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_SiteLongitude(Double value)
+14:56:35.494 SiteLongitude Set         181
+14:56:35.494 SiteLongitude Set         Threw an exception: 
+ASCOM.InvalidValueException: SiteLongitude set - '181' is an invalid value. The valid range is: -180 to +180.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_SiteLongitude(Double value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_SiteLongitude(Double value)
+14:56:35.496 SiteLongitude Set         16.6347
+14:56:35.497 SiteLongitude Set         26.6347
+14:56:35.498 SiteLongitude Get         16.6347
+14:56:35.500 SiteLongitude Set         16.6347
+14:56:35.503 Slewing                   False
+14:56:35.507 SlewSettleTime Get        3
+14:56:35.518 SlewSettleTime Set        -1
+14:56:35.518 SlewSettleTime Set        Threw an exception: 
+ASCOM.InvalidValueException: SlewSettleTime set - '-1' is an invalid value. The valid range is: 0 to 600.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_SlewSettleTime(Int16 value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_SlewSettleTime(Int16 value)
+14:56:35.523 SlewSettleTime Set        3
+14:56:35.526 SideOfPier Get            pierWest
+14:56:35.527 SiderealTime              15.5733694964782
+14:56:35.537 Tracking Get              True
+14:56:35.538 Tracking Set              False
+14:56:36.542 Tracking Get              False
+14:56:36.543 Tracking Set              True
+14:56:37.617 TrackingRates             Get - 
+14:56:37.623 TrackingRates             Get - driveSidereal
+14:56:37.623 TrackingRates             ASCOM.photonProxyHub.Telescope.TrackingRates
+14:56:37.639 TrackingRates             Get - 
+14:56:37.639 TrackingRates             Get - driveSidereal
+14:56:37.640 TrackingRates             ASCOM.photonProxyHub.Telescope.TrackingRates
+14:56:37.648 TrackingRates             Get - 
+14:56:37.648 TrackingRates             Get - driveSidereal
+14:56:37.648 TrackingRates             ASCOM.photonProxyHub.Telescope.TrackingRates
+14:56:37.653 TrackingRates             Get - 
+14:56:37.653 TrackingRates             Get - driveSidereal
+14:56:37.654 TrackingRates             ASCOM.photonProxyHub.Telescope.TrackingRates
+14:56:37.661 TrackingRate Get          driveSidereal
+14:56:37.661 TrackingRate Get          driveSidereal
+14:56:37.668 TrackingRate Set          driveSidereal
+14:56:37.668 TrackingRate Set          Not implemented
+14:56:37.668 TrackingRate Set          5
+14:56:37.668 TrackingRate Set          Not implemented
+14:56:37.669 TrackingRate Set          -1
+14:56:37.669 TrackingRate Set          Not implemented
+14:56:37.672 TrackingRate Set          driveSidereal
+14:56:37.672 TrackingRate Set          Not implemented
+14:56:37.673 UTCDate                   Get - MM/dd/yy HH:mm:ss
+14:56:37.673 UTCDate Get               2023-10-14 12:56:37
+14:56:37.682 UTCDate Set               2023-10-14 13:56:37
+14:56:37.682 UTCDate Set               Not implemented
+14:56:37.682 UTCDate Set               Threw an exception: 
+ASCOM.PropertyNotImplementedException: Property write UTCDate is not implemented in this driver.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_UTCDate(DateTime value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_UTCDate(DateTime value)
+14:56:37.699 CanMoveAxis               Axis: axisPrimary returned True.
+14:56:37.701 CanMoveAxis               Axis: axisSecondary returned True.
+14:56:37.702 CanMoveAxis               Axis: axisTertiary returned True.
+14:56:37.705 AtPark                    False
+14:56:37.713 Park                      Calling method.
+14:56:54.713 Park                      Completed.
+14:56:54.716 AtPark                    True
+14:56:54.719 Park                      Calling method.
+14:56:56.710 Park                      Completed.
+14:56:56.717 AtPark                    True
+14:56:56.720 AbortSlew                 Calling method.
+14:56:56.721 AbortSlew                 Threw an exception: 
+ASCOM.InvalidOperationException: Cannot abort slew when parked
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.AbortSlew()
+   at ASCOM.photonProxyHub.Telescope.Telescope.AbortSlew()
+14:56:56.723 AtPark                    True
+14:56:56.724 AtPark                    True
+14:56:56.727 FindHome                  Calling method.
+14:56:56.727 FindHome                  Threw an exception: 
+ASCOM.InvalidOperationException: Cannot find home when parked
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.FindHome()
+   at ASCOM.photonProxyHub.Telescope.Telescope.FindHome()
+14:56:56.730 AtPark                    True
+14:56:56.734 AtPark                    True
+14:56:56.739 MoveAxis                  Calling method - Axis: axisPrimary, Rate: 0.
+14:56:56.740 MoveAxis                  Threw an exception: 
+ASCOM.InvalidOperationException: Cannot move when parked
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.MoveAxis(TelescopeAxes Axis, Double Rate)
+   at ASCOM.photonProxyHub.Telescope.Telescope.MoveAxis(TelescopeAxes axis, Double rate)
+14:56:56.742 AtPark                    True
+14:56:56.743 AtPark                    True
+14:56:56.743 MoveAxis                  Calling method - Axis: axisSecondary, Rate: 0.
+14:56:56.744 MoveAxis                  Threw an exception: 
+ASCOM.InvalidOperationException: Cannot move when parked
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.MoveAxis(TelescopeAxes Axis, Double Rate)
+   at ASCOM.photonProxyHub.Telescope.Telescope.MoveAxis(TelescopeAxes axis, Double rate)
+14:56:56.746 AtPark                    True
+14:56:56.747 AtPark                    True
+14:56:56.747 MoveAxis                  Calling method - Axis: axisTertiary, Rate: 0.
+14:56:56.748 MoveAxis                  Threw an exception: 
+ASCOM.InvalidOperationException: Cannot move when parked
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.MoveAxis(TelescopeAxes Axis, Double Rate)
+   at ASCOM.photonProxyHub.Telescope.Telescope.MoveAxis(TelescopeAxes axis, Double rate)
+14:56:56.750 AtPark                    True
+14:56:56.750 AtPark                    True
+14:56:56.754 PulseGuide                Calling method.
+14:56:56.755 PulseGuide                Threw an exception: 
+ASCOM.InvalidOperationException: Cannot PulseGuide when parked
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.PulseGuide(GuideDirections Direction, Int32 Duration)
+   at ASCOM.photonProxyHub.Telescope.Telescope.PulseGuide(GuideDirections direction, Int32 duration)
+14:56:56.757 AtPark                    True
+14:56:56.758 AtPark                    True
+14:56:56.758 SiderealTime              15.579291499384
+14:56:56.763 SlewToCoordinates         Calling method - RightAscension: 16.579291499384, Declination: 0.
+14:56:56.764 SlewToCoordinates         Threw an exception: 
+ASCOM.InvalidOperationException: Cannot SlewToCoordinates when parked
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SlewToCoordinates(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.Telescope.SlewToCoordinates(Double rightAscension, Double declination)
+14:56:56.768 AtPark                    True
+14:56:56.769 AtPark                    True
+14:56:56.771 SiderealTime              15.579291499384
+14:56:56.771 SlewToCoordinatesAsync    Calling method - RightAscension: 16.579291499384, Declination: 0.
+14:56:56.772 SlewToCoordinatesAsync    Threw an exception: 
+ASCOM.InvalidOperationException: Cannot SlewToCoordinatesAsync when parked
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SlewToCoordinatesAsync(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.Telescope.SlewToCoordinatesAsync(Double rightAscension, Double declination)
+14:56:56.775 AtPark                    True
+14:56:56.776 AtPark                    True
+14:56:56.777 SiderealTime              15.579291499384
+14:56:56.780 TargetRightAscension Set  16.579291499384
+14:56:56.783 TargetDeclination Set     0
+14:56:56.787 SlewToTarget              Calling method.
+14:56:56.787 SlewToTarget              Threw an exception: 
+ASCOM.InvalidOperationException: Cannot slew when parked
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SlewToTarget()
+   at ASCOM.photonProxyHub.Telescope.Telescope.SlewToTarget()
+14:56:56.789 AtPark                    True
+14:56:56.790 AtPark                    True
+14:56:56.790 SiderealTime              15.579291499384
+14:56:56.791 TargetRightAscension Set  16.579291499384
+14:56:56.791 TargetDeclination Set     0
+14:56:56.797 SlewToTargetAsync         Calling method.
+14:56:56.798 SlewToTargetAsync         Threw an exception: 
+ASCOM.InvalidOperationException: Cannot slew when parked
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SlewToTargetAsync()
+   at ASCOM.photonProxyHub.Telescope.Telescope.SlewToTargetAsync()
+14:56:56.802 AtPark                    True
+14:56:56.803 AtPark                    True
+14:56:56.805 SiderealTime              15.579310718479
+14:56:56.808 SyncToCoordinates         Calling method - RightAscension: 16.579310718479, Declination: 0.
+14:56:56.809 SyncToCoordinates         Threw an exception: 
+ASCOM.InvalidOperationException: Cannot sync when parked
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SyncToCoordinates(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.Telescope.SyncToCoordinates(Double rightAscension, Double declination)
+14:56:56.811 AtPark                    True
+14:56:56.812 AtPark                    True
+14:56:56.813 SiderealTime              15.579310718479
+14:56:56.813 TargetRightAscension Set  16.579310718479
+14:56:56.814 TargetDeclination Set     0
+14:56:56.817 SyncToTarget              Calling method.
+14:56:56.817 SyncToTarget              Threw an exception: 
+ASCOM.InvalidOperationException: Cannot sync when parked
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SyncToTarget()
+   at ASCOM.photonProxyHub.Telescope.Telescope.SyncToTarget()
+14:56:56.820 AtPark                    True
+14:56:56.820 Unpark                    Completed.
+14:56:56.820 Unpark                    Calling method.
+14:56:56.821 Unpark                    Completed.
+14:56:56.822 AtPark                    True
+14:56:57.325 AtPark                    False
+14:56:57.326 Tracking Set              True
+14:56:57.329 Unpark                    Completed.
+14:56:57.329 Unpark                    Calling method.
+14:56:57.330 Unpark                    Completed.
+14:56:57.343 AbortSlew                 Calling method.
+14:56:57.354 AbortSlew                 Completed.
+14:56:57.369 AxisRates                 Get - axisPrimary
+14:56:57.370 AxisRates                 Axis: axisPrimary returned 1 rates.
+14:56:57.409 AxisRates                 Get - axisPrimary
+14:56:57.409 AxisRates                 Axis: axisPrimary returned 1 rates.
+14:56:57.416 AxisRates                 Get - axisSecondary
+14:56:57.416 AxisRates                 Axis: axisSecondary returned 1 rates.
+14:56:57.421 AxisRates                 Get - axisSecondary
+14:56:57.421 AxisRates                 Axis: axisSecondary returned 1 rates.
+14:56:57.427 AxisRates                 Get - axisTertiary
+14:56:57.427 AxisRates                 Axis: axisTertiary returned 0 rates.
+14:56:57.434 AxisRates                 Get - axisTertiary
+14:56:57.434 AxisRates                 Axis: axisTertiary returned 0 rates.
+14:56:57.440 FindHome                  Calling method.
+14:58:02.637 FindHome                  Completed.
+14:58:02.640 AtHome                    True
+14:58:02.642 AtHome                    True
+14:58:02.644 AtPark                    False
+14:58:02.645 AxisRates                 Get - axisPrimary
+14:58:02.645 AxisRates                 Axis: axisPrimary returned 1 rates.
+14:58:02.653 MoveAxis                  Calling method - Axis: axisPrimary, Rate: 0.
+14:58:03.960 MoveAxis                  Completed.
+14:58:03.963 MoveAxis                  Calling method - Axis: axisPrimary, Rate: -14.
+14:58:03.971 MoveAxis                  Threw an exception: 
+ASCOM.InvalidValueException: MoveAxis set - '-14' is an invalid value. The valid range is: -13 to +13.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.MoveAxis(TelescopeAxes Axis, Double Rate)
+   at ASCOM.photonProxyHub.Telescope.Telescope.MoveAxis(TelescopeAxes axis, Double rate)
+14:58:03.978 MoveAxis                  Calling method - Axis: axisPrimary, Rate: 14.
+14:58:03.980 MoveAxis                  Threw an exception: 
+ASCOM.InvalidValueException: MoveAxis set - '14' is an invalid value. The valid range is: -13 to +13.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.MoveAxis(TelescopeAxes Axis, Double Rate)
+   at ASCOM.photonProxyHub.Telescope.Telescope.MoveAxis(TelescopeAxes axis, Double rate)
+14:58:03.982 MoveAxis                  Calling method - Axis: axisPrimary, Rate: 0.
+14:58:04.002 MoveAxis                  Completed.
+14:58:06.005 MoveAxis                  Calling method - Axis: axisPrimary, Rate: 0.
+14:58:06.029 MoveAxis                  Completed.
+14:58:06.029 MoveAxis                  Calling method - Axis: axisPrimary, Rate: 0.
+14:58:06.044 MoveAxis                  Completed.
+14:58:08.046 MoveAxis                  Calling method - Axis: axisPrimary, Rate: 0.
+14:58:08.062 MoveAxis                  Completed.
+14:58:08.066 Slewing                   False
+14:58:08.067 MoveAxis                  Calling method - Axis: axisPrimary, Rate: 13.
+14:58:08.112 MoveAxis                  Completed.
+14:58:08.113 Slewing                   True
+14:58:10.120 Slewing                   True
+14:58:10.121 MoveAxis                  Calling method - Axis: axisPrimary, Rate: 0.
+14:58:10.149 MoveAxis                  Completed.
+14:58:10.150 Slewing                   False
+14:58:10.151 MoveAxis                  Calling method - Axis: axisPrimary, Rate: -13.
+14:58:10.164 MoveAxis                  Completed.
+14:58:10.165 Slewing                   True
+14:58:12.169 Slewing                   True
+14:58:12.169 MoveAxis                  Calling method - Axis: axisPrimary, Rate: 0.
+14:58:12.188 MoveAxis                  Completed.
+14:58:12.190 Slewing                   False
+14:58:12.194 Tracking Get              True
+14:58:12.195 MoveAxis                  Calling method - Axis: axisPrimary, Rate: 13.
+14:58:12.213 MoveAxis                  Completed.
+14:58:14.216 MoveAxis                  Calling method - Axis: axisPrimary, Rate: 0.
+14:58:14.246 MoveAxis                  Completed.
+14:58:14.247 Tracking Get              True
+14:58:14.248 Tracking Set              False
+14:58:14.250 MoveAxis                  Calling method - Axis: axisPrimary, Rate: -13.
+14:58:14.266 MoveAxis                  Completed.
+14:58:16.268 MoveAxis                  Calling method - Axis: axisPrimary, Rate: 0.
+14:58:16.274 MoveAxis                  Completed.
+14:58:16.277 Tracking Get              False
+14:58:16.282 AxisRates                 Get - axisSecondary
+14:58:16.282 AxisRates                 Axis: axisSecondary returned 1 rates.
+14:58:16.287 MoveAxis                  Calling method - Axis: axisSecondary, Rate: 0.
+14:58:16.294 MoveAxis                  Completed.
+14:58:16.295 MoveAxis                  Calling method - Axis: axisSecondary, Rate: -14.
+14:58:16.296 MoveAxis                  Threw an exception: 
+ASCOM.InvalidValueException: MoveAxis set - '-14' is an invalid value. The valid range is: -13 to +13.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.MoveAxis(TelescopeAxes Axis, Double Rate)
+   at ASCOM.photonProxyHub.Telescope.Telescope.MoveAxis(TelescopeAxes axis, Double rate)
+14:58:16.298 MoveAxis                  Calling method - Axis: axisSecondary, Rate: 14.
+14:58:16.299 MoveAxis                  Threw an exception: 
+ASCOM.InvalidValueException: MoveAxis set - '14' is an invalid value. The valid range is: -13 to +13.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.MoveAxis(TelescopeAxes Axis, Double Rate)
+   at ASCOM.photonProxyHub.Telescope.Telescope.MoveAxis(TelescopeAxes axis, Double rate)
+14:58:16.301 MoveAxis                  Calling method - Axis: axisSecondary, Rate: 0.
+14:58:16.304 MoveAxis                  Completed.
+14:58:18.307 MoveAxis                  Calling method - Axis: axisSecondary, Rate: 0.
+14:58:18.313 MoveAxis                  Completed.
+14:58:18.314 MoveAxis                  Calling method - Axis: axisSecondary, Rate: 0.
+14:58:18.323 MoveAxis                  Completed.
+14:58:20.326 MoveAxis                  Calling method - Axis: axisSecondary, Rate: 0.
+14:58:20.331 MoveAxis                  Completed.
+14:58:20.335 Slewing                   False
+14:58:20.336 MoveAxis                  Calling method - Axis: axisSecondary, Rate: 13.
+14:58:20.371 MoveAxis                  Completed.
+14:58:20.373 Slewing                   True
+14:58:22.375 Slewing                   True
+14:58:22.376 MoveAxis                  Calling method - Axis: axisSecondary, Rate: 0.
+14:58:22.383 MoveAxis                  Completed.
+14:58:22.384 Slewing                   False
+14:58:22.385 MoveAxis                  Calling method - Axis: axisSecondary, Rate: -13.
+14:58:22.394 MoveAxis                  Completed.
+14:58:22.395 Slewing                   True
+14:58:24.398 Slewing                   True
+14:58:24.398 MoveAxis                  Calling method - Axis: axisSecondary, Rate: 0.
+14:58:24.407 MoveAxis                  Completed.
+14:58:24.409 Slewing                   False
+14:58:24.414 Tracking Get              False
+14:58:24.415 MoveAxis                  Calling method - Axis: axisSecondary, Rate: 13.
+14:58:24.423 MoveAxis                  Completed.
+14:58:26.425 MoveAxis                  Calling method - Axis: axisSecondary, Rate: 0.
+14:58:26.431 MoveAxis                  Completed.
+14:58:26.432 Tracking Get              False
+14:58:26.433 Tracking Set              True
+14:58:26.486 MoveAxis                  Calling method - Axis: axisSecondary, Rate: -13.
+14:58:26.500 MoveAxis                  Completed.
+14:58:28.503 MoveAxis                  Calling method - Axis: axisSecondary, Rate: 0.
+14:58:28.519 MoveAxis                  Completed.
+14:58:28.521 Tracking Get              True
+14:58:28.526 AxisRates                 Get - axisTertiary
+14:58:28.526 AxisRates                 Axis: axisTertiary returned 0 rates.
+14:58:28.541 IsPulseGuiding            False
+14:58:28.543 PulseGuide                Calling method.
+14:58:28.545 PulseGuide                Completed.
+14:58:28.546 IsPulseGuiding            True
+14:58:28.547 IsPulseGuiding            True
+14:58:29.048 IsPulseGuiding            True
+14:58:29.550 IsPulseGuiding            True
+14:58:30.049 IsPulseGuiding            True
+14:58:30.550 IsPulseGuiding            True
+14:58:31.049 IsPulseGuiding            True
+14:58:31.549 IsPulseGuiding            False
+14:58:31.550 IsPulseGuiding            False
+14:58:31.554 Tracking Set              True
+14:58:31.557 SiderealTime              15.6056941456715
+14:58:31.558 SiteLatitude Get          48.2623
+14:58:31.559 SiteLongitude Get         16.6347
+14:58:31.560 SiteElevation Get         122.2
+14:58:31.587 SlewToCoordinatesAsync    Calling method - RightAscension: 0.605694145671549, Declination: 85.
+14:58:31.588 SlewToCoordinatesAsync    Completed.
+14:58:31.590 Slewing                   True
+14:58:32.090 Slewing                   True
+14:58:32.591 Slewing                   True
+14:58:33.092 Slewing                   True
+14:58:33.591 Slewing                   True
+14:58:34.091 Slewing                   True
+14:58:34.591 Slewing                   True
+14:58:35.091 Slewing                   True
+14:58:35.592 Slewing                   True
+14:58:36.092 Slewing                   True
+14:58:36.593 Slewing                   True
+14:58:37.090 Slewing                   True
+14:58:37.592 Slewing                   True
+14:58:38.092 Slewing                   True
+14:58:38.592 Slewing                   True
+14:58:39.091 Slewing                   True
+14:58:39.591 Slewing                   True
+14:58:40.097 Slewing                   True
+14:58:40.592 Slewing                   True
+14:58:41.091 Slewing                   True
+14:58:41.591 Slewing                   True
+14:58:42.091 Slewing                   True
+14:58:42.592 Slewing                   True
+14:58:43.092 Slewing                   True
+14:58:43.593 Slewing                   True
+14:58:44.094 Slewing                   True
+14:58:44.591 Slewing                   True
+14:58:45.091 Slewing                   True
+14:58:45.591 Slewing                   True
+14:58:46.093 Slewing                   True
+14:58:46.591 Slewing                   True
+14:58:47.093 Slewing                   True
+14:58:47.592 Slewing                   True
+14:58:48.092 Slewing                   True
+14:58:48.592 Slewing                   True
+14:58:49.091 Slewing                   True
+14:58:49.591 Slewing                   True
+14:58:50.091 Slewing                   True
+14:58:50.591 Slewing                   True
+14:58:51.092 Slewing                   False
+14:58:51.093 InterfaceVersion Get      3
+14:58:51.093 InterfaceVersion          3
+14:58:51.095 RightAscension            0.605976046207298
+14:58:51.097 Declination               84.999094187173
+14:58:51.099 SideOfPier Get            pierWest
+14:58:51.114 RightAscension            0.605909647571798
+14:58:51.115 Declination               84.9992543414756
+14:58:51.116 PulseGuide                Calling method.
+14:58:51.119 PulseGuide                Completed.
+14:58:51.121 IsPulseGuiding            True
+14:58:51.622 IsPulseGuiding            True
+14:58:52.121 IsPulseGuiding            True
+14:58:52.622 IsPulseGuiding            True
+14:58:53.122 IsPulseGuiding            True
+14:58:53.621 IsPulseGuiding            True
+14:58:54.124 IsPulseGuiding            False
+14:58:54.126 RightAscension            0.60570416116395
+14:58:54.127 Declination               84.9916681413927
+14:58:54.132 RightAscension            0.60570416116395
+14:58:54.134 Declination               84.9916681413927
+14:58:54.134 PulseGuide                Calling method.
+14:58:54.136 PulseGuide                Completed.
+14:58:54.140 IsPulseGuiding            True
+14:58:54.641 IsPulseGuiding            True
+14:58:55.141 IsPulseGuiding            True
+14:58:55.640 IsPulseGuiding            True
+14:58:56.141 IsPulseGuiding            True
+14:58:56.640 IsPulseGuiding            True
+14:58:57.140 IsPulseGuiding            False
+14:58:57.143 RightAscension            0.6056950670908
+14:58:57.144 Declination               84.9999837806182
+14:58:57.150 RightAscension            0.6056950670908
+14:58:57.151 Declination               84.9999837806182
+14:58:57.152 PulseGuide                Calling method.
+14:58:57.154 PulseGuide                Completed.
+14:58:57.158 IsPulseGuiding            False
+14:58:57.160 RightAscension            0.6056950670908
+14:58:57.161 Declination               84.9999837806182
+14:58:57.165 RightAscension            0.6056950670908
+14:58:57.166 Declination               84.9999837806182
+14:58:57.168 PulseGuide                Calling method.
+14:58:57.170 PulseGuide                Completed.
+14:58:57.171 IsPulseGuiding            False
+14:58:57.172 RightAscension            0.6056950670908
+14:58:57.172 Declination               84.9999837806182
+14:58:57.174 Tracking Set              True
+14:58:57.175 SiderealTime              15.612839488803
+14:58:57.176 SiteLatitude Get          48.2623
+14:58:57.178 SiteLongitude Get         16.6347
+14:58:57.178 SiteElevation Get         122.2
+14:58:57.199 SlewToCoordinatesAsync    Calling method - RightAscension: 6.61283948880302, Declination: 85.
+14:58:57.199 SlewToCoordinatesAsync    Completed.
+14:58:57.200 Slewing                   True
+14:58:57.702 Slewing                   True
+14:58:58.202 Slewing                   True
+14:58:58.703 Slewing                   True
+14:58:59.203 Slewing                   True
+14:58:59.702 Slewing                   True
+14:59:00.202 Slewing                   True
+14:59:00.703 Slewing                   True
+14:59:01.203 Slewing                   True
+14:59:01.701 Slewing                   True
+14:59:02.201 Slewing                   True
+14:59:02.704 Slewing                   True
+14:59:03.203 Slewing                   True
+14:59:03.703 Slewing                   True
+14:59:04.203 Slewing                   True
+14:59:04.703 Slewing                   True
+14:59:05.204 Slewing                   True
+14:59:05.702 Slewing                   True
+14:59:06.202 Slewing                   True
+14:59:06.704 Slewing                   True
+14:59:07.202 Slewing                   True
+14:59:07.703 Slewing                   True
+14:59:08.203 Slewing                   True
+14:59:08.702 Slewing                   True
+14:59:09.202 Slewing                   True
+14:59:09.702 Slewing                   True
+14:59:10.202 Slewing                   True
+14:59:10.702 Slewing                   True
+14:59:11.203 Slewing                   True
+14:59:11.707 Slewing                   True
+14:59:12.202 Slewing                   True
+14:59:12.702 Slewing                   True
+14:59:13.203 Slewing                   True
+14:59:13.702 Slewing                   False
+14:59:13.703 InterfaceVersion Get      3
+14:59:13.703 InterfaceVersion          3
+14:59:13.704 RightAscension            6.61253755940506
+14:59:13.704 Declination               84.9998931023375
+14:59:13.705 SideOfPier Get            pierEast
+14:59:13.706 RightAscension            6.61253755940506
+14:59:13.706 Declination               84.9998931023375
+14:59:13.706 PulseGuide                Calling method.
+14:59:13.707 PulseGuide                Completed.
+14:59:13.707 IsPulseGuiding            False
+14:59:13.708 RightAscension            6.61253755940506
+14:59:13.708 Declination               84.9998931023375
+14:59:13.711 RightAscension            6.61253755940506
+14:59:13.711 Declination               84.9998931023375
+14:59:13.712 PulseGuide                Calling method.
+14:59:13.712 PulseGuide                Completed.
+14:59:13.713 IsPulseGuiding            False
+14:59:13.714 RightAscension            6.61253755940506
+14:59:13.714 Declination               84.9998931023375
+14:59:13.716 RightAscension            6.61253755940506
+14:59:13.717 Declination               84.9998931023375
+14:59:13.717 PulseGuide                Calling method.
+14:59:13.718 PulseGuide                Completed.
+14:59:13.720 IsPulseGuiding            False
+14:59:13.721 RightAscension            6.61253755940506
+14:59:13.721 Declination               84.9998931023375
+14:59:13.723 RightAscension            6.61253755940506
+14:59:13.724 Declination               84.9998931023375
+14:59:13.724 PulseGuide                Calling method.
+14:59:13.725 PulseGuide                Completed.
+14:59:13.726 IsPulseGuiding            False
+14:59:13.727 RightAscension            6.61253755940506
+14:59:13.727 Declination               84.9998931023375
+14:59:13.728 Tracking Set              True
+14:59:13.731 SiderealTime              15.6174370421634
+14:59:13.732 SiteLatitude Get          48.2623
+14:59:13.733 SiteLongitude Get         16.6347
+14:59:13.733 SiteElevation Get         122.2
+14:59:13.751 SlewToCoordinatesAsync    Calling method - RightAscension: 18.6174370421634, Declination: 55.
+14:59:13.752 SlewToCoordinatesAsync    Completed.
+14:59:13.753 Slewing                   True
+14:59:14.254 Slewing                   True
+14:59:14.755 Slewing                   True
+14:59:15.256 Slewing                   True
+14:59:15.756 Slewing                   True
+14:59:16.255 Slewing                   True
+14:59:16.756 Slewing                   True
+14:59:17.255 Slewing                   True
+14:59:17.753 Slewing                   True
+14:59:18.256 Slewing                   True
+14:59:18.757 Slewing                   True
+14:59:19.255 Slewing                   True
+14:59:19.754 Slewing                   True
+14:59:20.256 Slewing                   True
+14:59:20.754 Slewing                   True
+14:59:21.255 Slewing                   True
+14:59:21.755 Slewing                   True
+14:59:22.255 Slewing                   True
+14:59:22.755 Slewing                   True
+14:59:23.255 Slewing                   False
+14:59:23.255 InterfaceVersion Get      3
+14:59:23.255 InterfaceVersion          3
+14:59:23.256 RightAscension            18.617636470912
+14:59:23.257 Declination               55.0002243891781
+14:59:23.258 SideOfPier Get            pierWest
+14:59:23.259 RightAscension            18.617636470912
+14:59:23.259 Declination               55.0002243891781
+14:59:23.260 PulseGuide                Calling method.
+14:59:23.260 PulseGuide                Completed.
+14:59:23.261 IsPulseGuiding            True
+14:59:23.764 IsPulseGuiding            True
+14:59:24.264 IsPulseGuiding            True
+14:59:24.763 IsPulseGuiding            True
+14:59:25.264 IsPulseGuiding            True
+14:59:25.763 IsPulseGuiding            False
+14:59:25.765 RightAscension            18.6174370217993
+14:59:25.766 Declination               54.99170718099
+14:59:25.773 RightAscension            18.6174370217993
+14:59:25.774 Declination               54.99170718099
+14:59:25.774 PulseGuide                Calling method.
+14:59:25.775 PulseGuide                Completed.
+14:59:25.776 IsPulseGuiding            False
+14:59:25.777 RightAscension            18.6174370217993
+14:59:25.777 Declination               54.99170718099
+14:59:25.780 RightAscension            18.6174370217993
+14:59:25.781 Declination               54.99170718099
+14:59:25.781 PulseGuide                Calling method.
+14:59:25.782 PulseGuide                Completed.
+14:59:25.783 IsPulseGuiding            False
+14:59:25.784 RightAscension            18.6174370217993
+14:59:25.784 Declination               54.99170718099
+14:59:25.786 RightAscension            18.6174370217993
+14:59:25.787 Declination               54.99170718099
+14:59:25.787 PulseGuide                Calling method.
+14:59:25.788 PulseGuide                Completed.
+14:59:25.791 IsPulseGuiding            False
+14:59:25.792 RightAscension            18.6174370217993
+14:59:25.793 Declination               54.99170718099
+14:59:25.796 Tracking Set              True
+14:59:25.797 SiderealTime              15.620790364863
+14:59:25.798 SiteLatitude Get          48.2623
+14:59:25.803 SiteLongitude Get         16.6347
+14:59:25.804 SiteElevation Get         122.2
+14:59:25.819 SlewToCoordinatesAsync    Calling method - RightAscension: 12.620790364863, Declination: 55.
+14:59:25.820 SlewToCoordinatesAsync    Completed.
+14:59:25.823 Slewing                   True
+14:59:26.324 Slewing                   True
+14:59:26.825 Slewing                   True
+14:59:27.325 Slewing                   True
+14:59:27.824 Slewing                   True
+14:59:28.327 Slewing                   True
+14:59:28.826 Slewing                   True
+14:59:29.324 Slewing                   True
+14:59:29.825 Slewing                   True
+14:59:30.325 Slewing                   True
+14:59:30.825 Slewing                   True
+14:59:31.324 Slewing                   True
+14:59:31.828 Slewing                   True
+14:59:32.326 Slewing                   True
+14:59:32.824 Slewing                   True
+14:59:33.327 Slewing                   True
+14:59:33.825 Slewing                   True
+14:59:34.325 Slewing                   True
+14:59:34.827 Slewing                   True
+14:59:35.326 Slewing                   True
+14:59:35.824 Slewing                   True
+14:59:36.325 Slewing                   True
+14:59:36.824 Slewing                   True
+14:59:37.324 Slewing                   True
+14:59:37.826 Slewing                   True
+14:59:38.324 Slewing                   True
+14:59:38.827 Slewing                   True
+14:59:39.324 Slewing                   True
+14:59:39.825 Slewing                   True
+14:59:40.326 Slewing                   True
+14:59:40.825 Slewing                   True
+14:59:41.325 Slewing                   False
+14:59:41.325 InterfaceVersion Get      3
+14:59:41.325 InterfaceVersion          3
+14:59:41.326 RightAscension            12.6209358970241
+14:59:41.327 Declination               54.998285318492
+14:59:41.328 SideOfPier Get            pierEast
+14:59:41.328 RightAscension            12.6209358970241
+14:59:41.329 Declination               54.998285318492
+14:59:41.330 PulseGuide                Calling method.
+14:59:41.331 PulseGuide                Completed.
+14:59:41.333 IsPulseGuiding            True
+14:59:41.837 IsPulseGuiding            True
+14:59:42.335 IsPulseGuiding            True
+14:59:42.835 IsPulseGuiding            True
+14:59:43.335 IsPulseGuiding            True
+14:59:43.834 IsPulseGuiding            False
+14:59:43.837 RightAscension            12.6207900988042
+14:59:43.839 Declination               55.0082955241695
+14:59:43.842 RightAscension            12.6207900988042
+14:59:43.843 Declination               55.0082955241695
+14:59:43.843 PulseGuide                Calling method.
+14:59:43.844 PulseGuide                Completed.
+14:59:43.845 IsPulseGuiding            False
+14:59:43.846 RightAscension            12.6207900988042
+14:59:43.846 Declination               55.0082955241695
+14:59:43.848 RightAscension            12.6207900988042
+14:59:43.849 Declination               55.0082955241695
+14:59:43.849 PulseGuide                Calling method.
+14:59:43.850 PulseGuide                Completed.
+14:59:43.852 IsPulseGuiding            False
+14:59:43.852 RightAscension            12.6207900988042
+14:59:43.853 Declination               55.0082955241695
+14:59:43.855 RightAscension            12.6207900988042
+14:59:43.856 Declination               55.0082955241695
+14:59:43.856 PulseGuide                Calling method.
+14:59:43.857 PulseGuide                Completed.
+14:59:43.858 IsPulseGuiding            False
+14:59:43.859 RightAscension            12.6207900988042
+14:59:43.859 Declination               55.0082955241695
+14:59:43.866 Tracking Set              True
+14:59:43.867 Tracking Get              True
+14:59:43.868 SiderealTime              15.625833022379
+14:59:43.871 SlewToCoordinates         Calling method - RightAscension: 14.625833022379, Declination: 1.
+14:59:46.875 SlewToCoordinates         Completed.
+14:59:46.878 RightAscension            13.2110264447646
+14:59:46.881 Declination               46.0517234255553
+14:59:46.888 TargetRightAscension Get  14.625833022379
+14:59:46.890 TargetDeclination Get     1
+14:59:46.897 Tracking Get              True
+14:59:46.898 SlewToCoordinates         Calling method - RightAscension: -1, Declination: 0.
+14:59:46.899 SlewToCoordinates         Threw an exception: 
+ASCOM.InvalidValueException: RightAscension set - '-1' is an invalid value. The valid range is: 0 to 24 hours.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.ValidateCoordinates(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SlewToCoordinates(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.Telescope.SlewToCoordinates(Double rightAscension, Double declination)
+14:59:46.902 SiderealTime              15.6266861852539
+14:59:46.904 SlewToCoordinates         Calling method - RightAscension: 13.6266861852539, Declination: -100.
+14:59:46.905 SlewToCoordinates         Threw an exception: 
+ASCOM.InvalidValueException: Declination set - '-100' is an invalid value. The valid range is: -90 to +90 degrees.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.ValidateCoordinates(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SlewToCoordinates(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.Telescope.SlewToCoordinates(Double rightAscension, Double declination)
+14:59:46.907 Tracking Get              True
+14:59:46.908 SlewToCoordinates         Calling method - RightAscension: 25, Declination: 0.
+14:59:46.908 SlewToCoordinates         Threw an exception: 
+ASCOM.InvalidValueException: RightAscension set - '25' is an invalid value. The valid range is: 0 to 24 hours.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.ValidateCoordinates(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SlewToCoordinates(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.Telescope.SlewToCoordinates(Double rightAscension, Double declination)
+14:59:46.910 SiderealTime              15.6266861852539
+14:59:46.911 SlewToCoordinates         Calling method - RightAscension: 13.6266861852539, Declination: 100.
+14:59:46.911 SlewToCoordinates         Threw an exception: 
+ASCOM.InvalidValueException: Declination set - '100' is an invalid value. The valid range is: -90 to +90 degrees.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.ValidateCoordinates(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SlewToCoordinates(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.Telescope.SlewToCoordinates(Double rightAscension, Double declination)
+14:59:46.913 Tracking Set              True
+14:59:46.917 Tracking Get              True
+14:59:46.918 SiderealTime              15.6266861852539
+14:59:46.919 SlewToCoordinatesAsync    Calling method - RightAscension: 13.6266861852539, Declination: 2.
+14:59:47.150 SlewToCoordinatesAsync    Completed.
+14:59:47.162 Slewing                   True
+14:59:47.654 Slewing                   True
+14:59:48.154 Slewing                   True
+14:59:48.672 Slewing                   True
+14:59:49.154 Slewing                   True
+14:59:49.655 Slewing                   True
+14:59:50.153 Slewing                   True
+14:59:50.654 Slewing                   True
+14:59:51.155 Slewing                   True
+14:59:51.654 Slewing                   True
+14:59:52.154 Slewing                   True
+14:59:52.654 Slewing                   True
+14:59:53.156 Slewing                   True
+14:59:53.654 Slewing                   True
+14:59:54.154 Slewing                   True
+14:59:54.656 Slewing                   True
+14:59:55.153 Slewing                   True
+14:59:55.655 Slewing                   True
+14:59:56.155 Slewing                   True
+14:59:56.655 Slewing                   True
+14:59:57.155 Slewing                   True
+14:59:57.655 Slewing                   True
+14:59:58.153 Slewing                   True
+14:59:58.654 Slewing                   False
+14:59:58.657 RightAscension            13.6906102855653
+14:59:58.659 Declination               0.966351887899004
+14:59:58.664 TargetRightAscension Get  13.6266861852539
+14:59:58.666 TargetDeclination Get     2
+14:59:58.667 Tracking Get              True
+14:59:58.668 SlewToCoordinatesAsync    Calling method - RightAscension: -1, Declination: 0.
+14:59:58.668 SlewToCoordinatesAsync    Threw an exception: 
+ASCOM.InvalidValueException: RightAscension set - '-1' is an invalid value. The valid range is: 0 to 24 hours.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.ValidateCoordinates(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SlewToCoordinatesAsync(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.Telescope.SlewToCoordinatesAsync(Double rightAscension, Double declination)
+14:59:58.672 SiderealTime              15.6299172296132
+14:59:58.673 SlewToCoordinatesAsync    Calling method - RightAscension: 13.6299172296132, Declination: -100.
+14:59:58.673 SlewToCoordinatesAsync    Threw an exception: 
+ASCOM.InvalidValueException: Declination set - '-100' is an invalid value. The valid range is: -90 to +90 degrees.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.ValidateCoordinates(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SlewToCoordinatesAsync(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.Telescope.SlewToCoordinatesAsync(Double rightAscension, Double declination)
+14:59:58.677 Tracking Get              True
+14:59:58.678 SlewToCoordinatesAsync    Calling method - RightAscension: 25, Declination: 0.
+14:59:58.679 SlewToCoordinatesAsync    Threw an exception: 
+ASCOM.InvalidValueException: RightAscension set - '25' is an invalid value. The valid range is: 0 to 24 hours.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.ValidateCoordinates(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SlewToCoordinatesAsync(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.Telescope.SlewToCoordinatesAsync(Double rightAscension, Double declination)
+14:59:58.683 SiderealTime              15.6299172296132
+14:59:58.683 SlewToCoordinatesAsync    Calling method - RightAscension: 13.6299172296132, Declination: 100.
+14:59:58.684 SlewToCoordinatesAsync    Threw an exception: 
+ASCOM.InvalidValueException: Declination set - '100' is an invalid value. The valid range is: -90 to +90 degrees.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.ValidateCoordinates(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SlewToCoordinatesAsync(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.Telescope.SlewToCoordinatesAsync(Double rightAscension, Double declination)
+14:59:58.689 RightAscension            13.6906102855653
+14:59:58.690 Declination               0.966351887899004
+14:59:58.691 SiderealTime              15.6299172296132
+14:59:58.692 Tracking Set              True
+14:59:58.692 SlewToCoordinatesAsync    Calling method - RightAscension: 12.6299172296132, Declination: 24.13115.
+14:59:58.693 SlewToCoordinatesAsync    Completed.
+14:59:58.694 Slewing                   True
+14:59:59.197 Slewing                   True
+14:59:59.696 Slewing                   True
+15:00:00.195 Slewing                   True
+15:00:00.697 Slewing                   True
+15:00:01.195 Slewing                   True
+15:00:01.696 Slewing                   True
+15:00:02.196 Slewing                   True
+15:00:02.696 Slewing                   True
+15:00:03.197 Slewing                   True
+15:00:03.697 Slewing                   True
+15:00:04.195 Slewing                   True
+15:00:04.697 Slewing                   True
+15:00:05.196 Slewing                   True
+15:00:05.697 Slewing                   True
+15:00:06.197 Slewing                   True
+15:00:06.697 Slewing                   True
+15:00:07.196 Slewing                   True
+15:00:07.696 Slewing                   True
+15:00:08.198 Slewing                   True
+15:00:08.697 Slewing                   True
+15:00:09.196 Slewing                   True
+15:00:09.695 Slewing                   True
+15:00:10.197 Slewing                   False
+15:00:10.197 SideOfPier Get            pierEast
+15:00:10.198 RightAscension            12.6303750508086
+15:00:10.199 Declination               24.1298025698655
+15:00:10.203 Tracking Get              True
+15:00:10.203 SyncToCoordinates         Calling method - RightAscension: 12.5632505629465, Declination: 23.13115.
+15:00:11.313 SyncToCoordinates         Completed.
+15:00:11.314 RightAscension            12.6299497114703
+15:00:11.315 Declination               24.1311746477372
+15:00:11.318 TargetRightAscension Get  12.5632505629465
+15:00:11.319 TargetDeclination Get     23.13115
+15:00:11.320 Tracking Set              True
+15:00:11.321 SlewToCoordinatesAsync    Calling method - RightAscension: 12.6299172296132, Declination: 24.13115.
+15:00:11.322 SlewToCoordinatesAsync    Completed.
+15:00:11.323 Slewing                   True
+15:00:11.825 Slewing                   True
+15:00:12.324 Slewing                   True
+15:00:12.826 Slewing                   True
+15:00:13.325 Slewing                   True
+15:00:13.826 Slewing                   True
+15:00:14.325 Slewing                   True
+15:00:14.824 Slewing                   True
+15:00:15.325 Slewing                   False
+15:00:15.824 Slewing                   False
+15:00:16.326 Slewing                   False
+15:00:16.328 SideOfPier Get            pierEast
+15:00:16.330 RightAscension            12.6298975799716
+15:00:16.332 Declination               24.1300618179797
+15:00:16.340 Tracking Get              True
+15:00:16.340 SyncToCoordinates         Calling method - RightAscension: 12.6965838962798, Declination: 25.13115.
+15:00:17.294 SyncToCoordinates         Completed.
+15:00:17.295 RightAscension            12.6299126315331
+15:00:17.295 Declination               24.1308327323956
+15:00:17.298 Tracking Set              True
+15:00:17.298 SlewToCoordinatesAsync    Calling method - RightAscension: 12.6299172296132, Declination: 24.13115.
+15:00:17.299 SlewToCoordinatesAsync    Completed.
+15:00:17.300 Slewing                   True
+15:00:17.802 Slewing                   True
+15:00:18.301 Slewing                   True
+15:00:18.802 Slewing                   True
+15:00:19.301 Slewing                   True
+15:00:19.802 Slewing                   True
+15:00:20.302 Slewing                   True
+15:00:20.801 Slewing                   True
+15:00:21.302 Slewing                   False
+15:00:21.802 Slewing                   False
+15:00:22.301 Slewing                   False
+15:00:22.302 SideOfPier Get            pierEast
+15:00:22.304 RightAscension            12.6299452890952
+15:00:22.305 Declination               24.1311337725724
+15:00:22.309 Tracking Get              True
+15:00:22.309 SyncToCoordinates         Calling method - RightAscension: -1, Declination: 0.
+15:00:22.310 SyncToCoordinates         Threw an exception: 
+ASCOM.InvalidValueException: RightAscension set - '-1' is an invalid value. The valid range is: 0 to 24 hours.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.ValidateCoordinates(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SyncToCoordinates(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.Telescope.SyncToCoordinates(Double rightAscension, Double declination)
+15:00:22.312 SiderealTime              15.6365405920339
+15:00:22.313 SyncToCoordinates         Calling method - RightAscension: 12.6365405920339, Declination: -100.
+15:00:22.313 SyncToCoordinates         Threw an exception: 
+ASCOM.InvalidValueException: Declination set - '-100' is an invalid value. The valid range is: -90 to +90 degrees.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.ValidateCoordinates(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SyncToCoordinates(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.Telescope.SyncToCoordinates(Double rightAscension, Double declination)
+15:00:22.315 Tracking Get              True
+15:00:22.317 SyncToCoordinates         Calling method - RightAscension: 25, Declination: 0.
+15:00:22.318 SyncToCoordinates         Threw an exception: 
+ASCOM.InvalidValueException: RightAscension set - '25' is an invalid value. The valid range is: 0 to 24 hours.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.ValidateCoordinates(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SyncToCoordinates(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.Telescope.SyncToCoordinates(Double rightAscension, Double declination)
+15:00:22.320 SiderealTime              15.6365405920339
+15:00:22.320 SyncToCoordinates         Calling method - RightAscension: 12.6365405920339, Declination: 100.
+15:00:22.321 SyncToCoordinates         Threw an exception: 
+ASCOM.InvalidValueException: Declination set - '100' is an invalid value. The valid range is: -90 to +90 degrees.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.ValidateCoordinates(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SyncToCoordinates(Double RightAscension, Double Declination)
+   at ASCOM.photonProxyHub.Telescope.Telescope.SyncToCoordinates(Double rightAscension, Double declination)
+15:00:22.323 TargetRightAscension Set  -1
+15:00:22.323 TargetRightAscension Set  Threw an exception: 
+ASCOM.InvalidValueException: TargetRightAscension set - '-1' is an invalid value. The valid range is: 0 to 24 hours.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_TargetRightAscension(Double value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_TargetRightAscension(Double value)
+15:00:22.324 TargetRightAscension Set  25
+15:00:22.324 TargetRightAscension Set  Threw an exception: 
+ASCOM.InvalidValueException: TargetRightAscension set - '25' is an invalid value. The valid range is: 0 to 24 hours.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_TargetRightAscension(Double value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_TargetRightAscension(Double value)
+15:00:22.327 SiderealTime              15.6365405920339
+15:00:22.328 TargetRightAscension Set  11.6365405920339
+15:00:22.329 TargetRightAscension Get  11.6365405920339
+15:00:22.330 TargetDeclination Set     -91
+15:00:22.330 TargetDeclination Set     Threw an exception: 
+ASCOM.InvalidValueException: TargetDeclination set - '-91' is an invalid value. The valid range is: -90 to +90 degrees.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_TargetDeclination(Double value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_TargetDeclination(Double value)
+15:00:22.333 TargetDeclination Set     91
+15:00:22.333 TargetDeclination Set     Threw an exception: 
+ASCOM.InvalidValueException: TargetDeclination set - '91' is an invalid value. The valid range is: -90 to +90 degrees.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_TargetDeclination(Double value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_TargetDeclination(Double value)
+15:00:22.336 TargetDeclination Set     1
+15:00:22.338 TargetDeclination Get     1
+15:00:22.341 Tracking Set              True
+15:00:22.343 Tracking Get              True
+15:00:22.344 SiderealTime              15.6365405920339
+15:00:22.344 TargetRightAscension Set  12.6365405920339
+15:00:22.345 TargetDeclination Set     3
+15:00:22.346 SlewToTarget              Calling method.
+15:00:33.334 SlewToTarget              Completed.
+15:00:33.335 RightAscension            12.6365404143816
+15:00:33.335 Declination               3.00001062341788
+15:00:33.338 TargetRightAscension Get  12.6365405920339
+15:00:33.339 TargetDeclination Get     3
+15:00:33.341 Tracking Get              True
+15:00:33.341 TargetRightAscension Set  -1
+15:00:33.341 TargetRightAscension Set  Threw an exception: 
+ASCOM.InvalidValueException: TargetRightAscension set - '-1' is an invalid value. The valid range is: 0 to 24 hours.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_TargetRightAscension(Double value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_TargetRightAscension(Double value)
+15:00:33.343 SiderealTime              15.6396201116189
+15:00:33.344 TargetDeclination Set     -100
+15:00:33.344 TargetDeclination Set     Threw an exception: 
+ASCOM.InvalidValueException: TargetDeclination set - '-100' is an invalid value. The valid range is: -90 to +90 degrees.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_TargetDeclination(Double value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_TargetDeclination(Double value)
+15:00:33.345 Tracking Get              True
+15:00:33.347 TargetRightAscension Set  25
+15:00:33.347 TargetRightAscension Set  Threw an exception: 
+ASCOM.InvalidValueException: TargetRightAscension set - '25' is an invalid value. The valid range is: 0 to 24 hours.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_TargetRightAscension(Double value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_TargetRightAscension(Double value)
+15:00:33.349 SiderealTime              15.6396201116189
+15:00:33.349 TargetDeclination Set     100
+15:00:33.349 TargetDeclination Set     Threw an exception: 
+ASCOM.InvalidValueException: TargetDeclination set - '100' is an invalid value. The valid range is: -90 to +90 degrees.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_TargetDeclination(Double value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_TargetDeclination(Double value)
+15:00:33.351 Tracking Set              True
+15:00:33.352 Tracking Get              True
+15:00:33.352 SiderealTime              15.6396201116189
+15:00:33.353 TargetRightAscension Set  11.6396201116189
+15:00:33.353 TargetDeclination Set     4
+15:00:33.354 SlewToTargetAsync         Calling method.
+15:00:33.355 SlewToTargetAsync         Completed.
+15:00:33.356 Slewing                   True
+15:00:33.857 Slewing                   True
+15:00:34.356 Slewing                   True
+15:00:34.857 Slewing                   True
+15:00:35.356 Slewing                   True
+15:00:35.857 Slewing                   True
+15:00:36.358 Slewing                   True
+15:00:36.857 Slewing                   True
+15:00:37.357 Slewing                   True
+15:00:37.857 Slewing                   True
+15:00:38.357 Slewing                   True
+15:00:38.856 Slewing                   True
+15:00:39.358 Slewing                   True
+15:00:39.858 Slewing                   False
+15:00:39.859 RightAscension            11.6396356240439
+15:00:39.860 Declination               3.99971188356127
+15:00:39.865 TargetRightAscension Get  11.6396201116189
+15:00:39.867 TargetDeclination Get     4
+15:00:39.869 Tracking Get              True
+15:00:39.870 TargetRightAscension Set  -1
+15:00:39.870 TargetRightAscension Set  Threw an exception: 
+ASCOM.InvalidValueException: TargetRightAscension set - '-1' is an invalid value. The valid range is: 0 to 24 hours.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_TargetRightAscension(Double value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_TargetRightAscension(Double value)
+15:00:39.873 SiderealTime              15.6414359028624
+15:00:39.873 TargetDeclination Set     -100
+15:00:39.874 TargetDeclination Set     Threw an exception: 
+ASCOM.InvalidValueException: TargetDeclination set - '-100' is an invalid value. The valid range is: -90 to +90 degrees.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_TargetDeclination(Double value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_TargetDeclination(Double value)
+15:00:39.875 Tracking Get              True
+15:00:39.876 TargetRightAscension Set  25
+15:00:39.876 TargetRightAscension Set  Threw an exception: 
+ASCOM.InvalidValueException: TargetRightAscension set - '25' is an invalid value. The valid range is: 0 to 24 hours.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_TargetRightAscension(Double value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_TargetRightAscension(Double value)
+15:00:39.878 SiderealTime              15.6414359028624
+15:00:39.878 TargetDeclination Set     100
+15:00:39.878 TargetDeclination Set     Threw an exception: 
+ASCOM.InvalidValueException: TargetDeclination set - '100' is an invalid value. The valid range is: -90 to +90 degrees.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_TargetDeclination(Double value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_TargetDeclination(Double value)
+15:00:39.880 SiderealTime              15.6414359028624
+15:00:39.888 DestinationSideOfPier     RA: 12.6414359028624, Dec: 45 - pierEast.
+15:00:39.888 SiderealTime              15.6414359028624
+15:00:39.889 DestinationSideOfPier     RA: 18.6414359028624, Dec: 45 - pierWest.
+15:00:39.890 Tracking Set              True
+15:00:39.892 Tracking Get              True
+15:00:39.893 Tracking Get              True
+15:00:39.893 Tracking Set              False
+15:00:39.896 Tracking Get              True
+15:00:39.899 SlewToAltAz               Calling method - Azimuth: 150, Altitude: 50.
+15:00:42.901 SlewToAltAz               Completed.
+15:00:42.901 Tracking Get              False
+15:00:42.902 Azimuth                   264.334708838261
+15:00:42.903 Altitude                  23.3372233859709
+15:00:42.905 Tracking Get              False
+15:00:42.906 SlewToAltAz               Calling method - Azimuth: 45, Altitude: -100.
+15:00:42.906 SlewToAltAz               Threw an exception: 
+ASCOM.InvalidValueException: Altitude set - '-100' is an invalid value. The valid range is: -90 to +90 degrees.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SlewToAltAz(Double Azimuth, Double Altitude)
+   at ASCOM.photonProxyHub.Telescope.Telescope.SlewToAltAz(Double azimuth, Double altitude)
+15:00:42.908 SlewToAltAz               Calling method - Azimuth: -10, Altitude: 45.
+15:00:42.908 SlewToAltAz               Threw an exception: 
+ASCOM.InvalidValueException: Azimuth set - '-10' is an invalid value. The valid range is: 0 to 360 degrees.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SlewToAltAz(Double Azimuth, Double Altitude)
+   at ASCOM.photonProxyHub.Telescope.Telescope.SlewToAltAz(Double azimuth, Double altitude)
+15:00:42.910 Tracking Get              False
+15:00:42.911 SlewToAltAz               Calling method - Azimuth: 45, Altitude: 100.
+15:00:42.911 SlewToAltAz               Threw an exception: 
+ASCOM.InvalidValueException: Altitude set - '100' is an invalid value. The valid range is: -90 to +90 degrees.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SlewToAltAz(Double Azimuth, Double Altitude)
+   at ASCOM.photonProxyHub.Telescope.Telescope.SlewToAltAz(Double azimuth, Double altitude)
+15:00:42.915 SlewToAltAz               Calling method - Azimuth: 370, Altitude: 45.
+15:00:42.915 SlewToAltAz               Threw an exception: 
+ASCOM.InvalidValueException: Azimuth set - '370' is an invalid value. The valid range is: 0 to 360 degrees.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SlewToAltAz(Double Azimuth, Double Altitude)
+   at ASCOM.photonProxyHub.Telescope.Telescope.SlewToAltAz(Double azimuth, Double altitude)
+15:00:42.919 Tracking Set              True
+15:00:42.921 Tracking Get              False
+15:00:42.922 Tracking Get              False
+15:00:42.923 Tracking Get              False
+15:00:42.927 SlewToAltAzAsync          Calling method - Azimuth: 155, Altitude: 55.
+15:00:42.928 SlewToAltAzAsync          Completed.
+15:00:42.929 Tracking Get              False
+15:00:42.930 Slewing                   True
+15:00:43.432 Slewing                   True
+15:00:43.933 Slewing                   True
+15:00:44.431 Slewing                   True
+15:00:44.931 Slewing                   True
+15:00:45.432 Slewing                   True
+15:00:45.932 Slewing                   True
+15:00:46.433 Slewing                   True
+15:00:46.932 Slewing                   True
+15:00:47.433 Slewing                   True
+15:00:47.932 Slewing                   True
+15:00:48.434 Slewing                   True
+15:00:48.932 Slewing                   True
+15:00:49.432 Slewing                   True
+15:00:49.933 Slewing                   True
+15:00:50.432 Slewing                   True
+15:00:50.932 Slewing                   True
+15:00:51.431 Slewing                   True
+15:00:51.931 Slewing                   True
+15:00:52.438 Slewing                   True
+15:00:52.932 Slewing                   True
+15:00:53.431 Slewing                   True
+15:00:53.935 Slewing                   True
+15:00:54.431 Slewing                   True
+15:00:54.933 Slewing                   True
+15:00:55.432 Slewing                   True
+15:00:55.938 Slewing                   True
+15:00:56.430 Slewing                   True
+15:00:56.932 Slewing                   True
+15:00:57.433 Slewing                   True
+15:00:57.933 Slewing                   True
+15:00:58.433 Slewing                   True
+15:00:58.932 Slewing                   True
+15:00:59.433 Slewing                   True
+15:00:59.931 Slewing                   True
+15:01:00.431 Slewing                   True
+15:01:00.932 Slewing                   True
+15:01:01.432 Slewing                   True
+15:01:01.932 Slewing                   True
+15:01:02.431 Slewing                   True
+15:01:02.932 Slewing                   True
+15:01:03.433 Slewing                   True
+15:01:03.931 Slewing                   True
+15:01:04.433 Slewing                   True
+15:01:04.933 Slewing                   True
+15:01:05.432 Slewing                   True
+15:01:05.931 Slewing                   True
+15:01:06.432 Slewing                   True
+15:01:06.933 Slewing                   False
+15:01:06.935 Tracking Get              True
+15:01:06.937 Azimuth                   155.1363901373
+15:01:06.939 Altitude                  54.8699814041152
+15:01:06.947 Tracking Get              True
+15:01:06.947 Tracking Set              False
+15:01:06.950 SlewToAltAzAsync          Calling method - Azimuth: 45, Altitude: -100.
+15:01:06.950 SlewToAltAzAsync          Threw an exception: 
+ASCOM.InvalidValueException: Altitude set - '-100' is an invalid value. The valid range is: -90 to +90 degrees.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SlewToAltAzAsync(Double Azimuth, Double Altitude)
+   at ASCOM.photonProxyHub.Telescope.Telescope.SlewToAltAzAsync(Double azimuth, Double altitude)
+15:01:06.955 SlewToAltAzAsync          Calling method - Azimuth: -10, Altitude: 45.
+15:01:06.955 SlewToAltAzAsync          Threw an exception: 
+ASCOM.InvalidValueException: Azimuth set - '-10' is an invalid value. The valid range is: 0 to 360 degrees.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SlewToAltAzAsync(Double Azimuth, Double Altitude)
+   at ASCOM.photonProxyHub.Telescope.Telescope.SlewToAltAzAsync(Double azimuth, Double altitude)
+15:01:06.959 Tracking Get              True
+15:01:06.959 Tracking Set              False
+15:01:06.961 SlewToAltAzAsync          Calling method - Azimuth: 45, Altitude: 100.
+15:01:06.961 SlewToAltAzAsync          Threw an exception: 
+ASCOM.InvalidValueException: Altitude set - '100' is an invalid value. The valid range is: -90 to +90 degrees.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SlewToAltAzAsync(Double Azimuth, Double Altitude)
+   at ASCOM.photonProxyHub.Telescope.Telescope.SlewToAltAzAsync(Double azimuth, Double altitude)
+15:01:06.966 SlewToAltAzAsync          Calling method - Azimuth: 370, Altitude: 45.
+15:01:06.966 SlewToAltAzAsync          Threw an exception: 
+ASCOM.InvalidValueException: Azimuth set - '370' is an invalid value. The valid range is: 0 to 360 degrees.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SlewToAltAzAsync(Double Azimuth, Double Altitude)
+   at ASCOM.photonProxyHub.Telescope.Telescope.SlewToAltAzAsync(Double azimuth, Double altitude)
+15:01:06.970 RightAscension            16.6136699985201
+15:01:06.971 Declination               15.3688649466116
+15:01:06.971 SiderealTime              15.6489803913678
+15:01:06.971 Tracking Set              True
+15:01:06.973 SlewToCoordinatesAsync    Calling method - RightAscension: 12.6489803913678, Declination: 24.13115.
+15:01:06.974 SlewToCoordinatesAsync    Completed.
+15:01:06.975 Slewing                   True
+15:01:07.477 Slewing                   True
+15:01:07.977 Slewing                   True
+15:01:08.478 Slewing                   True
+15:01:08.977 Slewing                   True
+15:01:09.477 Slewing                   True
+15:01:09.977 Slewing                   True
+15:01:10.477 Slewing                   True
+15:01:10.976 Slewing                   True
+15:01:11.476 Slewing                   True
+15:01:11.977 Slewing                   True
+15:01:12.476 Slewing                   True
+15:01:12.977 Slewing                   True
+15:01:13.476 Slewing                   True
+15:01:13.979 Slewing                   True
+15:01:14.479 Slewing                   True
+15:01:14.977 Slewing                   True
+15:01:15.477 Slewing                   True
+15:01:15.977 Slewing                   True
+15:01:16.476 Slewing                   True
+15:01:16.977 Slewing                   True
+15:01:17.477 Slewing                   True
+15:01:17.978 Slewing                   True
+15:01:18.478 Slewing                   True
+15:01:18.978 Slewing                   True
+15:01:19.477 Slewing                   True
+15:01:19.978 Slewing                   True
+15:01:20.477 Slewing                   True
+15:01:20.979 Slewing                   True
+15:01:21.478 Slewing                   True
+15:01:21.977 Slewing                   True
+15:01:22.478 Slewing                   True
+15:01:22.979 Slewing                   True
+15:01:23.478 Slewing                   True
+15:01:23.977 Slewing                   True
+15:01:24.480 Slewing                   True
+15:01:24.975 Slewing                   True
+15:01:25.477 Slewing                   True
+15:01:25.977 Slewing                   True
+15:01:26.476 Slewing                   True
+15:01:26.978 Slewing                   True
+15:01:27.478 Slewing                   True
+15:01:27.976 Slewing                   True
+15:01:28.478 Slewing                   True
+15:01:28.978 Slewing                   False
+15:01:28.980 SideOfPier Get            pierEast
+15:01:28.982 RightAscension            12.6490744102811
+15:01:28.983 Declination               24.1318586085029
+15:01:28.989 Tracking Get              True
+15:01:28.990 TargetRightAscension Set  12.5823137247011
+15:01:28.992 TargetDeclination Set     23.13115
+15:01:28.993 SyncToTarget              Calling method.
+15:01:29.296 SyncToTarget              Completed.
+15:01:29.297 RightAscension            12.6490139948792
+15:01:29.298 Declination               24.1314403539691
+15:01:29.300 Tracking Set              True
+15:01:29.301 SlewToCoordinatesAsync    Calling method - RightAscension: 12.6489803913678, Declination: 24.13115.
+15:01:29.302 SlewToCoordinatesAsync    Completed.
+15:01:29.303 Slewing                   True
+15:01:29.803 Slewing                   True
+15:01:30.304 Slewing                   True
+15:01:30.805 Slewing                   True
+15:01:31.304 Slewing                   True
+15:01:31.806 Slewing                   True
+15:01:32.305 Slewing                   True
+15:01:32.805 Slewing                   True
+15:01:33.306 Slewing                   False
+15:01:33.806 Slewing                   False
+15:01:34.308 Slewing                   False
+15:01:34.309 SideOfPier Get            pierEast
+15:01:34.310 RightAscension            12.6489474261491
+15:01:34.311 Declination               24.130680899035
+15:01:34.314 Tracking Get              True
+15:01:34.314 TargetRightAscension Set  12.7156470580345
+15:01:34.315 TargetDeclination Set     25.13115
+15:01:34.316 SyncToTarget              Calling method.
+15:01:35.291 SyncToTarget              Completed.
+15:01:35.292 RightAscension            12.6489794009841
+15:01:35.292 Declination               24.1309624385912
+15:01:35.296 Tracking Set              True
+15:01:35.297 SlewToCoordinatesAsync    Calling method - RightAscension: 12.6489803913678, Declination: 24.13115.
+15:01:35.297 SlewToCoordinatesAsync    Completed.
+15:01:35.298 Slewing                   True
+15:01:35.800 Slewing                   True
+15:01:36.299 Slewing                   True
+15:01:36.801 Slewing                   True
+15:01:37.301 Slewing                   True
+15:01:37.800 Slewing                   True
+15:01:38.300 Slewing                   True
+15:01:38.801 Slewing                   True
+15:01:39.301 Slewing                   False
+15:01:39.801 Slewing                   False
+15:01:40.299 Slewing                   False
+15:01:40.300 SideOfPier Get            pierEast
+15:01:40.301 RightAscension            12.6490038705935
+15:01:40.302 Declination               24.1311379297011
+15:01:40.303 Tracking Get              True
+15:01:40.305 TargetRightAscension Set  -1
+15:01:40.305 TargetRightAscension Set  Threw an exception: 
+ASCOM.InvalidValueException: TargetRightAscension set - '-1' is an invalid value. The valid range is: 0 to 24 hours.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_TargetRightAscension(Double value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_TargetRightAscension(Double value)
+15:01:40.306 SiderealTime              15.6582729864929
+15:01:40.306 TargetDeclination Set     -100
+15:01:40.306 TargetDeclination Set     Threw an exception: 
+ASCOM.InvalidValueException: TargetDeclination set - '-100' is an invalid value. The valid range is: -90 to +90 degrees.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_TargetDeclination(Double value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_TargetDeclination(Double value)
+15:01:40.308 Tracking Get              True
+15:01:40.308 TargetRightAscension Set  25
+15:01:40.308 TargetRightAscension Set  Threw an exception: 
+ASCOM.InvalidValueException: TargetRightAscension set - '25' is an invalid value. The valid range is: 0 to 24 hours.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_TargetRightAscension(Double value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_TargetRightAscension(Double value)
+15:01:40.310 SiderealTime              15.6582729864929
+15:01:40.311 TargetDeclination Set     100
+15:01:40.311 TargetDeclination Set     Threw an exception: 
+ASCOM.InvalidValueException: TargetDeclination set - '100' is an invalid value. The valid range is: -90 to +90 degrees.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.set_TargetDeclination(Double value)
+   at ASCOM.photonProxyHub.Telescope.Telescope.set_TargetDeclination(Double value)
+15:01:40.314 RightAscension            12.6490038705935
+15:01:40.315 Declination               24.1311379297011
+15:01:40.316 Altitude                  46.9496455301917
+15:01:40.317 Azimuth                   252.225291996345
+15:01:40.318 Tracking Get              True
+15:01:40.318 Tracking Set              False
+15:01:40.324 SyncToAltAz               Calling method - Azimuth: 252.225291996345, Altitude: 46.9496455301917.
+15:01:40.324 SyncToAltAz               Not implemented
+15:01:40.324 SyncToAltAz               Threw an exception: 
+ASCOM.MethodNotImplementedException: Method SyncToAltAz is not implemented in this driver.
+   at ASCOM.photonProxyHub.Telescope.TelescopeHardware.SyncToAltAz(Double Azimuth, Double Altitude)
+   at ASCOM.photonProxyHub.Telescope.Telescope.SyncToAltAz(Double azimuth, Double altitude)
+15:01:40.328 CanSetTracking            True
+15:01:40.329 Tracking Set              False
+15:01:40.331 Connected Set             Disconnecting from device
+15:01:40.331 Connected                 Set False
+15:01:40.334 Connected Get             False
+15:01:40.397 Connected Set             Device already connected, ignoring Connected Set = true
+15:01:40.918 Dispose                   Disposing of assets and closing down.

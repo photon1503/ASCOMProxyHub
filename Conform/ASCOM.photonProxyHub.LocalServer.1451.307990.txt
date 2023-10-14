@@ -1,0 +1,93 @@
+14:51:30.800 Main                      Server started
+14:51:30.801 Main                      Loading drivers
+14:51:30.804 PopulateListOfAscomDriver Found type: HardwareClassAttribute
+14:51:30.804 PopulateListOfAscomDriver Found type: Telescope
+14:51:30.804 PopulateListOfAscomDriver   Telescope is a driver assembly
+14:51:30.805 PopulateListOfAscomDriver Found type: Rate
+14:51:30.805 PopulateListOfAscomDriver Found type: AxisRates
+14:51:30.805 PopulateListOfAscomDriver Found type: TrackingRates
+14:51:30.805 PopulateListOfAscomDriver Found type: TelescopeHardware
+14:51:30.805 PopulateListOfAscomDriver Found type: SetupDialogForm
+14:51:30.805 PopulateListOfAscomDriver Found type: Settings
+14:51:30.805 PopulateListOfAscomDriver Found type: IClassFactory
+14:51:30.805 PopulateListOfAscomDriver Found type: ClassFactory
+14:51:30.805 PopulateListOfAscomDriver Found type: FrmMain
+14:51:30.805 PopulateListOfAscomDriver Found type: GarbageCollection
+14:51:30.805 PopulateListOfAscomDriver Found type: Server
+14:51:30.805 PopulateListOfAscomDriver Found type: ReferenceCountedObjectBase
+14:51:30.805 PopulateListOfAscomDriver Found type: SharedResources
+14:51:30.805 PopulateListOfAscomDriver Found type: <PrivateImplementationDetails>
+14:51:30.805 PopulateListOfAscomDriver Found type: <>c
+14:51:30.805 PopulateListOfAscomDriver Found type: CLSCTX
+14:51:30.805 PopulateListOfAscomDriver Found type: REGCLS
+14:51:30.805 PopulateListOfAscomDriver Found type: SetTextCallback
+14:51:30.805 PopulateListOfAscomDriver Found type: <>c__DisplayClass31_0
+14:51:30.806                           
+14:51:30.806 PopulateListOfAscomDriver Found 1 drivers
+14:51:30.806 PopulateListOfAscomDriver Found Driver : Telescope
+14:51:30.806                           
+14:51:30.806 Main                      Processing command-line arguments
+14:51:30.806 ProcessArguments          Started by COM: -Embedding
+14:51:30.806 Main                      Initialising variables
+14:51:30.806 Main                      Creating host form
+14:51:30.826 Main                      Registering class factories
+14:51:30.826 RegisterClassFactories    Registering class factories
+14:51:30.826 RegisterClassFactories      Creating class factory for: Telescope
+14:51:30.827 RegisterClassFactories      Registering class factory for: Telescope
+14:51:30.828 RegisterClassFactories      Registered class factory OK for: Telescope
+14:51:30.828 RegisterClassFactories    Making class factories live
+14:51:30.828 RegisterClassFactories    Class factories live OK
+14:51:30.828 Main                      Starting garbage collection
+14:51:30.829 StartGarbageCollection    Creating garbage collector with interval: 10000 seconds
+14:51:30.829 StartGarbageCollection    Starting garbage collector thread
+14:51:30.830 StartGarbageCollection    Garbage collector thread started OK
+14:51:30.830 Main                      Garbage collector thread started
+14:51:30.830 Main                      Starting main form
+14:51:30.838 IncrementServerLockCount  New server lock count: 1
+14:51:30.839 ExitIf                    Object count: 0, Server lock count: 1
+14:51:30.839 IncrementServerLockCount  New server lock count: 2
+14:51:30.839 ExitIf                    Object count: 0, Server lock count: 2
+14:51:30.839 DecrementServerLockLock   New server lock count: 1
+14:51:30.839 ExitIf                    Object count: 0, Server lock count: 1
+14:51:30.841 IncrementObjectCount      New object count: 1
+14:51:30.911 DecrementServerLockLock   New server lock count: 0
+14:51:30.911 ExitIf                    Object count: 1, Server lock count: 0
+15:01:40.908 DecrementObjectCount      New object count: 0
+15:01:40.908 ExitIf                    Object count: 0, Server lock count: 0
+15:01:40.908 ExitIf                    Server started by COM so shutting down the Windows message loop on the main process to end the local server.
+15:01:40.915 Main                      Main form has ended
+15:01:40.915 Main                      Revoking class factories
+15:01:40.916 RevokeClassFactories      Suspending class factories
+15:01:40.916 RevokeClassFactories      Class factories suspended OK
+15:01:40.916 Main                      Class factories revoked
+15:01:40.916 Main                      Hardware disposal - Found type: HardwareClassAttribute
+15:01:40.917 Main                      Hardware disposal - Found type: Telescope
+15:01:40.917 Main                      Hardware disposal - Found type: Rate
+15:01:40.917 Main                      Hardware disposal - Found type: AxisRates
+15:01:40.917 Main                      Hardware disposal - Found type: TrackingRates
+15:01:40.917 Main                      Hardware disposal - Found type: TelescopeHardware
+15:01:40.917 Main                        TelescopeHardware is a hardware class
+15:01:40.917 Main                        Calling method Dispose in static class TelescopeHardware...
+15:01:40.921 Main                        Dispose method called OK.
+15:01:40.921 Main                      Hardware disposal - Found type: SetupDialogForm
+15:01:40.921 Main                      Hardware disposal - Found type: Settings
+15:01:40.921 Main                      Hardware disposal - Found type: IClassFactory
+15:01:40.921 Main                      Hardware disposal - Found type: ClassFactory
+15:01:40.921 Main                      Hardware disposal - Found type: FrmMain
+15:01:40.921 Main                      Hardware disposal - Found type: GarbageCollection
+15:01:40.922 Main                      Hardware disposal - Found type: Server
+15:01:40.922 Main                      Hardware disposal - Found type: ReferenceCountedObjectBase
+15:01:40.922 Main                      Hardware disposal - Found type: SharedResources
+15:01:40.922 Main                        SharedResources is a hardware class
+15:01:40.922 Main                        Calling method Dispose in static class SharedResources...
+15:01:40.935 Main                        Dispose method called OK.
+15:01:40.935 Main                      Hardware disposal - Found type: <PrivateImplementationDetails>
+15:01:40.935 Main                      Hardware disposal - Found type: <>c
+15:01:40.935 Main                      Hardware disposal - Found type: CLSCTX
+15:01:40.935 Main                      Hardware disposal - Found type: REGCLS
+15:01:40.935 Main                      Hardware disposal - Found type: SetTextCallback
+15:01:40.935 Main                      Hardware disposal - Found type: <>c__DisplayClass31_0
+15:01:40.935 Main                      Stopping garbage collector
+15:01:40.935 StopGarbageCollection     Stopping garbage collector thread
+15:01:40.937 StopGarbageCollection     Garbage collector thread stopped OK
+15:01:40.938 Main                      Local server closing
