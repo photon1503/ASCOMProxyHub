@@ -53,7 +53,8 @@ namespace ASCOM.photonProxyHub.Telescope
         internal static TraceLogger tl; // Local server's trace logger object for diagnostic log with information that you specify
 
         // Variables to hold the currrent device configuration for this driver
-        internal static ASCOM.DriverAccess.Telescope driver;
+        //internal static ASCOM.DriverAccess.Telescope driver;
+        internal static AstrooptikServer.Telescope driver;
         internal static bool isMoving = false;
         internal static bool hasTargetDeclination = false;
         internal static bool hasTargetRightAscension = false;
@@ -148,7 +149,9 @@ namespace ASCOM.photonProxyHub.Telescope
         {
             get
             {
-                return driver.SupportedActions;
+                ArrayList result = new ArrayList();
+
+                return result; // driver.SupportedActions;
             }
         }
 
@@ -282,7 +285,9 @@ namespace ASCOM.photonProxyHub.Telescope
                     LogMessage("Connected Set", $"Connecting to proxy {Properties.Settings.Default.proxyDriverId}");
 
                     // TODO insert connect to the device code here
-                    driver = new ASCOM.DriverAccess.Telescope(Properties.Settings.Default.proxyDriverId);
+                    //driver = new ASCOM.DriverAccess.Telescope(Properties.Settings.Default.proxyDriverId);
+                    driver = new AstrooptikServer.Telescope();
+                    
                     driver.Connected = true;
 
                     connectedState = true;
@@ -383,7 +388,7 @@ namespace ASCOM.photonProxyHub.Telescope
         {
             get
             {
-                return driver.AlignmentMode;
+                return (AlignmentModes)driver.AlignmentMode;
             }
         }
 
@@ -485,7 +490,8 @@ namespace ASCOM.photonProxyHub.Telescope
         /// </summary>
         internal static bool CanMoveAxis(TelescopeAxes Axis)
         {
-            return driver.CanMoveAxis(Axis);
+            AstrooptikServer.TelescopeAxes a = (AstrooptikServer.TelescopeAxes)Axis;
+            return driver.CanMoveAxis(ref a);
         }
 
         /// <summary>
@@ -675,9 +681,7 @@ namespace ASCOM.photonProxyHub.Telescope
         {
             get
             {
-                /* It seems that the ASA driver includes also the correction */
-
-                return driver.DeclinationRate; // - driver.pointingCorrectionDE;
+                return driver.DeclinationRate;                                
             }
             set
             {
@@ -692,7 +696,7 @@ namespace ASCOM.photonProxyHub.Telescope
         /// </summary>
         internal static PierSide DestinationSideOfPier(double RightAscension, double Declination)
         {
-            return driver.DestinationSideOfPier(RightAscension, Declination);
+            return (PierSide)driver.DestinationSideOfPier(RightAscension, Declination);
         }
 
         /// <summary>
@@ -717,7 +721,7 @@ namespace ASCOM.photonProxyHub.Telescope
         {
             get
             {
-                return driver.EquatorialSystem;
+                return (EquatorialCoordinateType)driver.EquatorialSystem;
             }
         }
 
@@ -806,7 +810,7 @@ namespace ASCOM.photonProxyHub.Telescope
             {
                 throw new InvalidValueException("MoveAxis", Rate.ToString(), $"-{maxSlewRate} to +{maxSlewRate}");
             }
-            driver.MoveAxis(Axis, Rate);
+            driver.MoveAxis((AstrooptikServer.TelescopeAxes)Axis, Rate);
             if (Rate == 0) isMoving = false;
             else
                 isMoving = true;
@@ -833,7 +837,7 @@ namespace ASCOM.photonProxyHub.Telescope
             {
                 throw new InvalidOperationException("Cannot PulseGuide when parked");
             }
-            driver.PulseGuide(Direction, Duration);
+            driver.PulseGuide((AstrooptikServer.GuideDirections)Direction, Duration);
         }
 
         /// <summary>
@@ -855,7 +859,7 @@ namespace ASCOM.photonProxyHub.Telescope
         {
             get
             {
-                return driver.RightAscensionRate; // - driver.pointingCorrectionRA;
+                return driver.RightAscensionRate;
             }
             set
             {
@@ -881,14 +885,14 @@ namespace ASCOM.photonProxyHub.Telescope
         {
             get
             {
-                return driver.SideOfPier;
+                return (PierSide)driver.SideOfPier;
             }
             set
             {
                 if (value != PierSide.pierEast && value != PierSide.pierWest)
                     throw new InvalidValueException("SideOfPier", value.ToString(), "PierEast or PierWest");
 
-                driver.SideOfPier = value;
+                driver.SideOfPier = (AstrooptikServer.PierSide)value;
             }
         }
 
