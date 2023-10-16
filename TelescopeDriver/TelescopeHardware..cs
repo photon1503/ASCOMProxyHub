@@ -52,8 +52,11 @@ namespace ASCOM.photonProxyHub.Telescope
         internal static AstroUtils astroUtilities; // ASCOM AstroUtilities object for use as required
         internal static TraceLogger tl; // Local server's trace logger object for diagnostic log with information that you specify
 
+        // Variables to hold the currrent device configuration for this driver
         internal static ASCOM.DriverAccess.Telescope driver;
         internal static bool isMoving = false;
+        internal static bool hasTargetDeclination = false;
+        internal static bool hasTargetRightAscension = false;
 
         /// <summary>
         /// Initializes a new instance of the device Hardware class.
@@ -283,6 +286,9 @@ namespace ASCOM.photonProxyHub.Telescope
                     driver.Connected = true;
 
                     connectedState = true;
+
+                    //Set slew settle time from properties, since this setting is not persistent in the driver
+                    driver.SlewSettleTime = Properties.Settings.Default.SlewSettleTime;
                 }
                 else
                 {
@@ -671,7 +677,7 @@ namespace ASCOM.photonProxyHub.Telescope
             {
                 /* It seems that the ASA driver includes also the correction */
 
-                return driver.DeclinationRate - driver.pointingCorrectionDE;
+                return driver.DeclinationRate; // - driver.pointingCorrectionDE;
             }
             set
             {
@@ -849,7 +855,7 @@ namespace ASCOM.photonProxyHub.Telescope
         {
             get
             {
-                return driver.RightAscensionRate - driver.pointingCorrectionRA;
+                return driver.RightAscensionRate; // - driver.pointingCorrectionRA;
             }
             set
             {
@@ -993,7 +999,7 @@ namespace ASCOM.photonProxyHub.Telescope
             if (Altitude < -90 || Altitude > 90)
                 throw new InvalidValueException("Altitude", Altitude.ToString(), "-90 to +90 degrees");
             driver.SlewToAltAz(Azimuth, Altitude);
-            Settle();
+            //Settle();
         }
 
 
@@ -1032,7 +1038,7 @@ namespace ASCOM.photonProxyHub.Telescope
             }
             ValidateCoordinates(RightAscension, Declination);
             driver.SlewToCoordinates(RightAscension, Declination);
-            Settle();
+            //Settle();
         }
 
         /// <summary>
@@ -1059,7 +1065,7 @@ namespace ASCOM.photonProxyHub.Telescope
                 throw new InvalidOperationException("Cannot slew when parked");
             }
             driver.SlewToTarget();
-            Settle();
+            //Settle();
         }
 
         /// <summary>
@@ -1129,13 +1135,19 @@ namespace ASCOM.photonProxyHub.Telescope
         {
             get
             {
-                return driver.TargetDeclination;
+                
+                if (!hasTargetDeclination)
+                    throw new InvalidOperationException("TargetDeclination is not set");
+
+                if (driver.TargetDeclination)
+                    return driver.TargetDeclination;
             }
             set
-            {
+            {                
                 if (value < -90 || value > 90)
                     throw new InvalidValueException("TargetDeclination", value.ToString(), "-90 to +90 degrees");
                 driver.TargetDeclination = value;
+                hasTargetDeclination = true;
             }
         }
 
@@ -1146,6 +1158,9 @@ namespace ASCOM.photonProxyHub.Telescope
         {
             get
             {
+                if (!hasTargetRightAscension)
+                    throw new InvalidOperationException("TargetRightAscension is not set");
+
                 return driver.TargetRightAscension;
             }
             set
@@ -1153,6 +1168,7 @@ namespace ASCOM.photonProxyHub.Telescope
                 if (value < 0 || value >= 24)
                     throw new InvalidValueException("TargetRightAscension", value.ToString(), "0 to 24 hours");
                 driver.TargetRightAscension = value;
+                hasTargetRightAscension = true;
             }
         }
 
@@ -1318,17 +1334,6 @@ namespace ASCOM.photonProxyHub.Telescope
             LogMessage(identifier, msg);
         }
 
-        /// <summary>
-        /// Wait for slew settle time
-        /// </summary>
-        internal static void Settle()
-        {
-            if (!isSlewSettle)
-                return;
-
-            short _slewSettleTime = Convert.ToInt16(Properties.Settings.Default.SlewSettleTime);
-            Thread.Sleep(_slewSettleTime * 1000);
-        }
         #endregion
     }
 }
