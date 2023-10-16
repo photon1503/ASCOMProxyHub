@@ -288,7 +288,7 @@ namespace ASCOM.photonProxyHub.Telescope
                     connectedState = true;
 
                     //Set slew settle time from properties, since this setting is not persistent in the driver
-                    driver.SlewSettleTime = Properties.Settings.Default.SlewSettleTime;
+                    driver.SlewSettleTime = Convert.ToInt16(Properties.Settings.Default.SlewSettleTime);
                 }
                 else
                 {
@@ -999,7 +999,7 @@ namespace ASCOM.photonProxyHub.Telescope
             if (Altitude < -90 || Altitude > 90)
                 throw new InvalidValueException("Altitude", Altitude.ToString(), "-90 to +90 degrees");
             driver.SlewToAltAz(Azimuth, Altitude);
-            //Settle();
+            Settle();
         }
 
 
@@ -1038,7 +1038,7 @@ namespace ASCOM.photonProxyHub.Telescope
             }
             ValidateCoordinates(RightAscension, Declination);
             driver.SlewToCoordinates(RightAscension, Declination);
-            //Settle();
+            Settle();
         }
 
         /// <summary>
@@ -1065,7 +1065,7 @@ namespace ASCOM.photonProxyHub.Telescope
                 throw new InvalidOperationException("Cannot slew when parked");
             }
             driver.SlewToTarget();
-            //Settle();
+            Settle();
         }
 
         /// <summary>
@@ -1114,6 +1114,7 @@ namespace ASCOM.photonProxyHub.Telescope
             }
             ValidateCoordinates(RightAscension, Declination);
             driver.SyncToCoordinates(RightAscension, Declination);
+            Settle();
         }
 
         /// <summary>
@@ -1126,6 +1127,7 @@ namespace ASCOM.photonProxyHub.Telescope
                 throw new InvalidOperationException("Cannot sync when parked");
             }
             driver.SyncToTarget();
+            Settle();
         }
 
         /// <summary>
@@ -1139,8 +1141,7 @@ namespace ASCOM.photonProxyHub.Telescope
                 if (!hasTargetDeclination)
                     throw new InvalidOperationException("TargetDeclination is not set");
 
-                if (driver.TargetDeclination)
-                    return driver.TargetDeclination;
+                return driver.TargetDeclination;
             }
             set
             {                
@@ -1203,6 +1204,8 @@ namespace ASCOM.photonProxyHub.Telescope
             }
             set
             {
+                if (value < 0 || Convert.ToInt16(value) > 4)
+                    throw new InvalidValueException("TrackingRate", value.ToString(), "invalid");
                 LogMessage("TrackingRate Set", "Not implemented");
                 //throw new PropertyNotImplementedException("TrackingRate", true);
 
@@ -1334,6 +1337,10 @@ namespace ASCOM.photonProxyHub.Telescope
             LogMessage(identifier, msg);
         }
 
+        internal static void Settle()
+        {
+            Thread.Sleep(1000);            
+        }
         #endregion
     }
 }
