@@ -41,7 +41,7 @@ namespace ASCOM.photonProxyHub.Telescope
         internal const string traceStateProfileName = "Trace Level";
         internal const string traceStateDefault = "true";
 
-        internal static bool simulateSlewSettle = true; // Variable to hold the slew settling simulation state
+        internal static bool isSlewSettle = true; // Variable to hold the slew settling state
         
         private static string DriverProgId = ""; // ASCOM DeviceID (COM ProgID) for this driver, the value is set by the driver's class initialiser.
         private static string DriverDescription = ""; // The value is set by the driver's class initialiser.
@@ -669,7 +669,9 @@ namespace ASCOM.photonProxyHub.Telescope
         {
             get
             {
-                return driver.DeclinationRate;
+                /* It seems that the ASA driver includes also the correction */
+
+                return driver.DeclinationRate - driver.pointingCorrectionDE;
             }
             set
             {
@@ -847,7 +849,7 @@ namespace ASCOM.photonProxyHub.Telescope
         {
             get
             {
-                return driver.RightAscensionRate;
+                return driver.RightAscensionRate - driver.pointingCorrectionRA;
             }
             set
             {
@@ -954,7 +956,7 @@ namespace ASCOM.photonProxyHub.Telescope
         {
             get
             {
-                if (simulateSlewSettle)
+                if (isSlewSettle)
                 { return Convert.ToInt16(Properties.Settings.Default.SlewSettleTime); ; }
                 else
                 {
@@ -967,7 +969,7 @@ namespace ASCOM.photonProxyHub.Telescope
                 if (value < 0 || value > 600)
                     throw new InvalidValueException("SlewSettleTime", value.ToString(), "0 to 600");
 
-                if (simulateSlewSettle)
+                if (isSlewSettle)
                 {
                     Properties.Settings.Default.SlewSettleTime = value.ToString();
 
@@ -1321,7 +1323,7 @@ namespace ASCOM.photonProxyHub.Telescope
         /// </summary>
         internal static void Settle()
         {
-            if (!simulateSlewSettle)
+            if (!isSlewSettle)
                 return;
 
             short _slewSettleTime = Convert.ToInt16(Properties.Settings.Default.SlewSettleTime);
