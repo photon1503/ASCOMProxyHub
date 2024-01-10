@@ -57,6 +57,7 @@ namespace ASCOM.photonProxyHub.Telescope
         internal static bool isMoving = false;
         internal static bool hasTargetDeclination = false;
         internal static bool hasTargetRightAscension = false;
+        internal static bool _AtPark = false;
 
         /// <summary>
         /// Initializes a new instance of the device Hardware class.
@@ -441,7 +442,13 @@ namespace ASCOM.photonProxyHub.Telescope
         {
             get
             {
+
+                if (!driver.AtPark && _AtPark)
+                {
+                    return _AtPark;
+                }
                 return driver.AtPark;
+
 
             }
         }
@@ -819,6 +826,7 @@ namespace ASCOM.photonProxyHub.Telescope
         internal static void Park()
         {
             driver.Park();
+            _AtPark = true;
         }
 
         /// <summary>
@@ -871,6 +879,7 @@ namespace ASCOM.photonProxyHub.Telescope
         internal static void SetPark()
         {
             driver.SetPark();
+            _AtPark = true;
         }
 
         /// <summary>
@@ -1257,6 +1266,7 @@ namespace ASCOM.photonProxyHub.Telescope
         internal static void Unpark()
         {
             if (driver.AtPark)
+                _AtPark = false;
                 driver.Unpark();
 
         }
