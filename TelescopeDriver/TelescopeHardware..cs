@@ -149,7 +149,13 @@ namespace ASCOM.photonProxyHub.Telescope
         {
             get
             {
-                return driver.SupportedActions;
+                ArrayList result = new ArrayList();
+                result.Add("Telescope:MotorOn");
+                result.Add("Telescope:MotorOff");
+                result.Add("Telescope:StartFans");
+                result.Add("Telescope:StopFans");
+
+                return result; //driver.SupportedActions;
             }
         }
 
