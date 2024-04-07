@@ -1271,7 +1271,7 @@ namespace ASCOM.photonProxyHub.Telescope
         /// </summary>
         internal static void Unpark()
         {
-            if (driver.AtPark)
+           // if (driver.AtPark)
                 _AtPark = false;
                 driver.Unpark();
 
