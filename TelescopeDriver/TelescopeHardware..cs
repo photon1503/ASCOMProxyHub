@@ -296,6 +296,8 @@ namespace ASCOM.photonProxyHub.Telescope
 
                     //Set slew settle time from properties, since this setting is not persistent in the driver
                     driver.SlewSettleTime = Convert.ToInt16(Properties.Settings.Default.SlewSettleTime);
+
+                    _AtPark = driver.AtPark;
                 }
                 else
                 {
@@ -377,7 +379,7 @@ namespace ASCOM.photonProxyHub.Telescope
         /// </summary>
         internal static void AbortSlew()
         {
-            if (driver.AtPark)
+            if (AtPark)
                 throw new InvalidOperationException("Cannot abort slew when parked");
 
             driver.AbortSlew();
@@ -448,12 +450,15 @@ namespace ASCOM.photonProxyHub.Telescope
         {
             get
             {
+                return _AtPark;
 
+                /*
                 if (!driver.AtPark && _AtPark)
                 {
                     return _AtPark;
                 }
                 return driver.AtPark;
+                */
 
 
             }
@@ -739,7 +744,7 @@ namespace ASCOM.photonProxyHub.Telescope
         /// </summary>
         internal static void FindHome()
         {
-            if (driver.AtPark)
+            if (AtPark)
                 throw new InvalidOperationException("Cannot find home when parked");
 
             driver.FindHome();
@@ -810,7 +815,7 @@ namespace ASCOM.photonProxyHub.Telescope
         /// <param name="Rate">The rate of motion (deg/sec) about the specified axis</param>
         internal static void MoveAxis(TelescopeAxes Axis, double Rate)
         {
-            if (driver.AtPark)
+            if (AtPark)
             {
                 throw new InvalidOperationException("Cannot move when parked");
             }
@@ -843,7 +848,7 @@ namespace ASCOM.photonProxyHub.Telescope
         /// <param name="Duration">The duration of the guide-rate motion (milliseconds)</param>
         internal static void PulseGuide(GuideDirections Direction, int Duration)
         {
-            if (driver.AtPark)
+            if (AtPark)
             {
                 throw new InvalidOperationException("Cannot PulseGuide when parked");
             }
@@ -1047,7 +1052,7 @@ namespace ASCOM.photonProxyHub.Telescope
         /// </summary>
         internal static void SlewToCoordinates(double RightAscension, double Declination)
         {
-            if (driver.AtPark)
+            if (AtPark)
             {
                 throw new InvalidOperationException("Cannot SlewToCoordinates when parked");
             }
@@ -1062,7 +1067,7 @@ namespace ASCOM.photonProxyHub.Telescope
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "VSTHRD200:Use \"Async\" suffix for async methods", Justification = "internal static method name used for many years.")]
         internal static void SlewToCoordinatesAsync(double RightAscension, double Declination)
         {
-            if (driver.AtPark)
+            if (AtPark)
             {
                 throw new InvalidOperationException("Cannot SlewToCoordinatesAsync when parked");
             }
@@ -1075,7 +1080,7 @@ namespace ASCOM.photonProxyHub.Telescope
         /// </summary>
         internal static void SlewToTarget()
         {
-            if (driver.AtPark)
+            if (AtPark)
             {
                 throw new InvalidOperationException("Cannot slew when parked");
             }
@@ -1090,7 +1095,7 @@ namespace ASCOM.photonProxyHub.Telescope
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "VSTHRD200:Use \"Async\" suffix for async methods", Justification = "internal static method name used for many years.")]
         internal static void SlewToTargetAsync()
         {
-            if (driver.AtPark)
+            if (AtPark)
             {
                 throw new InvalidOperationException("Cannot slew when parked");
             }
@@ -1123,7 +1128,7 @@ namespace ASCOM.photonProxyHub.Telescope
         /// </summary>
         internal static void SyncToCoordinates(double RightAscension, double Declination)
         {
-            if (driver.AtPark)
+            if (AtPark)
             {
                 throw new InvalidOperationException("Cannot sync when parked");
             }
@@ -1137,7 +1142,7 @@ namespace ASCOM.photonProxyHub.Telescope
         /// </summary>
         internal static void SyncToTarget()
         {
-            if (driver.AtPark)
+            if (AtPark)
             {
                 throw new InvalidOperationException("Cannot sync when parked");
             }
@@ -1271,9 +1276,11 @@ namespace ASCOM.photonProxyHub.Telescope
         /// </summary>
         internal static void Unpark()
         {
-           // if (driver.AtPark)
-                _AtPark = false;
+            if (AtPark)
+            { 
                 driver.Unpark();
+                _AtPark = false;
+            }
 
         }
 
