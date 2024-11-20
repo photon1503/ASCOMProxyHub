@@ -12,6 +12,7 @@ using ASCOM;
 using ASCOM.Astrometry;
 using ASCOM.Astrometry.AstroUtils;
 using ASCOM.Astrometry.NOVAS;
+using ASCOM.Astrometry.Transform;
 using ASCOM.DeviceInterface;
 using ASCOM.LocalServer;
 using ASCOM.Utilities;
@@ -21,6 +22,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
@@ -266,6 +268,42 @@ namespace ASCOM.photonProxyHub.Telescope
             catch { }
         }
 
+        public static class Astro
+        {
+            public const double pi90 = Math.PI / 2.0;
+            public const double pi180 = Math.PI;
+            public const double pi360 = 2.0 * Math.PI;
+            public const double deg2rad = Math.PI / 180.0;
+            public const double rad2deg = 180.0 / Math.PI;
+        }
+
+       
+
+        public static void ConvertAltAzToRaDec(double altitude, double azimuth, out double RA, out double DEC)
+        {
+            // Create an instance of the Transform class
+            Transform transform = new Transform();
+
+            // Set the observer's location
+            transform.SiteLatitude = SiteLatitude;
+            transform.SiteLongitude = SiteLongitude;
+
+            // Set the current sidereal time
+            transform.SiteElevation = TelescopeHardware.SiteElevation;
+            transform.SiteTemperature = 0; // Assuming standard temperature, adjust if necessary
+            transform.SitePressure = 980; // Assuming standard pressure, adjust if necessary
+
+            // Set the Altitude and Azimuth
+            transform.SetAzimuthElevation(azimuth, altitude);            
+
+            // Get the RA and DEC
+            RA = transform.RAJ2000;
+            DEC = transform.DecJ2000;
+        }
+
+
+
+
         /// <summary>
         /// Set True to connect to the device hardware. Set False to disconnect from the device hardware.
         /// You can also read the property to check whether it is connected. This reports the current hardware state.
@@ -297,11 +335,45 @@ namespace ASCOM.photonProxyHub.Telescope
                     //Set slew settle time from properties, since this setting is not persistent in the driver
                     driver.SlewSettleTime = Convert.ToInt16(Properties.Settings.Default.SlewSettleTime);
 
+                    if (Convert.ToBoolean(Properties.Settings.Default.RestorePosition))
+                    {
+                        try
+                        {
+                            if (Properties.Settings.Default.Az != 0 || Properties.Settings.Default.Alt != 0)
+                            {
+                                double Alt = Convert.ToDouble(Properties.Settings.Default.Alt);
+                                double Az = Convert.ToDouble(Properties.Settings.Default.Az);
+
+                                Transform transform = new Transform();
+
+                                transform.SiteLatitude = TelescopeHardware.SiteLatitude; ;
+                                transform.SiteLongitude = TelescopeHardware.SiteLongitude; ;
+                                transform.JulianDateTT = 0.0;
+
+                                transform.SetAzimuthElevation(Az, Alt);
+
+                                driver.SyncToCoordinates(transform.RAApparent, transform.DECApparent);
+                                LogMessage("Connected Set", $"Restoring position to Alt={driver.Altitude} Az={driver.Azimuth}");
+                            }
+                        } catch (Exception ex)
+                        {
+                            LogMessage("Connected Set", $"Error restoring position: {ex.Message}");
+                        }
+                    }
+                    
+
                     _AtPark = driver.AtPark;
                 }
                 else
                 {
                     //LogMessage("Connected Set", $"Disconnecting from port {comPort}");
+
+
+                    Properties.Settings.Default.Az = driver.Azimuth;
+                    Properties.Settings.Default.Alt = driver.Altitude;
+                    Properties.Settings.Default.Save();
+                    
+                    LogMessage("Connected Set", $"Disconnecting from ASA Proxy Alt={driver.Altitude} Az={driver.Azimuth}");
 
                     // TODO insert disconnect from the device code here
                     driver.Connected = false;

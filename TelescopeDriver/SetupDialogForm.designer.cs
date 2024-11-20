@@ -46,6 +46,7 @@ namespace ASCOM.photonProxyHub.Telescope
             this.txtSlewSettleTime = new System.Windows.Forms.TextBox();
             this.txtMaxSlewRate = new System.Windows.Forms.TextBox();
             this.labelDriverId = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.picASCOM)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,10 +54,9 @@ namespace ASCOM.photonProxyHub.Telescope
             // 
             this.cmdOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cmdOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.cmdOK.Location = new System.Drawing.Point(317, 262);
-            this.cmdOK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmdOK.Location = new System.Drawing.Point(211, 170);
             this.cmdOK.Name = "cmdOK";
-            this.cmdOK.Size = new System.Drawing.Size(88, 37);
+            this.cmdOK.Size = new System.Drawing.Size(59, 24);
             this.cmdOK.TabIndex = 0;
             this.cmdOK.Text = "OK";
             this.cmdOK.UseVisualStyleBackColor = true;
@@ -66,10 +66,9 @@ namespace ASCOM.photonProxyHub.Telescope
             // 
             this.cmdCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cmdCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cmdCancel.Location = new System.Drawing.Point(422, 262);
-            this.cmdCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmdCancel.Location = new System.Drawing.Point(281, 170);
             this.cmdCancel.Name = "cmdCancel";
-            this.cmdCancel.Size = new System.Drawing.Size(88, 38);
+            this.cmdCancel.Size = new System.Drawing.Size(59, 25);
             this.cmdCancel.TabIndex = 1;
             this.cmdCancel.Text = "Cancel";
             this.cmdCancel.UseVisualStyleBackColor = true;
@@ -77,10 +76,9 @@ namespace ASCOM.photonProxyHub.Telescope
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(18, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 48);
+            this.label1.Size = new System.Drawing.Size(239, 31);
             this.label1.TabIndex = 2;
             this.label1.Text = "ASCOM Proxy Hub\r\nSettings";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -90,8 +88,7 @@ namespace ASCOM.photonProxyHub.Telescope
             this.picASCOM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picASCOM.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picASCOM.Image = ((System.Drawing.Image)(resources.GetObject("picASCOM.Image")));
-            this.picASCOM.Location = new System.Drawing.Point(438, 14);
-            this.picASCOM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.picASCOM.Location = new System.Drawing.Point(292, 9);
             this.picASCOM.Name = "picASCOM";
             this.picASCOM.Size = new System.Drawing.Size(48, 56);
             this.picASCOM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -103,20 +100,18 @@ namespace ASCOM.photonProxyHub.Telescope
             // chkTrace
             // 
             this.chkTrace.AutoSize = true;
-            this.chkTrace.Location = new System.Drawing.Point(13, 262);
-            this.chkTrace.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.chkTrace.Location = new System.Drawing.Point(15, 174);
             this.chkTrace.Name = "chkTrace";
-            this.chkTrace.Size = new System.Drawing.Size(97, 24);
+            this.chkTrace.Size = new System.Drawing.Size(69, 17);
             this.chkTrace.TabIndex = 6;
             this.chkTrace.Text = "Trace on";
             this.chkTrace.UseVisualStyleBackColor = true;
             // 
             // buttonChoose
             // 
-            this.buttonChoose.Location = new System.Drawing.Point(402, 80);
-            this.buttonChoose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonChoose.Location = new System.Drawing.Point(268, 52);
             this.buttonChoose.Name = "buttonChoose";
-            this.buttonChoose.Size = new System.Drawing.Size(108, 35);
+            this.buttonChoose.Size = new System.Drawing.Size(72, 23);
             this.buttonChoose.TabIndex = 10;
             this.buttonChoose.Text = "Choose";
             this.buttonChoose.UseVisualStyleBackColor = true;
@@ -124,10 +119,9 @@ namespace ASCOM.photonProxyHub.Telescope
             // 
             // buttonConnect
             // 
-            this.buttonConnect.Location = new System.Drawing.Point(402, 127);
-            this.buttonConnect.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonConnect.Location = new System.Drawing.Point(268, 83);
             this.buttonConnect.Name = "buttonConnect";
-            this.buttonConnect.Size = new System.Drawing.Size(108, 35);
+            this.buttonConnect.Size = new System.Drawing.Size(72, 23);
             this.buttonConnect.TabIndex = 11;
             this.buttonConnect.Text = "Connect";
             this.buttonConnect.UseVisualStyleBackColor = true;
@@ -136,54 +130,60 @@ namespace ASCOM.photonProxyHub.Telescope
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 127);
+            this.label2.Location = new System.Drawing.Point(12, 83);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 20);
+            this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 13;
             this.label2.Text = "Max slew rate";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 161);
+            this.label3.Location = new System.Drawing.Point(12, 105);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 20);
+            this.label3.Size = new System.Drawing.Size(80, 13);
             this.label3.TabIndex = 14;
             this.label3.Text = "Slew settle time";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(249, 161);
+            this.label4.Location = new System.Drawing.Point(166, 105);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 20);
+            this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 16;
             this.label4.Text = "seconds";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(249, 125);
+            this.label5.Location = new System.Drawing.Point(166, 81);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(123, 20);
+            this.label5.Size = new System.Drawing.Size(85, 13);
             this.label5.TabIndex = 17;
             this.label5.Text = "degrees/second";
             // 
             // txtSlewSettleTime
             // 
             this.txtSlewSettleTime.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::ASCOM.photonProxyHub.Properties.Settings.Default, "SlewSettleTime", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.txtSlewSettleTime.Location = new System.Drawing.Point(143, 161);
+            this.txtSlewSettleTime.Location = new System.Drawing.Point(95, 105);
+            this.txtSlewSettleTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSlewSettleTime.Name = "txtSlewSettleTime";
-            this.txtSlewSettleTime.Size = new System.Drawing.Size(100, 26);
+            this.txtSlewSettleTime.Size = new System.Drawing.Size(68, 20);
             this.txtSlewSettleTime.TabIndex = 15;
             this.txtSlewSettleTime.Text = global::ASCOM.photonProxyHub.Properties.Settings.Default.SlewSettleTime;
             // 
             // txtMaxSlewRate
             // 
             this.txtMaxSlewRate.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::ASCOM.photonProxyHub.Properties.Settings.Default, "maxSlewRate", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.txtMaxSlewRate.Location = new System.Drawing.Point(143, 122);
+            this.txtMaxSlewRate.Location = new System.Drawing.Point(95, 79);
+            this.txtMaxSlewRate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMaxSlewRate.Name = "txtMaxSlewRate";
-            this.txtMaxSlewRate.Size = new System.Drawing.Size(100, 26);
+            this.txtMaxSlewRate.Size = new System.Drawing.Size(68, 20);
             this.txtMaxSlewRate.TabIndex = 12;
             this.txtMaxSlewRate.Text = global::ASCOM.photonProxyHub.Properties.Settings.Default.maxSlewRate;
             // 
@@ -191,20 +191,33 @@ namespace ASCOM.photonProxyHub.Telescope
             // 
             this.labelDriverId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelDriverId.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::ASCOM.photonProxyHub.Properties.Settings.Default, "proxyDriverId", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.labelDriverId.Location = new System.Drawing.Point(22, 82);
-            this.labelDriverId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDriverId.Location = new System.Drawing.Point(15, 53);
             this.labelDriverId.Name = "labelDriverId";
-            this.labelDriverId.Size = new System.Drawing.Size(357, 31);
+            this.labelDriverId.Size = new System.Drawing.Size(239, 21);
             this.labelDriverId.TabIndex = 9;
             this.labelDriverId.Text = global::ASCOM.photonProxyHub.Properties.Settings.Default.proxyDriverId;
             this.labelDriverId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelDriverId.Click += new System.EventHandler(this.labelDriverId_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = global::ASCOM.photonProxyHub.Properties.Settings.Default.RestorePosition;
+            this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::ASCOM.photonProxyHub.Properties.Settings.Default, "RestorePosition", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox1.Location = new System.Drawing.Point(15, 132);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(206, 17);
+            this.checkBox1.TabIndex = 18;
+            this.checkBox1.Text = "Restore last known position on startup";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // SetupDialogForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(525, 313);
+            this.ClientSize = new System.Drawing.Size(350, 203);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtSlewSettleTime);
@@ -220,7 +233,6 @@ namespace ASCOM.photonProxyHub.Telescope
             this.Controls.Add(this.cmdCancel);
             this.Controls.Add(this.cmdOK);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SetupDialogForm";
@@ -253,5 +265,6 @@ namespace ASCOM.photonProxyHub.Telescope
         private System.Windows.Forms.TextBox txtSlewSettleTime;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
