@@ -268,6 +268,10 @@ namespace ASCOM.photonProxyHub.Telescope
             catch { }
         }
 
+        public static long GetUnixTime()
+        {
+            return Convert.ToInt32((DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds);
+        }
        
         /// <summary>
         /// Set True to connect to the device hardware. Set False to disconnect from the device hardware.
@@ -297,7 +301,7 @@ namespace ASCOM.photonProxyHub.Telescope
 
                     connectedState = true;
                     
-                    long lastConnected = Convert.ToInt32((DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds);
+                  
 
 
                     //Set slew settle time from properties, since this setting is not persistent in the driver
@@ -307,6 +311,7 @@ namespace ASCOM.photonProxyHub.Telescope
                     {
                         try
                         {
+                            long lastConnected = Properties.Settings.Default.Connected;
                             long disconnected = Properties.Settings.Default.Disconnected;
 
                             if (lastConnected < disconnected)
@@ -326,11 +331,25 @@ namespace ASCOM.photonProxyHub.Telescope
                                         transform.SiteLatitude = TelescopeHardware.SiteLatitude; ;
                                         transform.SiteLongitude = TelescopeHardware.SiteLongitude; ;
                                         transform.JulianDateTT = 0.0;
+                                        transform.SiteElevation = driver.SiteElevation;
+                                        transform.SiteTemperature = 15; // Temperature in Celsius (optional)
+                                        transform.SitePressure = 1010; // Pressure in hPa (optional)
+
 
                                         transform.SetAzimuthElevation(Az, Alt);
+                                        driver.TargetDeclination = transform.DECApparent;
+                                        driver.TargetRightAscension = transform.RAApparent;
+                                        
+                                        bool lastTracking = driver.Tracking;
+                                        bool lastPark = driver.AtPark;
+                                        driver.Unpark();
+                                        driver.Tracking = true;
+                                        driver.SyncToTarget(); 
+                                        driver.Tracking = lastTracking;
+                                    
+                                        
 
-                                        driver.SyncToCoordinates(transform.RAApparent, transform.DECApparent);
-                                        LogMessage("Connected Set", $"Restoring position to Alt={driver.Altitude} Az={driver.Azimuth}");
+                                        LogMessage("Connected Set", $"Restoring position to Alt={Alt} Az={Az} / RA={transform.RAApparent} Dec={transform.DECApparent}");
                                     }
                                     else
                                     {
@@ -338,7 +357,7 @@ namespace ASCOM.photonProxyHub.Telescope
                                     }
                                 }
                             } else                             {
-                                LogMessage("Connected Set", $"No position to restore, last disconnect was before last connect!");
+                                LogMessage("Connected Set", $"No position to restore, last disconnect {lastConnected} was before last connect {disconnected}!");
                             }
 
                         } catch (Exception ex)
@@ -347,7 +366,7 @@ namespace ASCOM.photonProxyHub.Telescope
                         }
                     }
 
-                    Properties.Settings.Default.Connected = Convert.ToInt32((DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds);
+                    Properties.Settings.Default.Connected = GetUnixTime();
                     Properties.Settings.Default.Save();
 
                     _AtPark = driver.AtPark;
@@ -357,10 +376,7 @@ namespace ASCOM.photonProxyHub.Telescope
                     //LogMessage("Connected Set", $"Disconnecting from port {comPort}");
 
 
-                    Properties.Settings.Default.Az = driver.Azimuth;
-                    Properties.Settings.Default.Alt = driver.Altitude;
-                    Properties.Settings.Default.Disconnected = Convert.ToInt32((DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds);
-                    Properties.Settings.Default.Save();
+                   SavePosition();
                     
                     LogMessage("Connected Set", $"Disconnecting from ASA Proxy Alt={driver.Altitude} Az={driver.Azimuth}");
 
@@ -371,6 +387,13 @@ namespace ASCOM.photonProxyHub.Telescope
             }
         }
 
+        public static void SavePosition()
+        {
+            Properties.Settings.Default.Az = driver.Azimuth;
+            Properties.Settings.Default.Alt = driver.Altitude;
+            Properties.Settings.Default.Disconnected = GetUnixTime();
+            Properties.Settings.Default.Save();
+        }
         /// <summary>
         /// Returns a description of the device, such as manufacturer and model number. Any ASCII characters may be used.
         /// </summary>
