@@ -94,5 +94,29 @@ namespace ASCOM.photonProxyHub.Properties {
                 this["Az"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public long Connected {
+            get {
+                return ((long)(this["Connected"]));
+            }
+            set {
+                this["Connected"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public long Disconnected {
+            get {
+                return ((long)(this["Disconnected"]));
+            }
+            set {
+                this["Disconnected"] = value;
+            }
+        }
     }
 }

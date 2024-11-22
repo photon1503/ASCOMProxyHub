@@ -268,42 +268,7 @@ namespace ASCOM.photonProxyHub.Telescope
             catch { }
         }
 
-        public static class Astro
-        {
-            public const double pi90 = Math.PI / 2.0;
-            public const double pi180 = Math.PI;
-            public const double pi360 = 2.0 * Math.PI;
-            public const double deg2rad = Math.PI / 180.0;
-            public const double rad2deg = 180.0 / Math.PI;
-        }
-
        
-
-        public static void ConvertAltAzToRaDec(double altitude, double azimuth, out double RA, out double DEC)
-        {
-            // Create an instance of the Transform class
-            Transform transform = new Transform();
-
-            // Set the observer's location
-            transform.SiteLatitude = SiteLatitude;
-            transform.SiteLongitude = SiteLongitude;
-
-            // Set the current sidereal time
-            transform.SiteElevation = TelescopeHardware.SiteElevation;
-            transform.SiteTemperature = 0; // Assuming standard temperature, adjust if necessary
-            transform.SitePressure = 980; // Assuming standard pressure, adjust if necessary
-
-            // Set the Altitude and Azimuth
-            transform.SetAzimuthElevation(azimuth, altitude);            
-
-            // Get the RA and DEC
-            RA = transform.RAJ2000;
-            DEC = transform.DecJ2000;
-        }
-
-
-
-
         /// <summary>
         /// Set True to connect to the device hardware. Set False to disconnect from the device hardware.
         /// You can also read the property to check whether it is connected. This reports the current hardware state.
@@ -331,6 +296,9 @@ namespace ASCOM.photonProxyHub.Telescope
                     driver.Connected = true;
 
                     connectedState = true;
+                    
+                    long lastConnected = Convert.ToInt32((DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds);
+
 
                     //Set slew settle time from properties, since this setting is not persistent in the driver
                     driver.SlewSettleTime = Convert.ToInt16(Properties.Settings.Default.SlewSettleTime);
@@ -339,28 +307,48 @@ namespace ASCOM.photonProxyHub.Telescope
                     {
                         try
                         {
-                            if (Properties.Settings.Default.Az != 0 || Properties.Settings.Default.Alt != 0)
+                            long disconnected = Properties.Settings.Default.Disconnected;
+
+                            if (lastConnected < disconnected)
                             {
-                                double Alt = Convert.ToDouble(Properties.Settings.Default.Alt);
-                                double Az = Convert.ToDouble(Properties.Settings.Default.Az);
 
-                                Transform transform = new Transform();
+                                if (Properties.Settings.Default.Az != 0 || Properties.Settings.Default.Alt != 0)
+                                {
+                                    double Alt = Convert.ToDouble(Properties.Settings.Default.Alt);
+                                    double Az = Convert.ToDouble(Properties.Settings.Default.Az);
 
-                                transform.SiteLatitude = TelescopeHardware.SiteLatitude; ;
-                                transform.SiteLongitude = TelescopeHardware.SiteLongitude; ;
-                                transform.JulianDateTT = 0.0;
+                                    // only sync if we have more then 0.5 degree difference
+                                    if (Math.Abs(driver.Altitude - Alt) > 0.5 || Math.Abs(driver.Azimuth - Az) > 0.5)
+                                    {
 
-                                transform.SetAzimuthElevation(Az, Alt);
+                                        Transform transform = new Transform();
 
-                                driver.SyncToCoordinates(transform.RAApparent, transform.DECApparent);
-                                LogMessage("Connected Set", $"Restoring position to Alt={driver.Altitude} Az={driver.Azimuth}");
+                                        transform.SiteLatitude = TelescopeHardware.SiteLatitude; ;
+                                        transform.SiteLongitude = TelescopeHardware.SiteLongitude; ;
+                                        transform.JulianDateTT = 0.0;
+
+                                        transform.SetAzimuthElevation(Az, Alt);
+
+                                        driver.SyncToCoordinates(transform.RAApparent, transform.DECApparent);
+                                        LogMessage("Connected Set", $"Restoring position to Alt={driver.Altitude} Az={driver.Azimuth}");
+                                    }
+                                    else
+                                    {
+                                        LogMessage("Connected Set", $"No position to restore, position is within tolerance");
+                                    }
+                                }
+                            } else                             {
+                                LogMessage("Connected Set", $"No position to restore, last disconnect was before last connect!");
                             }
+
                         } catch (Exception ex)
                         {
                             LogMessage("Connected Set", $"Error restoring position: {ex.Message}");
                         }
                     }
-                    
+
+                    Properties.Settings.Default.Connected = Convert.ToInt32((DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds);
+                    Properties.Settings.Default.Save();
 
                     _AtPark = driver.AtPark;
                 }
@@ -371,6 +359,7 @@ namespace ASCOM.photonProxyHub.Telescope
 
                     Properties.Settings.Default.Az = driver.Azimuth;
                     Properties.Settings.Default.Alt = driver.Altitude;
+                    Properties.Settings.Default.Disconnected = Convert.ToInt32((DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds);
                     Properties.Settings.Default.Save();
                     
                     LogMessage("Connected Set", $"Disconnecting from ASA Proxy Alt={driver.Altitude} Az={driver.Azimuth}");

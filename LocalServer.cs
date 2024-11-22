@@ -86,7 +86,13 @@ namespace ASCOM.LocalServer
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             localServerMainForm = new FrmMain();
-            if (startedByCOM) localServerMainForm.WindowState = FormWindowState.Minimized;
+            if (startedByCOM)
+            {
+                localServerMainForm.WindowState = FormWindowState.Minimized;
+               
+                localServerMainForm.ShowInTaskbar = false;
+                localServerMainForm.Visible = false;
+            }
 
             // Register the class factories of the served objects
             TL.LogMessage("Main", $"Registering class factories");
